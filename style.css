@@ -18,7 +18,8 @@ nav {
   justify-content: flex-start;
   align-items: center;
   min-height: 8vh;
-  background-color: #5E9AB7;
+  width: 100%;
+  background-color: black;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -26,15 +27,30 @@ nav {
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 20px;
+  font-size: 2vw;
   margin-left: 10px;
+}
+
+.head {
+  color: white;
+  font-size: 10vw; /* responsive font-size based on viewport width */
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .head {
+    font-size: 32px; /* fixed font-size for small screens */
+  }
+  .heading {
+    font-size: 16px; /* fixed font-size for small screens */
+  }
 }
 
 .nav-links {
   display: flex;
-
-  margin-left: 10px;
-  width: 30%;
+  margin-left: flex-end;
+  width: 100%;
 }
 
 .nav-links li {
@@ -42,12 +58,20 @@ nav {
 }
 
 .nav-links a {
-  color: #231F20;
+  color: #FFFF;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
   padding: 14px 16px;
+}
+
+/* Media query for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+  .nav-links a {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
 }
 
 .nav-links a:hover:not(.active) {
@@ -59,10 +83,22 @@ nav {
 }
 
 .logo{
-  width: 45px;
-  height: 45px;
-  margin-left: 10px;
-  margin-top: 10px;
+  width: 10vw; /* 10% of the viewport width */
+  height: 10vw; /* 10% of the viewport width */
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.oval {
+  height: 100vh;
+  width: 100vw;
+  top: -50vh; /* adjust as needed */
+  /*left: -50vw; adjust as needed*/
+  background-color: #376074;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
 }
 
 /* #5E9AB7, #E3CAAB, #231F20 */

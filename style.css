@@ -1,6 +1,8 @@
 
 /* #5E9AB7, #E3CAAB, #231F20 */
 
+body { overflow: auto; }
+
 /* Universal Reset */
 *{
   margin: 0px;
@@ -33,8 +35,6 @@ nav {
   display: flex;
   justify-content: space-around; /* Distribute space around the links */
 }
-
-
 
 .heading {
   display: flex;
@@ -238,15 +238,6 @@ nav2 ul {
 
 /* ! THIS IS NOW THE ABOUT PAGE */
 
-/* .abt body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-} */
-
 .parent-class {
   display: flex;
   justify-content: center;
@@ -325,14 +316,15 @@ nav2 ul {
 .frame .wave-background {
   position: relative;
   width: 100vw; /* Change this from 1549px to 100vw */
-  height: 120vh;
+  height: 100vh;
   top: -40vh;
   z-index: 0;
+  transform: scaleY(0.75);
 }
 
 .pillar_text {
   position: absolute; 
-  top: 8%; /* Change this from 0 to 10% */
+  top: 4vh; /* Change this from 0 to 10% */
   left: 0;
   right: 0;
   bottom: 0;
@@ -349,8 +341,9 @@ nav2 ul {
 
 
 .community_text {
+  cursor: pointer;
   position: absolute; 
-  top: 28%; 
+  top: 28vh; 
   right: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
@@ -363,8 +356,9 @@ nav2 ul {
 }
 
 .ambition_text {
+  cursor: pointer;
   position: absolute; 
-  top: 48%; 
+  top: 48vh; 
   right: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
@@ -377,8 +371,9 @@ nav2 ul {
 }
 
 .philanthropy_text {
+  cursor: pointer;
   position: absolute; 
-  top: 48%; 
+  top: 45vh; 
   left: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
@@ -391,8 +386,9 @@ nav2 ul {
 }
 
 .development_text {
+  cursor: pointer;
   position: absolute; 
-  top: 68%; 
+  top: 65vh; 
   left: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
@@ -402,4 +398,444 @@ nav2 ul {
   line-height: normal;
   z-index: 1;
   text-align: left;
+}
+
+.chev2 {
+  position: absolute;
+  top: 85vh;
+  left: 50%;
+  transform: translateX(-50%) scale(4,3);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+.nav_page3 {
+  display: flex;
+  top: 200vh;
+  height: 150vh;
+  width: 100vw;
+  position: absolute;
+  background-color: #5E9AB7;
+}
+
+.community_header {
+  position: absolute; 
+  top: 4vh; /* Change this from 0 to 10% */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 6vi;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+.socials {
+  position: absolute; 
+  top: 10vh; /* Change this from 0 to 10% */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 6vi;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+
+
+.chev3 {
+  position: absolute;
+  top: 93vh;
+  left: 50%;
+  transform: translateX(-50%) scale(4,3);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav_page4 {
+  display: flex;
+  top: 300vh;
+  height: 150vh;
+  width: 100vw;
+  position: absolute;
+  background-color: #231F20;
+}
+
+.development_header {
+  position: absolute; 
+  top: 4vh; /* Change this from 0 to 10% */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 6vi;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+.prof-dev {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 700; /* * Can change this */
+  color: #ffffff;
+  font-size: 3vi;
+  text-align: center;
+  line-height: normal;
+}
+
+.nav_page5 {
+  display: flex;
+  top: 400vh;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: #C8C5B5;
+}
+
+.ambition_header {
+  position: absolute; 
+  top: 4vh; /* Change this from 0 to 10% */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #000;
+  font-size: 6vi;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+.ambition_statement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 700; /* * Can change this */
+  color: #000;
+  font-size: 3vi;
+  text-align: center;
+  line-height: normal;
+}
+
+.nav_page6 {
+  display: flex;
+  top: 500vh;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: #D9D9D9;
+}
+
+.philanthropy_header {
+  position: absolute; 
+  top: 4vh; /* Change this from 0 to 10% */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #000;
+  font-size: 6vi;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+.philanthropy_statement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 700; /* * Can change this */
+  color: #000;
+  font-size: 3vi;
+  text-align: center;
+  line-height: normal;
+}
+
+.wave {
+  position: absolute;
+  bottom: 58vh;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 73px;
+  transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+  fill: #5E9AB7;
+}
+
+.community-images {
+  display: flex;
+  margin-top: 20vh; /* Adjust this value as needed */
+}
+
+.images-container1 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.images-container2 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.view-port {
+  /* background-color: red; */
+  width: 1300px;
+  height: 200px;
+  overflow: hidden;
+
+  position: absolute;
+  top: 25%;
+  left: 27.5vw;
+  transform: translate(-25%, -50%);
+}
+
+.view-port::before,
+.view-port::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  pointer-events: none;
+  z-index: 9999; /* Add this line */
+}
+
+.view-port::before {
+  left: 0;
+  background: linear-gradient(to right, #5E9AB7 0%, transparent 100%);
+}
+
+.view-port::after {
+  right: 0;
+  background: linear-gradient(to left, #5E9AB7 0%, transparent 100%);
+}
+
+.card {
+  width: 400px;
+  height: 200px;
+  background-color: green;
+  border: 2px solid black;
+  box-sizing: border-box;
+
+  font-size: 2.5em;
+  text-align: center;
+
+  margin-right: 50px;
+}
+
+.next {
+  position: absolute;
+  height: 200px;
+  top: 16.25%;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.prev {
+  position: absolute;
+  height: 200px;
+  top: 16.25%;
+  z-index: 2;
+  left: 0;
+  cursor: pointer;
+}
+
+.exec-header {
+  font-family: "Inter", sans-serif;
+  font-size: 3em;
+  position: absolute;
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.exec-members {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 90vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.exec-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 20px;
+  position: relative; /* Added this */
+}
+
+.exec-card::after {
+  content: "";
+  position: absolute;
+  bottom: -50px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: skyblue; /* Change this to the color you want */
+}
+
+.exec-card-text {
+  position: absolute;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  bottom: -40px; /* Adjust as needed */
+  left: 80px;
+}
+
+
+/* Need to make the height be reactive based on the width */
+.chair-members {
+  background-color: #231F20;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 10vh;
+  padding: 20px;
+  width: 100%; /* Added this */
+}
+
+.chair-header {
+  font-family: "Inter", sans-serif;
+  font-size: 3em;
+  position: absolute;
+  top: 20px; /* Added this */
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chair-card-text {
+  position: absolute;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  bottom: -25px;
+  left: 70px;
+  color: white;
+}
+
+.members {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4vh;
+  padding: 20px;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.member-header {
+  font-family: "Inter", sans-serif;
+  font-size: 3em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 20px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.member-card::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: skyblue;
+}
+
+.member-card-text {
+  position: absolute;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  bottom: -25px;
+  left: 70px;
 }

@@ -1,12 +1,21 @@
 
 /* #5E9AB7, #E3CAAB, #231F20 */
 
-body { overflow: auto; }
+:root {
+  --primary-color: #5E9AB7;
+  --secondary-color: #E3CAAB;
+  --tertiary-color: #231F20;
+  --font-family: "Inter", sans-serif;
+  --base-font-size: 16px;
+}
 
-/* Universal Reset */
-*{
-  margin: 0px;
-  padding: 0px;
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  color: var(--tertiary-color);
+  overflow: auto;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -27,8 +36,7 @@ nav {
   align-items: center;
   min-height: 8vh;
   width: 100%;
-  background-color: #231F20;
-  font-family: "Inter", sans-serif;
+background-color: var(--tertiary-color);
 }
 
 .nav-links {
@@ -41,7 +49,7 @@ nav {
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 1.8vw;
+  font-size: 10rem;
   margin-left: 10px;
   margin-right: auto; /* Push logo to the left */
 }
@@ -49,35 +57,21 @@ nav {
 /* Main Header Styles */
 .head {
   color: white;
-  font-size: 8.5vw; /* responsive font-size based on viewport width */
+  font-size: 7rem;
   display: flex;
   justify-content: center;
-  font-family: "Inter";
   font-weight: 700;
-
-}
-
-/* Responsive Media Query for Smaller Screens */
-@media only screen and (max-width: 600px) {
-  .head {
-    font-size: 32px;
-  }
-  .heading {
-    font-size: 16px; 
-  }
 }
 
 h2 {
   display: flex;
   align-items: center;
-  /* width: 1.5vw; Removed this line */
   justify-content: center;
 }
 
 .memo {
-  /* display: inline-flex; */
   color: white;
-  font-size: 2.1vw;
+  font-size: 1.8rem;
   font-weight: 400;
   width: 50%;
   text-align: center;
@@ -102,14 +96,6 @@ h2 {
   font-weight: bold;
   font-size: 14px;
   padding: 14px 16px;
-}
-
-/* Media query for screens smaller than 600px */
-@media only screen and (max-width: 600px) {
-  .nav-links a {
-    font-size: 12px;
-    padding: 10px 12px;
-  }
 }
 
 .nav-links a:hover:not(.active) {
@@ -138,10 +124,7 @@ h2 {
   top: 0px;
 }
 
-/* Oval Shape Styles */
-/*
-! Need to fix it on like mobile/smaller size
-*/
+/* TODO: FIX THIS */
 .oval {
   height: 100vh;
   width: 150vw;
@@ -178,26 +161,8 @@ nav2 ul {
 .nav2-links {
   color: white;
   text-decoration: none;
-  font-size: 4vw;
+  font-size: 3.4rem;
 }
-
-/* When the screen width is 600px or less, reduce the font size */
-@media (max-width: 600px) {
-  .nav2-links {
-    font-size: 3vw;
-  }
-}
-
-/* When the screen width is 400px or less, reduce the font size even more */
-@media (max-width: 400px) {
-  .nav2-links {
-    font-size: 2vw;
-  }
-}
-
-/* .chevron {
-  height: 100vh;
-} */
 
 .bi {
   color: white;
@@ -210,6 +175,7 @@ nav2 ul {
   width: 100vw;
   cursor: pointer;
 }
+
 .welcome {
   display: flex;
   align-items: flex-start;
@@ -221,16 +187,15 @@ nav2 ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start; /* Add this line */
+  align-items: flex-start;
   height: 100vh;
   overflow-y: auto;
   margin-top: 20vh;
 }
 
 .headshot {
-  order: -1; /* Add this line */
-  width: 15vw;
-  height: 15vw;
+  width: 15rem;
+  height: 15rem;
   margin-top: 20px;
   margin-left: 20px;
   border-radius: 10px;
@@ -251,13 +216,12 @@ nav2 ul {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  padding: 0px;
   overflow: hidden;
 }
 
 .about1 {
   font-family: "Inter", sans-serif;
-  font-size: 8vmin;
+  font-size: 4rem;
   margin-bottom: .1vh;
   font-weight: 900;
   color: #000;
@@ -267,7 +231,7 @@ nav2 ul {
   font-family: "Inter", sans-serif;
   margin-bottom: .1vh;
   margin-top: .1vh;
-  font-size: 8vmin;
+  font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 82%;
@@ -276,14 +240,14 @@ nav2 ul {
   font-family: "Inter", sans-serif;
   margin-bottom: .1vh;
   margin-top: .1vh;
-  font-size: 8vmin;
+  font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 82%;
 }
 .about4 {
   font-family: "Inter", sans-serif;
-  font-size: 8vmin;
+  font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 100%;
@@ -331,7 +295,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #ffffff;
-  font-size: 8vi;
+  font-size: 7.5rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -348,7 +312,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000000;
-  font-size: 8vi;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: normal;
   z-index: 1;
@@ -363,7 +327,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000000;
-  font-size: 8vi;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: normal;
   z-index: 1;
@@ -378,7 +342,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000000;
-  font-size: 8vi;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: normal;
   z-index: 1;
@@ -393,7 +357,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000000;
-  font-size: 8vi;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: normal;
   z-index: 1;
@@ -424,7 +388,7 @@ nav2 ul {
 
 .community_header {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -441,7 +405,7 @@ nav2 ul {
 
 .socials {
   position: absolute; 
-  top: 10vh; /* Change this from 0 to 10% */
+  top: 10vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -481,14 +445,14 @@ nav2 ul {
 
 .development_header {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #ffffff;
-  font-size: 6vi;
+  font-size: 6rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -504,7 +468,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 700; /* * Can change this */
   color: #ffffff;
-  font-size: 3vi;
+  font-size: 3rem;
   text-align: center;
   line-height: normal;
 }
@@ -527,7 +491,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000;
-  font-size: 6vi;
+  font-size: 6rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -543,7 +507,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 700; /* * Can change this */
   color: #000;
-  font-size: 3vi;
+  font-size: 3rem;
   text-align: center;
   line-height: normal;
 }
@@ -566,7 +530,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000;
-  font-size: 6vi;
+  font-size: 6rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -582,7 +546,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 700; /* * Can change this */
   color: #000;
-  font-size: 3vi;
+  font-size: 3rem;
   text-align: center;
   line-height: normal;
 }
@@ -742,7 +706,7 @@ nav2 ul {
 .exec-card-text {
   position: absolute;
   font-family: "Inter", sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   bottom: -40px; /* Adjust as needed */
   left: 80px;
 }
@@ -764,7 +728,7 @@ nav2 ul {
 
 .chair-header {
   font-family: "Inter", sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   position: absolute;
   top: 20px; /* Added this */
   display: flex;
@@ -798,7 +762,7 @@ nav2 ul {
 
 .member-header {
   font-family: "Inter", sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   position: absolute;
   top: 0;
   width: 100%;
@@ -835,7 +799,7 @@ nav2 ul {
 .member-card-text {
   position: absolute;
   font-family: "Inter", sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   bottom: -25px;
   left: 70px;
 }

@@ -1,6 +1,16 @@
 
 /* #5E9AB7, #E3CAAB, #231F20 */
 
+/*
+  * Goals on what to do for the reactiveness:
+    * Get rid of all the viewport units because they're ass units.
+    * Fix the padding and make everything use the box model
+    * Clean up the code if possible
+    * Should try to clean up the main front page and then go from there to the about then to the members.
+      * Make the layout look good if possible.
+    * Can just restart the styles and split everything up so it's all just split up for starters.
+*/
+
 :root {
   --primary-color: #5E9AB7;
   --secondary-color: #E3CAAB;
@@ -23,25 +33,24 @@ body {
 .body-text {
   color: #231F20;
   display: flex;
-  font-family: "Inter", sans-serif;
   align-items: center;
   justify-content: center;
   margin-top: 250px;
 }
 
-/* Navigation Styles */
+/* TODO: FIX all the navbar */
 nav {
   display: flex;
-  justify-content: flex-end;  /* Align items to the right */
+  justify-content: flex-end;
   align-items: center;
   min-height: 8vh;
   width: 100%;
-background-color: var(--tertiary-color);
+  background-color: var(--tertiary-color);
 }
 
 .nav-links {
   display: flex;
-  justify-content: space-around; /* Distribute space around the links */
+  justify-content: space-around;
 }
 
 .heading {
@@ -51,7 +60,7 @@ background-color: var(--tertiary-color);
   letter-spacing: 5px;
   font-size: 10rem;
   margin-left: 10px;
-  margin-right: auto; /* Push logo to the left */
+  margin-right: auto;
 }
 
 /* Main Header Styles */
@@ -76,13 +85,12 @@ h2 {
   width: 50%;
   text-align: center;
   margin: auto;
-  font-family: "Inter";
   font-weight: 250;
 }
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap; /* Added this line */
+  flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -99,12 +107,12 @@ h2 {
 }
 
 .nav-links a:hover:not(.active) {
-  background-color: lightseagreen; /* * change the oclor? */
+  background-color: lightseagreen;
   border-radius: 10px;
 }
 
 .nav-links li a.active {
-  background-color: #E3CAAB;
+  background-color: var(--secondary-color);
 }
 
 .apply {
@@ -114,7 +122,7 @@ h2 {
   border-radius: 10px;
 }
 
-/* Logo Styles */
+/* TODO: FIX THIS styling shit */
 .logo{
   display: flex;
   width: 8vh; 
@@ -124,7 +132,7 @@ h2 {
   top: 0px;
 }
 
-/* TODO: FIX THIS */
+/* TODO: FIX THIS get rid of vh */
 .oval {
   height: 100vh;
   width: 150vw;
@@ -154,7 +162,6 @@ nav2 ul {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-family: "Inter", sans-serif;
   font-weight: 850;
 }
 
@@ -207,9 +214,10 @@ nav2 ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Or another value that fits your design */
+  min-height: 100vh;
 }
 
+/*! ERROR HERE WITH THE ABOUTS */
 .abouts {
   display: flex;
   flex-direction: column;
@@ -219,39 +227,39 @@ nav2 ul {
   overflow: hidden;
 }
 
+.second_about, .third_about, .main_abt {
+  margin: inherit;
+}
+
 .about1 {
-  font-family: "Inter", sans-serif;
   font-size: 4rem;
-  margin-bottom: .1vh;
+  margin-bottom: 10px;
   font-weight: 900;
   color: #000;
   line-height: 82%;
 }
 .about2 {
-  font-family: "Inter", sans-serif;
-  margin-bottom: .1vh;
-  margin-top: .1vh;
+  margin: 10px;
   font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 82%;
 }
 .about3 {
-  font-family: "Inter", sans-serif;
-  margin-bottom: .1vh;
-  margin-top: .1vh;
+  margin: 10px;
   font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 82%;
 }
 .about4 {
-  font-family: "Inter", sans-serif;
   font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 100%;
 }
+
+/* TODO: FIX HOW THIS IS DONE */
 
 .nav_page2 {
   display: flex;
@@ -279,7 +287,7 @@ nav2 ul {
 
 .frame .wave-background {
   position: relative;
-  width: 100vw; /* Change this from 1549px to 100vw */
+  width: 100vw;
   height: 100vh;
   top: -40vh;
   z-index: 0;
@@ -288,7 +296,7 @@ nav2 ul {
 
 .pillar_text {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -383,7 +391,7 @@ nav2 ul {
   height: 150vh;
   width: 100vw;
   position: absolute;
-  background-color: #5E9AB7;
+  background-color: var(--primary-color);
 }
 
 .community_header {
@@ -440,7 +448,7 @@ nav2 ul {
   height: 150vh;
   width: 100vw;
   position: absolute;
-  background-color: #231F20;
+  background-color: var(--tertiary-color);
 }
 
 .development_header {
@@ -466,7 +474,7 @@ nav2 ul {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Inter-Black", Helvetica;
-  font-weight: 700; /* * Can change this */
+  font-weight: 700;
   color: #ffffff;
   font-size: 3rem;
   text-align: center;
@@ -484,7 +492,7 @@ nav2 ul {
 
 .ambition_header {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -505,7 +513,7 @@ nav2 ul {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Inter-Black", Helvetica;
-  font-weight: 700; /* * Can change this */
+  font-weight: 700;
   color: #000;
   font-size: 3rem;
   text-align: center;
@@ -523,7 +531,7 @@ nav2 ul {
 
 .philanthropy_header {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -544,7 +552,7 @@ nav2 ul {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Inter-Black", Helvetica;
-  font-weight: 700; /* * Can change this */
+  font-weight: 700;
   color: #000;
   font-size: 3rem;
   text-align: center;
@@ -571,7 +579,7 @@ nav2 ul {
 }
 
 .wave .shape-fill {
-  fill: #5E9AB7;
+  fill: var(--primary-color);
 }
 
 .community-images {
@@ -591,12 +599,11 @@ nav2 ul {
   width: fit-content;
 }
 
+/* TODO: Can make this a media query to be one slide instead of multiple */
 .view-port {
-  /* background-color: red; */
   width: 1300px;
   height: 200px;
   overflow: hidden;
-
   position: absolute;
   top: 25%;
   left: 27.5vw;
@@ -616,14 +623,15 @@ nav2 ul {
 
 .view-port::before {
   left: 0;
-  background: linear-gradient(to right, #5E9AB7 0%, transparent 100%);
+  background: linear-gradient(to right, var(--primary-color) 0%, transparent 100%);
 }
 
 .view-port::after {
   right: 0;
-  background: linear-gradient(to left, #5E9AB7 0%, transparent 100%);
+  background: linear-gradient(to left, var(--primary-color) 0%, transparent 100%);
 }
 
+/* TODO: need to make this not strict pixel values*/
 .card {
   width: 400px;
   height: 200px;
@@ -656,7 +664,6 @@ nav2 ul {
 }
 
 .exec-header {
-  font-family: "Inter", sans-serif;
   font-size: 3em;
   position: absolute;
   display: flex;
@@ -695,24 +702,21 @@ nav2 ul {
 .exec-card::after {
   content: "";
   position: absolute;
-  bottom: -50px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
+  bottom: -50px;
+  left: 20px;
   width: 40px;
   height: 40px;
   border-radius: 10%;
-  background-color: skyblue; /* Change this to the color you want */
+  background-color: skyblue;
 }
 
 .exec-card-text {
   position: absolute;
-  font-family: "Inter", sans-serif;
   font-size: 1rem;
-  bottom: -40px; /* Adjust as needed */
+  bottom: -40px;
   left: 80px;
 }
 
-
-/* Need to make the height be reactive based on the width */
 .chair-members {
   background-color: #231F20;
   position: relative;
@@ -723,14 +727,13 @@ nav2 ul {
   flex-wrap: nowrap;
   margin-top: 10vh;
   padding: 20px;
-  width: 100%; /* Added this */
+  width: 100%;
 }
 
 .chair-header {
-  font-family: "Inter", sans-serif;
   font-size: 3rem;
   position: absolute;
-  top: 20px; /* Added this */
+  top: 20px;
   display: flex;
   color: white;
   justify-content: center;
@@ -740,7 +743,6 @@ nav2 ul {
 
 .chair-card-text {
   position: absolute;
-  font-family: "Inter", sans-serif;
   font-size: 1em;
   bottom: -25px;
   left: 70px;
@@ -761,7 +763,6 @@ nav2 ul {
 }
 
 .member-header {
-  font-family: "Inter", sans-serif;
   font-size: 3rem;
   position: absolute;
   top: 0;
@@ -798,7 +799,6 @@ nav2 ul {
 
 .member-card-text {
   position: absolute;
-  font-family: "Inter", sans-serif;
   font-size: 1rem;
   bottom: -25px;
   left: 70px;

@@ -1,0 +1,157 @@
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 10px;
+  }
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #231F20;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #231F20;
+}
+nav .logo {
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+
+.first-page,
+.second-page {
+  height: 120%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 500;
+  padding: 14px 16px;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #5E9AB7;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .logo {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    align-items: center;
+  }
+}
+.iota-text {
+  display: flex;
+  width: 100%;
+  font-weight: 700;
+  color: white;
+  justify-content: center;
+  font-size: 7.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.memo-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.memo-wrapper > .memo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.5rem;
+  width: 40%;
+  max-width: 40ch;
+  font-weight: 400;
+  color: white;
+  font-size: 1.75rem;
+}
+
+nav2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+nav2 ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-weight: 850;
+}
+
+.nav2-links {
+  color: white;
+  text-decoration: none;
+  font-size: 2.8rem;
+}
+
+.bi {
+  color: white;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) scale(4, 3);
+  cursor: pointer;
+}
+
+.headshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 15rem;
+  height: 15rem;
+}
+
+/*# sourceMappingURL=newstyle.css.map */

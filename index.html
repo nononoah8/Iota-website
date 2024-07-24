@@ -8,15 +8,20 @@
     <script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
-    <link rel="stylesheet" href="css/newstyle.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/mainstyles.css" />
     <title>Home</title>
   </head>
 
-  <body style="background-color:#5E9AB7">
+  <body style="background-color:#e2decd">
     <div class="first-page">
       <nav>
         <a href="index.html" class="heading">
-          <img src="public/Iota_Emblem.jpeg" alt="IOE" class="logo" />
+          <img src="public/IOE_logo.png" alt="IOE" class="logo" />
         </a>
         <ul class="nav-links">
           <li><a href="pages/about.html">About Us</a></li>
@@ -25,40 +30,23 @@
           <li><a class="apply" href="">Apply Now</a></li> <!-- Is this a link? -->
         </ul>
       </nav>
-      <!-- <div class="oval"></div> -->
-      <h1 class="iota-text">
-        Iota Omega Epsilon
-      </h1>
-      <div class="memo-wrapper">
-        <h2 class="memo">
-          CO-ED STEM Business Professional Fraternity at the University of Michigan
-        </h2>
-      </div>
-      <nav2>
-        <ul>
-          <li><a href="pages/about.html" class="nav2-links">About Us</a></li>
-          <li><a href="pages/prosmembers.html" class="nav2-links">Prospective Members</a></li>
-          <li><a href="pages/members.html" class="nav2-links">Members</a></li>
-        </ul>
-      </nav2>
-      <!-- <div class="chevron-top"></div>
-      <div class="chevron-bottom"></div> -->
-      <div class="chevron">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-          <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-        </svg>
-      </div>
-    </div>
 
-    <div class="second-page">
-      <img src="public/ethan.jpg" alt="Headshot" class="headshot" />
-      <h class="pres_welcome">President's Welcome</h>
-      <p class="words">
-        Text abt the group and shit
-      </p>
-    </div>
 
-    <script src="script.js"></script>
+      <div class="front-wrapper">
+        <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us!</button>
+
+        <p>Michigan's premier co-ed business stem fraternity</p>
+      </div>
+
+      <div class="presidents-wrapper">
+        <img src="./public/ethan.jpg" alt="Ethan">
+        <div class="presidents-welcome">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, atque vitae nesciunt soluta unde natus nemo rerum dolores? Ipsa laboriosam debitis vel dolor tenetur? Unde amet eius sequi quod commodi!
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum officiis voluptatum laboriosam reprehenderit perferendis possimus dicta, sed eos modi corrupti officia voluptate itaque dolor ducimus molestias obcaecati id quibusdam perspiciatis?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptatem maiores. Modi sunt officia fugiat dolorem facilis laudantium ex. Voluptates voluptatibus dolores voluptate velit et maiores dolorum, dolore porro repellat.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, quo. Et nisi sequi pariatur necessitatibus nemo, blanditiis laudantium nihil fuga, corrupti eius sit quas deleniti, debitis beatae! Ab, ut dolore!
+        </div>
+      </div>
+
   </body>
 </html>

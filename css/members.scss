@@ -1,0 +1,140 @@
+@import "base-styles.scss";
+
+$color_1: black;
+$color_2: white;
+$background-color_1: #fafafa;
+$background-color_2: skyblue;
+$background-color_3: #231F20;
+
+.exec-header {
+	font-size: 3em;
+	position: absolute;
+	display: flex;
+	color: $color_1;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 5vh;
+}
+.exec-members {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 90vw;
+	margin: 0 auto;
+	margin-top: 10vh;
+}
+.exec-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 13rem;
+	height: 13rem;
+	background-color: $background-color_1;
+	border-radius: 10px;
+	margin: 40px;
+	padding: 20px;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -50px;
+		left: 20px;
+		width: 40px;
+		height: 40px;
+		border-radius: 10%;
+		background-color: $background-color_2;
+	}
+}
+.exec-card-text {
+	position: absolute;
+	font-size: 1rem;
+	bottom: -40px;
+	left: 80px;
+}
+.chair-members {
+	background-color: $background-color_3;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10vh;
+	padding-top: 40px;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.chair-members-wrapper {
+	margin-top: 30px;
+	width: 100%;
+}
+.chair-header {
+	font-size: 3rem;
+	position: absolute;
+	top: -5px;
+	display: flex;
+	color: $color_2;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.chair-card-text {
+	position: absolute;
+	font-size: 1em;
+	bottom: -25px;
+	left: 70px;
+	color: $color_2;
+}
+.members {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 4vh;
+	padding: 20px;
+	padding-top: 50px;
+	width: 100%;
+}
+.member-header {
+	font-size: 3rem;
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	text-align: center;
+	color: $color_1;
+}
+.member-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 13rem;
+	height: 13rem;
+	background-color: $background-color_1;
+	border-radius: 10px;
+	margin: 40px;
+	padding: 20px;
+	position: relative;
+	border-radius: 50%;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		border-radius: 10%;
+		background-color: $background-color_2;
+	}
+}
+.member-card-text {
+	position: absolute;
+	font-size: 1rem;
+	bottom: -25px;
+	left: 70px;
+}

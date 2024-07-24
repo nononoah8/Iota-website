@@ -1,0 +1,123 @@
+@import "base-styles.scss";
+
+.front-wrapper {
+  position: relative;
+  padding: 5px;
+  background-image: url('../public/IOE_Front_page.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 0;
+  padding-top: 45rem;
+  margin-bottom: 3rem;
+
+  > .join-btn {
+    position: absolute;
+    bottom: 5rem;
+    left: 20rem;
+    background-color: black;
+    color: white;
+    width: 9rem;
+    height: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:active, &:focus {
+      background-color: black;
+      color: white;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  > p {
+    font-family: "Diplomata SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .front-wrapper {
+    padding-top: 45rem;
+
+    > .join-btn {
+      bottom: 5rem;
+      left: 12rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .front-wrapper {
+    padding-top: 45rem;
+
+    > .join-btn {
+      bottom: 3rem;
+      left: 6rem;
+    }
+  }
+}
+
+.presidents-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.25rem;
+  padding: 3rem 5rem;
+  justify-content: center;
+  align-items: stretch;
+
+  img, .presidents-welcome {
+    flex: 1;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .presidents-welcome {
+    background-color: #2C2C2C;
+    color: white;
+    height: auto;
+    overflow: hidden;
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .presidents-wrapper {
+    gap: 3rem; // Adjust gap for vertical layout  
+  }
+}
+
+@media (max-width: 1000px) {
+  .presidents-wrapper {
+    gap: 2rem; // Adjust gap for vertical layout  
+  }
+}
+
+@media (max-width: 900px) {
+  .presidents-wrapper {
+    gap: 1rem; // Adjust gap for vertical layout  
+  }
+}

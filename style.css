@@ -690,8 +690,8 @@ nav2 ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   background-color: #D9D9D9;
   border-radius: 10px;
   margin: 40px;
@@ -722,18 +722,23 @@ nav2 ul {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  justify-content: center;
   margin-top: 10vh;
-  padding: 20px;
+  padding-top: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.chair-members-wrapper {
+  margin-top: 30px;
   width: 100%;
 }
 
 .chair-header {
   font-size: 3rem;
   position: absolute;
-  top: 20px;
+  top: -5px;
   display: flex;
   color: white;
   justify-content: center;
@@ -765,7 +770,7 @@ nav2 ul {
 .member-header {
   font-size: 3rem;
   position: absolute;
-  top: 0;
+  top: -10px;
   width: 100%;
   text-align: center;
   color: black;
@@ -776,8 +781,8 @@ nav2 ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   background-color: #D9D9D9;
   border-radius: 10px;
   margin: 40px;

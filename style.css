@@ -1,12 +1,31 @@
 
 /* #5E9AB7, #E3CAAB, #231F20 */
 
-body { overflow: auto; }
+/*
+  * Goals on what to do for the reactiveness:
+    * Get rid of all the viewport units because they're ass units.
+    * Fix the padding and make everything use the box model
+    * Clean up the code if possible
+    * Should try to clean up the main front page and then go from there to the about then to the members.
+      * Make the layout look good if possible.
+    * Can just restart the styles and split everything up so it's all just split up for starters.
+*/
 
-/* Universal Reset */
-*{
-  margin: 0px;
-  padding: 0px;
+:root {
+  --primary-color: #5E9AB7;
+  --secondary-color: #E3CAAB;
+  --tertiary-color: #231F20;
+  --font-family: "Inter", sans-serif;
+  --base-font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  color: var(--tertiary-color);
+  overflow: auto;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -14,26 +33,24 @@ body { overflow: auto; }
 .body-text {
   color: #231F20;
   display: flex;
-  font-family: "Inter", sans-serif;
   align-items: center;
   justify-content: center;
   margin-top: 250px;
 }
 
-/* Navigation Styles */
+/* TODO: FIX all the navbar */
 nav {
   display: flex;
-  justify-content: flex-end;  /* Align items to the right */
+  justify-content: flex-end;
   align-items: center;
   min-height: 8vh;
   width: 100%;
-  background-color: #231F20;
-  font-family: "Inter", sans-serif;
+  background-color: var(--tertiary-color);
 }
 
 .nav-links {
   display: flex;
-  justify-content: space-around; /* Distribute space around the links */
+  justify-content: space-around;
 }
 
 .heading {
@@ -41,54 +58,39 @@ nav {
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 1.8vw;
+  font-size: 10rem;
   margin-left: 10px;
-  margin-right: auto; /* Push logo to the left */
+  margin-right: auto;
 }
 
 /* Main Header Styles */
 .head {
   color: white;
-  font-size: 8.5vw; /* responsive font-size based on viewport width */
+  font-size: 7rem;
   display: flex;
   justify-content: center;
-  font-family: "Inter";
   font-weight: 700;
-
-}
-
-/* Responsive Media Query for Smaller Screens */
-@media only screen and (max-width: 600px) {
-  .head {
-    font-size: 32px;
-  }
-  .heading {
-    font-size: 16px; 
-  }
 }
 
 h2 {
   display: flex;
   align-items: center;
-  /* width: 1.5vw; Removed this line */
   justify-content: center;
 }
 
 .memo {
-  /* display: inline-flex; */
   color: white;
-  font-size: 2.1vw;
+  font-size: 1.8rem;
   font-weight: 400;
   width: 50%;
   text-align: center;
   margin: auto;
-  font-family: "Inter";
   font-weight: 250;
 }
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap; /* Added this line */
+  flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -104,21 +106,13 @@ h2 {
   padding: 14px 16px;
 }
 
-/* Media query for screens smaller than 600px */
-@media only screen and (max-width: 600px) {
-  .nav-links a {
-    font-size: 12px;
-    padding: 10px 12px;
-  }
-}
-
 .nav-links a:hover:not(.active) {
-  background-color: lightseagreen; /* * change the oclor? */
+  background-color: lightseagreen;
   border-radius: 10px;
 }
 
 .nav-links li a.active {
-  background-color: #E3CAAB;
+  background-color: var(--secondary-color);
 }
 
 .apply {
@@ -128,7 +122,7 @@ h2 {
   border-radius: 10px;
 }
 
-/* Logo Styles */
+/* TODO: FIX THIS styling shit */
 .logo{
   display: flex;
   width: 8vh; 
@@ -138,10 +132,7 @@ h2 {
   top: 0px;
 }
 
-/* Oval Shape Styles */
-/*
-! Need to fix it on like mobile/smaller size
-*/
+/* TODO: FIX THIS get rid of vh */
 .oval {
   height: 100vh;
   width: 150vw;
@@ -171,33 +162,14 @@ nav2 ul {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-family: "Inter", sans-serif;
   font-weight: 850;
 }
 
 .nav2-links {
   color: white;
   text-decoration: none;
-  font-size: 4vw;
+  font-size: 3.4rem;
 }
-
-/* When the screen width is 600px or less, reduce the font size */
-@media (max-width: 600px) {
-  .nav2-links {
-    font-size: 3vw;
-  }
-}
-
-/* When the screen width is 400px or less, reduce the font size even more */
-@media (max-width: 400px) {
-  .nav2-links {
-    font-size: 2vw;
-  }
-}
-
-/* .chevron {
-  height: 100vh;
-} */
 
 .bi {
   color: white;
@@ -210,6 +182,7 @@ nav2 ul {
   width: 100vw;
   cursor: pointer;
 }
+
 .welcome {
   display: flex;
   align-items: flex-start;
@@ -221,16 +194,15 @@ nav2 ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start; /* Add this line */
+  align-items: flex-start;
   height: 100vh;
   overflow-y: auto;
   margin-top: 20vh;
 }
 
 .headshot {
-  order: -1; /* Add this line */
-  width: 15vw;
-  height: 15vw;
+  width: 15rem;
+  height: 15rem;
   margin-top: 20px;
   margin-left: 20px;
   border-radius: 10px;
@@ -242,52 +214,52 @@ nav2 ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Or another value that fits your design */
+  min-height: 100vh;
 }
 
+/*! ERROR HERE WITH THE ABOUTS */
 .abouts {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  padding: 0px;
   overflow: hidden;
 }
 
+.second_about, .third_about, .main_abt {
+  margin: inherit;
+}
+
 .about1 {
-  font-family: "Inter", sans-serif;
-  font-size: 8vmin;
-  margin-bottom: .1vh;
+  font-size: 4rem;
+  margin-bottom: 10px;
   font-weight: 900;
   color: #000;
   line-height: 82%;
 }
 .about2 {
-  font-family: "Inter", sans-serif;
-  margin-bottom: .1vh;
-  margin-top: .1vh;
-  font-size: 8vmin;
+  margin: 10px;
+  font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 82%;
 }
 .about3 {
-  font-family: "Inter", sans-serif;
-  margin-bottom: .1vh;
-  margin-top: .1vh;
-  font-size: 8vmin;
+  margin: 10px;
+  font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 82%;
 }
 .about4 {
-  font-family: "Inter", sans-serif;
-  font-size: 8vmin;
+  font-size: 4rem;
   font-weight: 900;
   color: #000;
   line-height: 100%;
 }
+
+/* TODO: FIX HOW THIS IS DONE */
 
 .nav_page2 {
   display: flex;
@@ -315,7 +287,7 @@ nav2 ul {
 
 .frame .wave-background {
   position: relative;
-  width: 100vw; /* Change this from 1549px to 100vw */
+  width: 100vw;
   height: 100vh;
   top: -40vh;
   z-index: 0;
@@ -324,14 +296,14 @@ nav2 ul {
 
 .pillar_text {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #ffffff;
-  font-size: 8vi;
+  font-size: 7.5rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -348,7 +320,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000000;
-  font-size: 8vi;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: normal;
   z-index: 1;
@@ -363,7 +335,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000000;
-  font-size: 8vi;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: normal;
   z-index: 1;
@@ -378,7 +350,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000000;
-  font-size: 8vi;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: normal;
   z-index: 1;
@@ -393,7 +365,7 @@ nav2 ul {
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000000;
-  font-size: 8vi;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: normal;
   z-index: 1;
@@ -419,12 +391,12 @@ nav2 ul {
   height: 150vh;
   width: 100vw;
   position: absolute;
-  background-color: #5E9AB7;
+  background-color: var(--primary-color);
 }
 
 .community_header {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -441,7 +413,7 @@ nav2 ul {
 
 .socials {
   position: absolute; 
-  top: 10vh; /* Change this from 0 to 10% */
+  top: 10vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -476,19 +448,19 @@ nav2 ul {
   height: 150vh;
   width: 100vw;
   position: absolute;
-  background-color: #231F20;
+  background-color: var(--tertiary-color);
 }
 
 .development_header {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #ffffff;
-  font-size: 6vi;
+  font-size: 6rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -502,9 +474,9 @@ nav2 ul {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Inter-Black", Helvetica;
-  font-weight: 700; /* * Can change this */
+  font-weight: 700;
   color: #ffffff;
-  font-size: 3vi;
+  font-size: 3rem;
   text-align: center;
   line-height: normal;
 }
@@ -520,14 +492,14 @@ nav2 ul {
 
 .ambition_header {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000;
-  font-size: 6vi;
+  font-size: 6rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -541,9 +513,9 @@ nav2 ul {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Inter-Black", Helvetica;
-  font-weight: 700; /* * Can change this */
+  font-weight: 700;
   color: #000;
-  font-size: 3vi;
+  font-size: 3rem;
   text-align: center;
   line-height: normal;
 }
@@ -559,14 +531,14 @@ nav2 ul {
 
 .philanthropy_header {
   position: absolute; 
-  top: 4vh; /* Change this from 0 to 10% */
+  top: 4vh;
   left: 0;
   right: 0;
   bottom: 0;
   font-family: "Inter-Black", Helvetica;
   font-weight: 900;
   color: #000;
-  font-size: 6vi;
+  font-size: 6rem;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -580,9 +552,9 @@ nav2 ul {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Inter-Black", Helvetica;
-  font-weight: 700; /* * Can change this */
+  font-weight: 700;
   color: #000;
-  font-size: 3vi;
+  font-size: 3rem;
   text-align: center;
   line-height: normal;
 }
@@ -607,7 +579,7 @@ nav2 ul {
 }
 
 .wave .shape-fill {
-  fill: #5E9AB7;
+  fill: var(--primary-color);
 }
 
 .community-images {
@@ -627,12 +599,11 @@ nav2 ul {
   width: fit-content;
 }
 
+/* TODO: Can make this a media query to be one slide instead of multiple */
 .view-port {
-  /* background-color: red; */
   width: 1300px;
   height: 200px;
   overflow: hidden;
-
   position: absolute;
   top: 25%;
   left: 27.5vw;
@@ -652,14 +623,15 @@ nav2 ul {
 
 .view-port::before {
   left: 0;
-  background: linear-gradient(to right, #5E9AB7 0%, transparent 100%);
+  background: linear-gradient(to right, var(--primary-color) 0%, transparent 100%);
 }
 
 .view-port::after {
   right: 0;
-  background: linear-gradient(to left, #5E9AB7 0%, transparent 100%);
+  background: linear-gradient(to left, var(--primary-color) 0%, transparent 100%);
 }
 
+/* TODO: need to make this not strict pixel values*/
 .card {
   width: 400px;
   height: 200px;
@@ -692,7 +664,6 @@ nav2 ul {
 }
 
 .exec-header {
-  font-family: "Inter", sans-serif;
   font-size: 3em;
   position: absolute;
   display: flex;
@@ -719,8 +690,8 @@ nav2 ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   background-color: #D9D9D9;
   border-radius: 10px;
   margin: 40px;
@@ -731,42 +702,43 @@ nav2 ul {
 .exec-card::after {
   content: "";
   position: absolute;
-  bottom: -50px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
+  bottom: -50px;
+  left: 20px;
   width: 40px;
   height: 40px;
   border-radius: 10%;
-  background-color: skyblue; /* Change this to the color you want */
+  background-color: skyblue;
 }
 
 .exec-card-text {
   position: absolute;
-  font-family: "Inter", sans-serif;
-  font-size: 1em;
-  bottom: -40px; /* Adjust as needed */
+  font-size: 1rem;
+  bottom: -40px;
   left: 80px;
 }
 
-
-/* Need to make the height be reactive based on the width */
 .chair-members {
   background-color: #231F20;
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  justify-content: center;
   margin-top: 10vh;
-  padding: 20px;
-  width: 100%; /* Added this */
+  padding-top: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.chair-members-wrapper {
+  margin-top: 30px;
+  width: 100%;
 }
 
 .chair-header {
-  font-family: "Inter", sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   position: absolute;
-  top: 20px; /* Added this */
+  top: -5px;
   display: flex;
   color: white;
   justify-content: center;
@@ -776,7 +748,6 @@ nav2 ul {
 
 .chair-card-text {
   position: absolute;
-  font-family: "Inter", sans-serif;
   font-size: 1em;
   bottom: -25px;
   left: 70px;
@@ -797,10 +768,9 @@ nav2 ul {
 }
 
 .member-header {
-  font-family: "Inter", sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   position: absolute;
-  top: 0;
+  top: -10px;
   width: 100%;
   text-align: center;
   color: black;
@@ -811,8 +781,8 @@ nav2 ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   background-color: #D9D9D9;
   border-radius: 10px;
   margin: 40px;
@@ -834,8 +804,7 @@ nav2 ul {
 
 .member-card-text {
   position: absolute;
-  font-family: "Inter", sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   bottom: -25px;
   left: 70px;
 }

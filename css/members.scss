@@ -1,0 +1,141 @@
+@import "base-styles.scss";
+
+$color_1: black;
+$color_2: white;
+$background-color_1: #fafafa;
+$background-color_2: skyblue;
+$background-color_3: #231F20;
+
+.exec-header {
+	font-size: 3em;
+	position: absolute;
+	display: flex;
+	color: $color_1;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 5vh;
+}
+.exec-members {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 90vw;
+	margin: 0 auto;
+	margin-top: 10vh;
+}
+.exec-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 13rem;
+	height: 13rem;
+	background-color: $background-color_1;
+	border-radius: 10px;
+	margin: 40px;
+	padding: 20px;
+	position: relative;
+}
+.exec-card-text {
+	position: absolute;
+	font-size: 1rem;
+	bottom: -40px;
+	left: 80px;
+}
+.chair-members {
+	background-color: $background-color_3;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10vh;
+	padding-top: 40px;
+	flex-wrap: wrap;
+}
+.chair-members-wrapper {
+	margin-top: 30px;
+}
+.chair-header {
+	font-size: 3rem;
+	position: absolute;
+	top: -5px;
+	display: flex;
+	color: $color_2;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.chair-card-text {
+	position: absolute;
+	font-size: 1em;
+	bottom: -25px;
+	left: 70px;
+	color: $color_2;
+}
+.members {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 4vh;
+	padding: 20px;
+	padding-top: 50px;
+}
+.member-header {
+	font-size: 3rem;
+	position: absolute;
+	top: -10px;
+	text-align: center;
+	color: $color_1;
+}
+.member-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 13rem;
+	height: 13rem;
+	background-color: $background-color_1;
+	border-radius: 10px;
+	margin: 40px;
+	padding: 20px;
+	position: relative;
+	border-radius: 50%;
+}
+.member-card-text {
+	position: absolute;
+	font-size: 1rem;
+	bottom: -25px;
+	left: 70px;
+}
+
+// Links for the linkedin and the icon
+.common-link-style {
+  content: "";
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 10%;
+  background-image: url('./../public/linkedin_logo.png');
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.exec-card-link {
+  @extend .common-link-style;
+  bottom: -3rem;
+  left: 1.5rem;
+}
+
+.member-card-link {
+  @extend .common-link-style;
+  bottom: -1.8rem;
+  left: 1rem;
+}

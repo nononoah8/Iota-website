@@ -38,16 +38,6 @@ $background-color_3: #231F20;
 	margin: 40px;
 	padding: 20px;
 	position: relative;
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: -50px;
-		left: 20px;
-		width: 40px;
-		height: 40px;
-		border-radius: 10%;
-		background-color: $background-color_2;
-	}
 }
 .exec-card-text {
 	position: absolute;
@@ -64,12 +54,10 @@ $background-color_3: #231F20;
 	justify-content: center;
 	margin-top: 10vh;
 	padding-top: 40px;
-	width: 100%;
 	flex-wrap: wrap;
 }
 .chair-members-wrapper {
 	margin-top: 30px;
-	width: 100%;
 }
 .chair-header {
 	font-size: 3rem;
@@ -98,13 +86,11 @@ $background-color_3: #231F20;
 	margin-top: 4vh;
 	padding: 20px;
 	padding-top: 50px;
-	width: 100%;
 }
 .member-header {
 	font-size: 3rem;
 	position: absolute;
 	top: -10px;
-	width: 100%;
 	text-align: center;
 	color: $color_1;
 }
@@ -121,20 +107,35 @@ $background-color_3: #231F20;
 	padding: 20px;
 	position: relative;
 	border-radius: 50%;
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: -20px;
-		left: 0;
-		width: 40px;
-		height: 40px;
-		border-radius: 10%;
-		background-color: $background-color_2;
-	}
 }
 .member-card-text {
 	position: absolute;
 	font-size: 1rem;
 	bottom: -25px;
 	left: 70px;
+}
+
+// Links for the linkedin and the icon
+.common-link-style {
+  content: "";
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 10%;
+  background-image: url('./../public/linkedin_logo.png');
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.exec-card-link {
+  @extend .common-link-style;
+  bottom: -3rem;
+  left: 1.5rem;
+}
+
+.member-card-link {
+  @extend .common-link-style;
+  bottom: -1.8rem;
+  left: 1rem;
 }

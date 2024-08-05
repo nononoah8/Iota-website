@@ -1,7 +1,10 @@
+@import "base-styles.scss";
+
 .header-img-container {
   position: relative;
   width: 100%;
   height: 25rem;
+  transition: opacity 0.5s ease; // Smoothly transition the opacity over 0.5 seconds
 
   > .about {
     position: absolute;
@@ -35,6 +38,8 @@
 .phil-img-container {
   margin: 4rem 1rem;
   overflow: hidden;
+  opacity: 0; // Start these sections completely transparent
+  transition: opacity 0.5s ease; // Smoothly transition the opacity over 0.5 seconds
 
   > img {
     width: 30%;
@@ -45,7 +50,6 @@
   }
 
   > p {
-    font-family: "Inknut Antiqua", serif;
     text-align: justify;
     overflow: hidden;
     margin: 2rem 1rem;
@@ -59,11 +63,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  opacity: 0; // Start these sections completely transparent
+  transition: opacity 0.5s ease; // Smoothly transition the opacity over 0.5 seconds
 
   .pillar-header {
-    font-family: "Inknut Antiqua", serif;
     color: black;
     margin: 0 2rem;
+    font-size: 4rem;
     text-align: center;
     font-weight: 400;
   }
@@ -76,7 +82,6 @@
     width: 100%;
   
     > .pillar-card {
-      font-family: "Inknut Antiqua", serif;
       flex: 1;
       max-width: 30rem;
       height: auto;
@@ -86,12 +91,14 @@
   }
 }
 
-.pillar-footer {
+.footer {
   position: relative;
   display: inline-flex;
   width: 100%;
   justify-content: center;
   margin: 2rem 0;
+  opacity: 0; // Start these sections completely transparent
+  transition: opacity 0.5s ease; // Smoothly transition the opacity over 0.5 seconds
 
   .join-us-btn {
     background-color: black;

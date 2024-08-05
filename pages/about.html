@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/mainstyles.css" />
     <title>About Us</title>
   </head>
@@ -60,10 +63,25 @@
       </div>
     </div>
 
-    <div class="footer">
+    <div class="pillar-footer">
       <button id="join-us-btn" class="join-us-btn">
         Join Us
       </button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <!-- Link to apply -->
+      <div>
+        <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us!</button>
+      </div>
+      <!-- email -->
+      <a class="email" href="mailto:iotaomegaepsilon@umich.edu">iotaomegaepsilon@umich.edu</a>
+      <!-- Links to social media -->
+      <div class="social-links">
+        <a href="https://www.instagram.com/iota_omega_epsilon/" class="instagram" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/iota-omega-epsilon/" class="linkedin" target="_blank">LinkedIn</a>
+      </div>
     </div>
   
     <script src="../script.js"></script>

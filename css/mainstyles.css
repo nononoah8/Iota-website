@@ -23,7 +23,6 @@ html {
   }
 }
 body {
-  font-family: "Inknut Antiqua", serif;
   font-size: 16px;
   color: #231F20;
   overflow: auto;
@@ -79,103 +78,53 @@ nav .logo {
     margin-top: 0;
   }
 }
-.bi {
-  color: white;
+.footer {
   position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%) scale(4, 3);
-  cursor: pointer;
-}
-
-html {
-  font-size: 16px;
-}
-
-@media (max-width: 1200px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media (max-width: 992px) {
-  html {
-    font-size: 13px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 11px;
-  }
-}
-@media (max-width: 576px) {
-  html {
-    font-size: 10px;
-  }
-}
-body {
-  font-family: "Inknut Antiqua", serif;
-  font-size: 16px;
-  color: #231F20;
-  overflow: auto;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  font-family: "Inter", sans-serif;
   background-color: #231F20;
-}
-nav .logo {
-  margin-left: 5px;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-}
-
-.nav-links {
+  height: 2rem;
+  width: 100%;
+  margin: 2.5rem 0 0 0 !important;
   display: flex;
   justify-content: space-around;
+  padding-top: 1rem;
 }
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-weight: 500;
-  padding: 1rem 1rem;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #5E9AB7;
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-  nav .logo {
-    align-items: center;
-    margin-left: 3.2rem;
-    width: 4rem;
-    height: 4rem;
-  }
-  nav .nav-links {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-  }
-}
-.bi {
-  color: white;
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%) scale(4, 3);
+.footer .join-btn {
+  background-color: white;
+  color: black;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: 6px;
   cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.footer .join-btn:active, .footer .join-btn:focus {
+  background-color: black;
+  color: white;
+  outline: none;
+  box-shadow: none;
+}
+.footer .join-btn > a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+.footer > .email {
+  color: white;
+}
+.footer > .social-links {
+  display: flex;
+  gap: 20px;
+}
+.footer > .social-links .instagram, .footer > .social-links .linkedin {
+  text-decoration: underline;
+  color: white;
 }
 
 .front-wrapper {
@@ -187,12 +136,12 @@ nav .logo {
   background-size: contain;
   height: 0;
   padding-top: 45rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 .front-wrapper > .join-btn {
   position: absolute;
   bottom: 5rem;
-  left: 20rem;
+  left: 25rem;
   background-color: black;
   color: white;
   width: 9rem;
@@ -221,6 +170,12 @@ nav .logo {
   display: flex;
   justify-content: center;
   margin-top: -1.5rem;
+}
+.front-wrapper > .scroll-icon {
+  position: absolute;
+  right: 0.5rem;
+  width: 3rem;
+  bottom: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -285,96 +240,6 @@ nav .logo {
     gap: 1rem;
   }
 }
-html {
-  font-size: 16px;
-}
-
-@media (max-width: 1200px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media (max-width: 992px) {
-  html {
-    font-size: 13px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 11px;
-  }
-}
-@media (max-width: 576px) {
-  html {
-    font-size: 10px;
-  }
-}
-body {
-  font-family: "Inknut Antiqua", serif;
-  font-size: 16px;
-  color: #231F20;
-  overflow: auto;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: #231F20;
-}
-nav .logo {
-  margin-left: 5px;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-weight: 500;
-  padding: 1rem 1rem;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #5E9AB7;
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-  nav .logo {
-    align-items: center;
-    margin-left: 3.2rem;
-    width: 4rem;
-    height: 4rem;
-  }
-  nav .nav-links {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-  }
-}
-.bi {
-  color: white;
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%) scale(4, 3);
-  cursor: pointer;
-}
-
 .exec-header {
   font-size: 3em;
   position: absolute;
@@ -411,11 +276,22 @@ nav .logo {
   position: relative;
 }
 
+.exec-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .exec-card-text {
   position: absolute;
   font-size: 1rem;
-  bottom: -40px;
+  bottom: -50px;
   left: 80px;
+  text-align: center;
 }
 
 .chair-members {
@@ -428,6 +304,7 @@ nav .logo {
   margin-top: 10vh;
   padding-top: 40px;
   flex-wrap: wrap;
+  padding-bottom: 2rem;
 }
 
 .chair-members-wrapper {
@@ -448,9 +325,10 @@ nav .logo {
 .chair-card-text {
   position: absolute;
   font-size: 1em;
-  bottom: -25px;
-  left: 70px;
+  bottom: -40px;
+  left: 60px;
   color: white;
+  text-align: center;
 }
 
 .members {
@@ -488,6 +366,16 @@ nav .logo {
   border-radius: 50%;
 }
 
+.member-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .member-card-text {
   position: absolute;
   font-size: 1rem;
@@ -515,96 +403,6 @@ nav .logo {
 .member-card-link {
   bottom: -1.8rem;
   left: 1rem;
-}
-
-html {
-  font-size: 16px;
-}
-
-@media (max-width: 1200px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media (max-width: 992px) {
-  html {
-    font-size: 13px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 11px;
-  }
-}
-@media (max-width: 576px) {
-  html {
-    font-size: 10px;
-  }
-}
-body {
-  font-family: "Inknut Antiqua", serif;
-  font-size: 16px;
-  color: #231F20;
-  overflow: auto;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: #231F20;
-}
-nav .logo {
-  margin-left: 5px;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-weight: 500;
-  padding: 1rem 1rem;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #5E9AB7;
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-  nav .logo {
-    align-items: center;
-    margin-left: 3.2rem;
-    width: 4rem;
-    height: 4rem;
-  }
-  nav .nav-links {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-  }
-}
-.bi {
-  color: white;
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%) scale(4, 3);
-  cursor: pointer;
 }
 
 .header-img-container {
@@ -650,6 +448,7 @@ nav .logo {
   border-radius: 5px;
 }
 .phil-img-container > p {
+  font-family: "Inknut Antiqua", serif;
   text-align: justify;
   overflow: hidden;
   margin: 2rem 1rem;
@@ -664,9 +463,9 @@ nav .logo {
   background-size: contain;
 }
 .pillar-wrapper .pillar-header {
+  font-family: "Inknut Antiqua", serif;
   color: black;
   margin: 0 2rem;
-  font-size: 4rem;
   text-align: center;
   font-weight: 400;
 }
@@ -678,6 +477,7 @@ nav .logo {
   width: 100%;
 }
 .pillar-wrapper > .pillar-cards > .pillar-card {
+  font-family: "Inknut Antiqua", serif;
   flex: 1;
   max-width: 30rem;
   height: auto;
@@ -685,14 +485,14 @@ nav .logo {
   color: black;
 }
 
-.footer {
+.pillar-footer {
   position: relative;
   display: inline-flex;
   width: 100%;
   justify-content: center;
   margin: 2rem 0;
 }
-.footer .join-us-btn {
+.pillar-footer .join-us-btn {
   background-color: black;
   color: white;
   width: 9rem;
@@ -706,13 +506,13 @@ nav .logo {
   -moz-appearance: none;
   appearance: none;
 }
-.footer .join-us-btn:active, .footer .join-us-btn:focus {
+.pillar-footer .join-us-btn:active, .pillar-footer .join-us-btn:focus {
   background-color: black;
   color: white;
   outline: none;
   box-shadow: none;
 }
-.footer .join-us-btn > a {
+.pillar-footer .join-us-btn > a {
   text-decoration: none;
   color: white;
   width: 100%;

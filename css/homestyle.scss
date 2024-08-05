@@ -1,5 +1,3 @@
-@import "base-styles.scss";
-
 .front-wrapper {
   position: relative;
   padding: 5px;
@@ -9,12 +7,12 @@
   background-size: contain;
   height: 0;
   padding-top: 45rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 
   > .join-btn {
     position: absolute;
     bottom: 5rem;
-    left: 20rem;
+    left: 25rem;
     background-color: black;
     color: white;
     width: 9rem;
@@ -47,6 +45,13 @@
     display: flex;
     justify-content: center;
     margin-top: -1.5rem;
+  }
+
+  > .scroll-icon {
+    position: absolute;
+    right: 0.5rem;
+    width: 3rem;
+    bottom: 1rem;
   }
 }
 

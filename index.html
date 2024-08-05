@@ -35,6 +35,8 @@
         <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us!</button>
 
         <p>Michigan's premier co-ed business stem fraternity</p>
+
+        <img src="public/scroll-icon.png" alt="" class="scroll-icon"></img>
       </div>
 
       <div class="presidents-wrapper">
@@ -50,27 +52,34 @@
 
     <!-- Footer -->
     <div class="footer">
+      <!-- Link to apply -->
+      <div>
+        <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us!</button>
+      </div>
+      <!-- email -->
+      <a class="email" href="mailto:iotaomegaepsilon@umich.edu">iotaomegaepsilon@umich.edu</a>
       <!-- Links to social media -->
       <div class="social-links">
-        <div class="instagram">
-          
-        </div>
-        <div class="linkedin">
-
-        </div>
-
-      </div>
-      <!-- Link to apply -->
-      <div class="join-wrapper">
-        <div class="join-btn">
-
-        </div>
-      </div>
-
-      <!-- email -->
-      <div class="email">
-
+        <a href="https://www.instagram.com/iota_omega_epsilon/" class="instagram" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/iota-omega-epsilon/" class="linkedin" target="_blank">LinkedIn</a>
       </div>
     </div>
+    <script>
+      window.addEventListener('wheel', function(e) {
+      if (e.deltaY < 0) {
+        // Scrolling up
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        // Scrolling down
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
+    });
+    </script>
   </body>
 </html>

@@ -23,9 +23,6 @@
   </head>
 
   <body class="abt" style="background-color: #e2decd;">
-    <!-- <div class="overlay" id="overlay">
-      <img src="./../public/about-us.gif" alt="Intro Animation">
-    </div> -->
     <nav>
       <a href="../index.html" class="heading">
         <img src="../public/IOE_logo.png" alt="IOE" class="logo" />
@@ -40,6 +37,12 @@
 
     <!-- Header Image -->
     <div class="about-header">
+      <div class="overlay" id="overlay">
+        <!-- <video id="intro-animation" autoplay muted>
+          <source src="../public/about-animation-3.mp4" type="video/mp4">
+        </video> -->
+        <img id="intro-animation" src="../public/about-animation-4.gif" alt="Intro Animation">
+      </div>
       <h1 class="about">ABOUT US</h1>
       <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
     </div>
@@ -110,19 +113,41 @@
   
     <script src="../script.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const overlay = document.getElementById('overlay');
+      window.onload = function() {
+        var gif = document.getElementById('intro-animation');
+        var src = gif.src;
+        gif.src = '';
+        gif.src = src;
 
-        // Hide overlay on scroll
-        window.addEventListener('scroll', function() {
-          overlay.style.display = 'none';
-        });
+        if (window.pageYOffset !== 0 && window.innerWidth <= 760) {
+          document.getElementById('overlay').style.display = 'none';
+        }
+      };
 
-        // Hide overlay after 2 seconds
+      if (window.pageYOffset !== 0 && window.innerWidth <= 760) {
+        document.getElementById('overlay').style.display = 'none';
+      }
+
+      window.addEventListener('scroll', function() {
+        var overlay = document.getElementById('overlay');
+        overlay.style.opacity = '0';
         setTimeout(function() {
           overlay.style.display = 'none';
-        }, 2000);
+        }, 200); 
+        // window.scrollBy({ top: 100, behavior: 'smooth' });
       });
+
+
+      var gif = document.getElementById('intro-animation');
+      var overlay = document.getElementById('overlay');
+
+      setTimeout(function() {
+        overlay.style.opacity = '0';
+        setTimeout(function() {
+          overlay.style.display = 'none';
+        }, 200);
+      }, 2200);
+      
     </script>
   </body>
 </html>

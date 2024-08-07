@@ -69,6 +69,7 @@ nav {
     letter-spacing: 2px;
     font-weight: 500;
     padding: 1rem 1rem;
+    margin: 1rem 0;
     transition: color 0.3s ease;
 
     &:hover {
@@ -92,6 +93,10 @@ nav {
       flex-direction: column;
       align-items: center;
       margin-top: 1rem;
+
+      & a {
+        margin: 1rem 0;
+      }
     }
   }
 }
@@ -177,11 +182,14 @@ nav {
 }
 
 .overlay {
-  position: fixed;
-  top: 0;
+  position: absolute; /* Position relative to the top of the page */
+  display: flex;
+  justify-content: center;
+  top: -6rem;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #231f20;
   z-index: 1000;
+  transition: opacity 0.2s;
 }

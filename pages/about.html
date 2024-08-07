@@ -38,10 +38,10 @@
     <!-- Header Image -->
     <div class="about-header">
       <div class="overlay" id="overlay">
-        <!-- <video id="intro-animation" autoplay muted>
-          <source src="../public/about-animation-3.mp4" type="video/mp4">
-        </video> -->
-        <img id="intro-animation" src="../public/about-animation-4.gif" alt="Intro Animation">
+        <video id="intro-animation" autoplay muted>
+          <source src="../public/about-animation-5.mp4" type="video/mp4">
+        </video>
+        <!-- <img id="intro-animation" src="../public/about-animation-4.gif" alt="Intro Animation"> -->
       </div>
       <h1 class="about">ABOUT US</h1>
       <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
@@ -114,40 +114,36 @@
     <script src="../script.js"></script>
     <script>
       window.onload = function() {
-        var gif = document.getElementById('intro-animation');
-        var src = gif.src;
-        gif.src = '';
-        gif.src = src;
-
+        var video = document.getElementById('intro-animation');
+        video.load();
+    
         if (window.pageYOffset !== 0 && window.innerWidth <= 760) {
           document.getElementById('overlay').style.display = 'none';
         }
       };
-
+    
       if (window.pageYOffset !== 0 && window.innerWidth <= 760) {
         document.getElementById('overlay').style.display = 'none';
       }
-
+    
       window.addEventListener('scroll', function() {
         var overlay = document.getElementById('overlay');
         overlay.style.opacity = '0';
         setTimeout(function() {
           overlay.style.display = 'none';
         }, 200); 
-        // window.scrollBy({ top: 100, behavior: 'smooth' });
       });
-
-
-      var gif = document.getElementById('intro-animation');
+    
+      var video = document.getElementById('intro-animation');
       var overlay = document.getElementById('overlay');
-
-      setTimeout(function() {
+    
+      video.onended = function() {
         overlay.style.opacity = '0';
         setTimeout(function() {
           overlay.style.display = 'none';
+          // Scroll a little bit
         }, 200);
-      }, 2200);
-      
+      };
     </script>
   </body>
 </html>

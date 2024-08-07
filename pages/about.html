@@ -12,11 +12,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/mainstyles.css" />
     <title>About Us</title>
   </head>
 
   <body class="abt" style="background-color: #e2decd;">
+    <!-- <div class="overlay" id="overlay">
+      <img src="./../public/about-us.gif" alt="Intro Animation">
+    </div> -->
     <nav>
       <a href="../index.html" class="heading">
         <img src="../public/IOE_logo.png" alt="IOE" class="logo" />
@@ -25,19 +33,18 @@
         <li><a href="./about.html">About Us</a></li>
         <li><a href="../pages/prosmembers.html">Prospective Members</a></li>
         <li><a href="../pages/members.html">Members</a></li>
-        <li><a class="apply" href="">Apply Now</a></li>
+        <li><a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Apply Now</a></li>
       </ul>
     </nav>
 
     <!-- Header Image -->
-    <div class="header-img-container">
-      <img src="./../public/ioe_group.jpg" alt="Group Image"/>
-      <h1 class="about">About Us</h1>
+    <div class="about-header">
+      <h1 class="about">ABOUT US</h1>
+      <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
     </div>
 
     <div class="phil-img-container">
-      <img src="./../public/IOE_group_2.jpg" alt="Group Image 2">
-      <img src="./../public/IOE_group_3.jpg" alt="Group Image 3">
+      <img src="./../public/ioe-collage.png" alt="IOE College">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quidem numquam ducimus deleniti, assumenda ut consequatur expedita, cupiditate nesciunt explicabo nostrum recusandae fuga quam! Dicta magnam necessitatibus non quibusdam maxime.</p>
     </div>
 
@@ -47,18 +54,34 @@
         <div class="pillar-card">
           <h1>Ambition</h1>
           <p>Our members are extremely ambitious, always searching for new ways to expand their knowledge and experience base. Through professional and academic development opportunities, Iota Omega Epsilon members have ample opportunities to grow within a community of driven students.</p>
+          <!-- <div class="pillar-images">
+            <img src="./../public/IOE_group_2.jpg" alt="">
+            <img src="./../public/IOE_group_3.jpg" alt="">
+          </div> -->
         </div>
         <div class="pillar-card">
           <h1>Philanthropy</h1>
           <p>Our philanthropy drives impactful change within our community. Through financial contributions, volunteerism, and mentorship, we empower future leaders and address pressing societal challenges. Together, we embody the ethos of giving back, catalyzing lasting positive change.</p>
+          <!-- <div class="pillar-images">
+            <img src="./../public/IOE_group_2.jpg" alt="">
+            <img src="./../public/IOE_group_3.jpg" alt="">
+          </div> -->
         </div>
         <div class="pillar-card">
           <h1>Community</h1>
           <p>At Iota Omega Epsilon, our Community is the heart of our fraternity. We are dedicated to building a tight-knit brotherhood where members support, inspire, and collaborate. Through mentorship, networking, and community service, we foster inclusivity as well as social and professional growth.</p>
+          <!-- <div class="pillar-images">
+            <img src="./../public/IOE_group_2.jpg" alt="">
+            <img src="./../public/IOE_group_3.jpg" alt="">
+          </div> -->
         </div>
         <div class="pillar-card">
           <h1>Development</h1>
           <p>The development pillar of Iota Omega Epsilon is distinguished by innovative initiatives aimed at empowering members both professionally and socially. With a commitment to continuous evolution, Iota ensures its members are equipped with the skills and connections necessary to excel in the intersection between business and STEM.</p>
+          <!-- <div class="pillar-images">
+            <img src="./../public/IOE_group_2.jpg" alt="">
+            <img src="./../public/IOE_group_3.jpg" alt="">
+          </div> -->
         </div>
       </div>
     </div>
@@ -85,6 +108,21 @@
     </div>
   
     <script src="../script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const overlay = document.getElementById('overlay');
+
+        // Hide overlay on scroll
+        window.addEventListener('scroll', function() {
+          overlay.style.display = 'none';
+        });
+
+        // Hide overlay after 2 seconds
+        setTimeout(function() {
+          overlay.style.display = 'none';
+        }, 2000);
+      });
+    </script>
   </body>
 </html>
 

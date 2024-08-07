@@ -1,0 +1,47 @@
+.prosbody {
+  background-image: url('../public/prosbackground.png');
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+.rush-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 2rem 0; /* Add some margin for spacing */
+}
+
+.responsive-image {
+  width: 50%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Responsive Image */
+@media (max-width: 1200px) {
+  .responsive-image {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .responsive-image {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .responsive-image {
+    width: 90%;
+  }
+}

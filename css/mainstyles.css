@@ -88,6 +88,7 @@ nav .logo {
   display: flex;
   justify-content: space-around;
   padding-top: 1rem;
+  margin-top: auto;
 }
 .footer .join-btn {
   background-color: white;
@@ -125,6 +126,35 @@ nav .logo {
 .footer > .social-links .instagram, .footer > .social-links .linkedin {
   text-decoration: underline;
   color: white;
+}
+
+/* Media Query for Vertical Footer Layout */
+@media (max-width: 550px) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .join-btn {
+    margin-bottom: 1rem; /* Add some spacing between items */
+  }
+  .footer .email {
+    margin-bottom: 1rem; /* Add some spacing between items */
+  }
+  .footer .social-links {
+    flex-direction: column;
+    gap: 0.5rem; /* Adjust gap for vertical layout */
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #231f20;
+  z-index: 1000;
 }
 
 .front-wrapper {
@@ -405,46 +435,49 @@ nav .logo {
   left: 1rem;
 }
 
-.header-img-container {
-  position: relative;
-  width: 100%;
-  height: 25rem;
-}
-.header-img-container > .about {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  font-size: 5rem;
-  margin: 0;
-  color: white;
-  z-index: 2;
-}
-.header-img-container > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.header-img-container::after {
-  content: "";
-  position: absolute;
+/*
+  * Check figma/praveena text. Can do 100vh for the about part and then do
+  * a dynamic scroll to the new content which will lead to pillars
+*/
+.about-header {
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(to bottom, #231F20, rgba(35, 31, 32, 0.5) 30%, rgba(35, 31, 32, 0.5));
-  pointer-events: none;
+  background-color: #231F20;
+  height: 93vh;
+  width: 100%;
+}
+.about-header > .about {
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 10rem;
+  color: white;
+}
+.about-header > .arrow-down {
+  display: flex;
+  width: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .phil-img-container {
-  margin: 4rem 1rem;
+  margin: 1rem 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
 }
 .phil-img-container > img {
-  width: 30%;
+  width: 45vw;
   height: auto;
-  float: left;
-  margin-right: 1rem;
   border-radius: 5px;
 }
 .phil-img-container > p {
@@ -455,6 +488,20 @@ nav .logo {
   border-bottom: 5px dotted black;
 }
 
+@media (max-width: 768px) {
+  .phil-img-container {
+    flex-direction: column; /* Switch to vertical layout */
+    align-items: center;
+  }
+  .phil-img-container > img {
+    width: 70%; /* Adjust width for smaller screens */
+    margin-right: 0;
+    margin-bottom: 1rem; /* Add margin below the image */
+  }
+  .phil-img-container > p {
+    margin: 1rem; /* Adjust margin for smaller screens */
+  }
+}
 .pillar-wrapper {
   padding: 5px;
   background-image: url("../public/IOE_Pillars.png");
@@ -473,16 +520,47 @@ nav .logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 1rem;
+  gap: 0;
   width: 100%;
 }
 .pillar-wrapper > .pillar-cards > .pillar-card {
   font-family: "Inknut Antiqua", serif;
   flex: 1;
-  max-width: 30rem;
+  max-width: 45rem;
   height: auto;
   margin: 1rem;
   color: black;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.pillar-wrapper > .pillar-cards > .pillar-card:hover {
+  transition-delay: 0.5s;
+  transform: scale(1.1);
+  z-index: 1;
+}
+.pillar-wrapper > .pillar-cards > .pillar-card:hover .pillar-images {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease 0.5s, visibility 0.3s ease 0.5s; /* Add delay before showing images */
+}
+.pillar-wrapper > .pillar-cards > .pillar-card .pillar-images {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.pillar-wrapper > .pillar-cards > .pillar-card .pillar-images img {
+  width: 48%;
+  height: auto;
+}
+
+.pillar-card.hovered {
+  background: none;
+  border-radius: 10px;
 }
 
 .pillar-footer {
@@ -490,7 +568,7 @@ nav .logo {
   display: inline-flex;
   width: 100%;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 .pillar-footer .join-us-btn {
   background-color: black;
@@ -500,11 +578,6 @@ nav .logo {
   border-radius: 10px;
   cursor: pointer;
   border: none;
-  outline: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 .pillar-footer .join-us-btn:active, .pillar-footer .join-us-btn:focus {
   background-color: black;
@@ -517,6 +590,51 @@ nav .logo {
   color: white;
   width: 100%;
   height: 100%;
+}
+
+.prosbody {
+  background-image: url("../public/prosbackground.png");
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+.rush-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 2rem 0; /* Add some margin for spacing */
+}
+
+.responsive-image {
+  width: 50%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Responsive Image */
+@media (max-width: 1200px) {
+  .responsive-image {
+    width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  .responsive-image {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .responsive-image {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=mainstyles.css.map */

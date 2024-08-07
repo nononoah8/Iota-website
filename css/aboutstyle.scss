@@ -1,46 +1,49 @@
-.header-img-container {
-  position: relative;
+/*
+  * Check figma/praveena text. Can do 100vh for the about part and then do
+  * a dynamic scroll to the new content which will lead to pillars
+*/
+
+.about-header {
+  top: 0;
+  background-color: $tertiary-color;
+  height: 93vh;
   width: 100%;
-  height: 25rem;
 
   > .about {
+    font-family: "Sen", sans-serif;
+    font-weight: 700;
     position: absolute;
-    bottom: 0;
     width: 100%;
+    top: 25%;
+    text-align: center;
     display: flex;
-    font-size: 5rem;
-    margin: 0;
+    justify-content: center;
+    font-size: 10rem;
     color: white;
-    z-index: 2;
   }
 
-  > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &::after {
-    content: '';
+  > .arrow-down {
+    display: flex;
+    width: 2rem;
+    justify-content: center;
+    align-items: flex-end;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(to bottom, $tertiary-color, rgba(35, 31, 32, 0.5) 30%, rgba(35, 31, 32, 0.5));
-    pointer-events: none;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 .phil-img-container {
-  margin: 4rem 1rem;
+  margin: 1rem 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
 
   > img {
-    width: 30%;
+    width: 45vw; // can change from vw to percent if necessary - do 100%
     height: auto;
-    float: left;
-    margin-right: 1rem;
     border-radius: 5px;
   }
 
@@ -52,6 +55,24 @@
     border-bottom: 5px dotted black;
   }
 }
+
+@media (max-width: 768px) {
+  .phil-img-container {
+    flex-direction: column; /* Switch to vertical layout */
+    align-items: center;
+
+    > img {
+      width: 70%; /* Adjust width for smaller screens */
+      margin-right: 0;
+      margin-bottom: 1rem; /* Add margin below the image */
+    }
+
+    > p {
+      margin: 1rem; /* Adjust margin for smaller screens */
+    }
+  }
+}
+
 
 .pillar-wrapper {
   padding: 5px;
@@ -72,26 +93,75 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 1rem;
+    gap: 0;
     width: 100%;
   
     > .pillar-card {
       font-family: "Inknut Antiqua", serif;
       flex: 1;
-      max-width: 30rem;
+      max-width: 45rem;
       height: auto;
       margin: 1rem; 
       color: black;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        transition-delay: 0.5s;
+        transform: scale(1.1);
+        z-index: 1;
+        
+        .pillar-images {
+          opacity: 1;
+          visibility: visible;
+          transition: opacity 0.3s ease 0.5s, visibility 0.3s ease 0.5s; /* Add delay before showing images */
+        }
+      }
+  
+      .pillar-images {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+  
+        img {
+          width: 48%;
+          height: auto;
+        }
+      }
     }
   }
 }
+
+// .dimmed-background::before {
+//   content: '';
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.1);
+//   pointer-events: none;
+//   transition: opacity 0.3s ease 0.5s;
+// }
+
+//* The hovered pillar card
+.pillar-card.hovered {
+  background: none;
+  border-radius: 10px;
+}
+
 
 .pillar-footer {
   position: relative;
   display: inline-flex;
   width: 100%;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 3rem 0;
 
   .join-us-btn {
     background-color: black;
@@ -100,14 +170,7 @@
     height: 2rem;
     border-radius: 10px;
     cursor: pointer;
-
-
     border: none;
-    outline: none;
-    box-shadow: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
 
     &:active, &:focus {
       background-color: black;

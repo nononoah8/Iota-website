@@ -39,7 +39,7 @@
     <div class="about-header">
       <div class="overlay" id="overlay">
         <video id="intro-animation" autoplay muted>
-          <source src="../public/about-animation-5.mp4" type="video/mp4">
+          <source src="../public/about-animation-5.mp4" type="video/mp4" media="(min-width: 951px)">
         </video>
         <!-- <img id="intro-animation" src="../public/about-animation-4.gif" alt="Intro Animation"> -->
       </div>
@@ -115,14 +115,16 @@
     <script>
       window.onload = function() {
         var video = document.getElementById('intro-animation');
-        video.load();
+        if (window.innerWidth > 950) {
+          video.load();
+        }
     
-        if (window.pageYOffset !== 0 && window.innerWidth <= 760) {
+        if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
           document.getElementById('overlay').style.display = 'none';
         }
       };
     
-      if (window.pageYOffset !== 0 && window.innerWidth <= 760) {
+      if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
         document.getElementById('overlay').style.display = 'none';
       }
     

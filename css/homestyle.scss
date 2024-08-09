@@ -10,13 +10,16 @@
   margin-bottom: 6rem;
 
   > .join-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
     position: absolute;
     bottom: 5rem;
     left: 25rem;
     background-color: black;
     color: white;
     width: 9rem;
-    height: 2rem;
+    height: 3rem;
     border-radius: 10px;
     cursor: pointer;
 

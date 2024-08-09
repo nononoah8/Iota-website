@@ -48,10 +48,11 @@ $background-color_3: #231F20;
 	border-radius: 10px;
 }
 .exec-card-text {
+	// font-family: "Inter", sans-serif;
 	position: absolute;
 	font-size: 1rem;
-	bottom: -50px;
-	left: 80px;
+	bottom: -3rem;
+	left: 5rem;
 	text-align: center;
 }
 .chair-members {
@@ -80,10 +81,11 @@ $background-color_3: #231F20;
 	width: 100%;
 }
 .chair-card-text {
+	// font-family: "Inter", sans-serif;
 	position: absolute;
-	font-size: 1em;
-	bottom: -40px;
-	left: 60px;
+	font-size: 1rem;
+	bottom: -3rem;
+	left: 4rem;
 	color: $color_2;
 	text-align: center;
 }
@@ -129,10 +131,12 @@ $background-color_3: #231F20;
 	border-radius: 50%;
 }
 .member-card-text {
+	font-family: "Inter", sans-serif;
 	position: absolute;
 	font-size: 1rem;
-	bottom: -25px;
-	left: 70px;
+	bottom: -1.8rem;
+	left: 4.5rem;
+	font-weight: 500;
 }
 
 // Links for the linkedin and the icon

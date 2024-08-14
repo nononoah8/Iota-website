@@ -19,20 +19,35 @@
   </head>
 
   <body style="background-color:#e2decd">
-    <nav>
-      <a href="index.html" class="heading">
-        <img src="public/IOE_logo.png" alt="IOE" class="logo" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="pages/about.html">About Us</a></li>
-        <li><a href="pages/prosmembers.html">Prospective Members</a></li>
-        <li><a href="pages/members.html">Members</a></li>
-        <li><a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Apply Now</a></li> <!-- Is this a link? -->
-      </ul>
-    </nav>
+    <header>
+      <div id="brand">
+        <a href="/">
+          <img src="public/IOE_logo_home.png" alt="IOE" class="logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/prosmembers.html">Prospective Members</a></li>
+          <li><a href="pages/members.html">Members</a></li>
+          <li><a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Apply Now</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/prosmembers.html">Prospective Members</a></li>
+          <li><a href="pages/members.html">Members</a></li>
+          <li><a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Apply Now</a></li>
+        </ul>
+      </div>
+    </header>
 
     <div class="front-wrapper">
-      <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us!</button>
+      <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us</button>
 
       <p>Michigan's premier co-ed business stem fraternity</p>
 
@@ -42,10 +57,32 @@
     <div class="presidents-wrapper">
       <img src="./public/members/Ethan_George.jpg" alt="Ethan">
       <div class="presidents-welcome">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, atque vitae nesciunt soluta unde natus nemo rerum dolores? Ipsa laboriosam debitis vel dolor tenetur? Unde amet eius sequi quod commodi!
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum officiis voluptatum laboriosam reprehenderit perferendis possimus dicta, sed eos modi corrupti officia voluptate itaque dolor ducimus molestias obcaecati id quibusdam perspiciatis?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptatem maiores. Modi sunt officia fugiat dolorem facilis laudantium ex. Voluptates voluptatibus dolores voluptate velit et maiores dolorum, dolore porro repellat.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, quo. Et nisi sequi pariatur necessitatibus nemo, blanditiis laudantium nihil fuga, corrupti eius sit quas deleniti, debitis beatae! Ab, ut dolore!
+        Welcome to the Alpha Chapter of Iota Omega Epsilon, Michigan’s premier STEM-Business co-ed professional fraternity.
+        As President, I am honored to extend a warm welcome to you on behalf of our fraternity!
+        <br>
+        <br>
+        During my first year at Michigan, I wanted to join a community that seeked to combine their engineering
+        knowledge and business skills to create positive change both locally and globally. I was able to find this in Iota,
+        and I can confidently say that joining has been the most rewarding and impactful part of my college experience.
+        Not only have I been introduced to lifelong friends and connections who serve as a constant source of inspiration,
+        I’ve also been provided the guidance and resources to become the best version of myself.
+        <br>
+        <br>
+        As Michigan’s first STEM-Business fraternity, Iota Omega Epsilon offers brothers a community of like-minded
+        and driven individuals, along with the tools they need to succeed in the ever-evolving world of STEM and business.
+        From project teams and study groups to professional development workshops, we cultivate a culture of growth where
+        brothers are pushed to become the best version of themselves and supported in their pursuit of their passions within
+        STEM and Business.
+        <br>
+        <br>
+        Thank you for taking the time to visit our website. I encourage you to continue exploring to learn more about who we are
+        and what we stand for. If you have any questions, please don’t hesitate to reach out to me at eten@umich.edu.
+        We look forward to meeting you!
+        <br>
+        <br>
+        Best,
+        <br>
+        Ethan George
       </div>
     </div>
 
@@ -64,22 +101,7 @@
         <a href="https://www.linkedin.com/company/iota-omega-epsilon/" class="linkedin" target="_blank">LinkedIn</a>
       </div>
     </div>
-    <script>
-      window.addEventListener('wheel', function(e) {
-      if (e.deltaY < 0) {
-        // Scrolling up
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      } else {
-        // Scrolling down
-        window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: 'smooth'
-        });
-      }
-    });
+    <script src="script.js">
     </script>
   </body>
 </html>

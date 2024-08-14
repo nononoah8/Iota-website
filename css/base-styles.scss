@@ -5,6 +5,11 @@ $tertiary-color: #231F20;
 $quaternary-color: #d9d9d9;
 $base-font-size: 16px;
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   font-size: 16px;
 }
@@ -43,65 +48,176 @@ body {
   box-sizing: border-box;
 }
 
-nav {
+.logo {
+  position: relative;
+  margin-left: 5px;
+  width: 65px;
+  height: 40px;
+  padding: 5px;
+  z-index: 4;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px;
+  background-color: $tertiary-color;
+  height: 50px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  z-index: 3;
-  background-color: $tertiary-color;
 
-  .logo {
-    position: relative;
-    margin-left: 5px;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    z-index: 4;
+  #brand {
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+      color: white;
+      transition: color 0.3s ease;
+      letter-spacing: 2px;
+      z-index: 1;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    li {
+      padding: 5px;
+      margin-left: 10px;
+    }
   }
 }
 
-.nav-links {
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
+
+.open {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .bar2 {
+    opacity: 0;
+  }
+
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+}
+
+.open .mobile-menu {
   display: flex;
-  justify-content: space-around;
-  z-index: 3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-  & a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-weight: 500;
-    padding: 1rem 1rem;
-    margin: 1rem 0;
-    transition: color 0.3s ease;
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
 
-    &:hover {
-      color: $primary-color;
+  li {
+    z-index: 1;
+    background-color: rgba($tertiary-color, 0.7); // Set background color with 0.7 opacity
+    width: 100%;
+    text-align: center;
+
+    a {
+      opacity: 1;
+      color: white;
     }
   }
 }
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
 
-    .logo {
-      align-items: center;
-      margin-left: 3.2rem;
-      width: 4rem;
-      height: 4rem;
-      z-index: 3;
-    }
+//! Can change this to a different width if necessary
+@media only screen and (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+
+// nav {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 100%;
+//   width: 100%;
+//   z-index: 3;
+//   background-color: $tertiary-color;
+// }
+
+// .nav-links {
+//   display: flex;
+//   justify-content: space-around;
+//   z-index: 3;
+
+//   & a {
+//     color: white;
+//     text-decoration: none;
+//     letter-spacing: 2px;
+//     font-weight: 500;
+//     padding: 1rem 1rem;
+//     margin: 1rem 0;
+//     transition: color 0.3s ease;
+
+//     &:hover {
+//       color: $primary-color;
+//     }
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   nav {
+//     flex-direction: column;
+
+//     .logo {
+//       align-items: center;
+//       margin-left: 3.2rem;
+//       width: 5rem;
+//       height: 3.5rem;
+//       z-index: 3;
+//     }
   
-    .nav-links {
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      margin-top: 1rem;
-    }
-  }
-}
+//     .nav-links {
+//       flex-direction: column;
+//       gap: 1rem;
+//       align-items: center;
+//       margin-top: 1rem;
+//     }
+//   }
+// }
 
 .footer {
   position: absolute;

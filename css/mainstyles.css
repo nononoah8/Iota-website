@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   font-size: 16px;
 }
@@ -31,16 +36,7 @@ body {
   box-sizing: border-box;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  z-index: 3;
-  background-color: #231F20;
-}
-nav .logo {
+.logo {
   position: relative;
   margin-left: 5px;
   width: 65px;
@@ -49,40 +45,99 @@ nav .logo {
   z-index: 4;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  z-index: 3;
-}
-.nav-links a {
-  color: white;
+header a {
   text-decoration: none;
-  letter-spacing: 2px;
-  font-weight: 500;
-  padding: 1rem 1rem;
-  margin: 1rem 0;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #5E9AB7;
 }
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
+header {
+  padding: 0 20px;
+  background-color: #231F20;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+header #brand {
+  display: flex;
+  align-items: center;
+}
+header ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header ul a {
+  color: white;
+  transition: color 0.3s ease;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+header ul a:hover {
+  color: #5E9AB7;
+}
+header ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+.mobile-menu li {
+  z-index: 1;
+  background-color: rgba(35, 31, 32, 0.7);
+  width: 100%;
+  text-align: center;
+}
+.mobile-menu li a {
+  opacity: 1;
+  color: white;
+}
+
+@media only screen and (max-width: 700px) {
+  header nav {
+    display: none;
   }
-  nav .logo {
-    align-items: center;
-    margin-left: 3.2rem;
-    width: 5rem;
-    height: 3.5rem;
-    z-index: 3;
-  }
-  nav .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    margin-top: 1rem;
+  #hamburger-icon {
+    display: block;
   }
 }
 .footer {
@@ -177,6 +232,7 @@ nav .logo {
   height: 0;
   padding-top: 45rem;
   margin-bottom: 6rem;
+  z-index: 0;
 }
 .front-wrapper > .join-btn {
   font-family: "Inter", sans-serif;
@@ -249,7 +305,7 @@ nav .logo {
 }
 .presidents-wrapper img, .presidents-wrapper .presidents-welcome {
   flex: 1;
-  max-width: 500px;
+  max-width: 550px;
   min-width: 300px;
   padding: 0 1.25rem;
   display: flex;
@@ -261,6 +317,7 @@ nav .logo {
   object-fit: cover;
 }
 .presidents-wrapper .presidents-welcome {
+  display: block;
   background-color: #2C2C2C;
   color: white;
   height: auto;
@@ -335,6 +392,7 @@ nav .logo {
   bottom: -3rem;
   left: 5rem;
   text-align: center;
+  font-weight: bold;
 }
 
 .chair-members {
@@ -425,7 +483,7 @@ nav .logo {
   font-size: 1rem;
   bottom: -1.8rem;
   left: 4.5rem;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .common-link-style, .member-card-link, .exec-card-link {

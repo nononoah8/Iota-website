@@ -8,15 +8,19 @@
   height: 0;
   padding-top: 45rem;
   margin-bottom: 6rem;
+  z-index: 0;
 
   > .join-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
     position: absolute;
     bottom: 5rem;
     left: 25rem;
     background-color: black;
     color: white;
     width: 9rem;
-    height: 2rem;
+    height: 3rem;
     border-radius: 10px;
     cursor: pointer;
 
@@ -87,7 +91,7 @@
 
   img, .presidents-welcome {
     flex: 1;
-    max-width: 500px;
+    max-width: 550px;
     min-width: 300px;
     padding: 0 1.25rem;
     display: flex;
@@ -101,6 +105,7 @@
   }
 
   .presidents-welcome {
+    display: block;
     background-color: #2C2C2C;
     color: white;
     height: auto;

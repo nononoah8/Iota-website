@@ -39,10 +39,10 @@ body {
 .logo {
   position: relative;
   margin-left: 5px;
-  width: 65px;
-  height: 40px;
   padding: 5px;
+  margin-top: 5px;
   z-index: 4;
+  height: 40px;
 }
 
 header a {
@@ -216,12 +216,17 @@ header ul li {
   top: -6rem;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: #231f20;
-  z-index: 2;
+  height: 115vh;
+  background-color: #231F20;
+  z-index: 4;
   transition: opacity 0.2s;
 }
 
+@media (max-width: 950px) {
+  .overlay {
+    display: none;
+  }
+}
 .front-wrapper {
   position: relative;
   padding: 5px;
@@ -235,16 +240,16 @@ header ul li {
   z-index: 0;
 }
 .front-wrapper > .join-btn {
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-  font-size: 0.75rem;
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
   position: absolute;
   bottom: 5rem;
   left: 25rem;
-  background-color: black;
+  background-color: #231f20;
   color: white;
   width: 9rem;
-  height: 3rem;
+  height: 3.5rem;
   border-radius: 10px;
   cursor: pointer;
   border: none;
@@ -261,14 +266,15 @@ header ul li {
   box-shadow: none;
 }
 .front-wrapper > p {
-  font-family: "Diplomata SC", serif;
-  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
   font-style: normal;
   font-size: 1.2rem;
   text-align: center;
   display: flex;
   justify-content: center;
   margin-top: -1.5rem;
+  letter-spacing: 2px;
 }
 .front-wrapper > .scroll-icon {
   position: absolute;
@@ -311,14 +317,16 @@ header ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 5px;
 }
 .presidents-wrapper img {
   height: 100%;
   object-fit: cover;
+  border-radius: 5px;
 }
 .presidents-wrapper .presidents-welcome {
   display: block;
-  background-color: #2C2C2C;
+  background-color: #231f20;
   color: white;
   height: auto;
   overflow: hidden;
@@ -375,8 +383,7 @@ header ul li {
   padding: 20px;
   position: relative;
 }
-
-.exec-img {
+.exec-card > .exec-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -385,8 +392,7 @@ header ul li {
   object-fit: cover;
   border-radius: 10px;
 }
-
-.exec-card-text {
+.exec-card > .exec-card-text {
   position: absolute;
   font-size: 1rem;
   bottom: -3rem;
@@ -421,15 +427,7 @@ header ul li {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.chair-card-text {
-  position: absolute;
-  font-size: 1rem;
-  bottom: -3rem;
-  left: 4rem;
-  color: white;
-  text-align: center;
+  margin-top: 1rem;
 }
 
 .members {
@@ -466,8 +464,7 @@ header ul li {
   position: relative;
   border-radius: 50%;
 }
-
-.member-img {
+.member-card > .member-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -476,14 +473,21 @@ header ul li {
   object-fit: cover;
   border-radius: 50%;
 }
-
-.member-card-text {
+.member-card > .member-card-text {
   font-family: "Inter", sans-serif;
   position: absolute;
   font-size: 1rem;
   bottom: -1.8rem;
   left: 4.5rem;
   font-weight: bold;
+}
+.member-card > .chair-card-text {
+  position: absolute;
+  font-size: 1rem;
+  bottom: -3rem;
+  left: 4rem;
+  color: white;
+  text-align: center;
 }
 
 .common-link-style, .member-card-link, .exec-card-link {
@@ -523,7 +527,7 @@ header ul li {
   font-weight: 700;
   position: absolute;
   width: 100%;
-  top: 25%;
+  top: 40%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -544,6 +548,7 @@ header ul li {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 4;
 }
 
 .phil-img-container {
@@ -555,7 +560,7 @@ header ul li {
 }
 .phil-img-container > img {
   width: 45vw;
-  height: auto;
+  height: 50vw;
   border-radius: 5px;
 }
 .phil-img-container > p {
@@ -565,13 +570,14 @@ header ul li {
   margin: 2rem 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .phil-img-container {
     flex-direction: column; /* Switch to vertical layout */
     align-items: center;
   }
   .phil-img-container > img {
     width: 70%; /* Adjust width for smaller screens */
+    height: auto;
     margin-right: 0;
     margin-bottom: 1rem; /* Add margin below the image */
   }
@@ -607,37 +613,8 @@ header ul li {
   height: auto;
   margin: 1rem;
   color: black;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   z-index: 1;
-}
-.pillar-wrapper > .pillar-cards > .pillar-card:hover {
-  transition-delay: 0.5s;
-  transform: scale(1.1);
-  z-index: 1;
-}
-.pillar-wrapper > .pillar-cards > .pillar-card:hover .pillar-images {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s ease 0.5s, visibility 0.3s ease 0.5s; /* Add delay before showing images */
-}
-.pillar-wrapper > .pillar-cards > .pillar-card .pillar-images {
-  opacity: 0;
-  visibility: hidden;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.pillar-wrapper > .pillar-cards > .pillar-card .pillar-images img {
-  width: 48%;
-  height: auto;
-}
-
-.pillar-card.hovered {
-  background: none;
-  border-radius: 10px;
 }
 
 .pillar-footer {

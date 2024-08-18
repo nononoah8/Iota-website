@@ -26,7 +26,7 @@
     <header>
       <div id="brand">
         <a href="../index.html">
-          <img src="../public/IOE_logo_home.png" alt="IOE" class="logo" />
+          <img src="../public/IOE_logo2.png" alt="IOE" class="logo" />
         </a>
       </div>
       <nav>
@@ -54,7 +54,7 @@
     <div class="about-header">
       <div class="overlay" id="overlay">
         <video id="intro-animation" autoplay muted>
-          <source src="../public/about-animation.mp4" type="video/mp4" media="(min-width: 951px)">
+          <source src="../public/IOE_about_animation.mp4" type="video/mp4">
         </video>
       </div>
       <h1 class="about">ABOUT US</h1>
@@ -62,6 +62,7 @@
     </div>
 
     <div class="phil-img-container">
+      <!-- ! Fix the image here so that it stays the correct aspect ratio. -->
       <img src="./../public/ioe-collage.png" alt="IOE College">
       <p>
         Iota Omega Epsilon is a co-ed professional fraternity at the University of Michigan,
@@ -127,10 +128,8 @@
     <div class="footer">
       <!-- Link to apply -->
       <div>
-        <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us!</button>
+        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0')" class="join-btn">Join Us!</button>
       </div>
-      <!-- email -->
-      <a class="email" href="mailto:iotaomegaepsilon@umich.edu">iotaomegaepsilon@umich.edu</a>
       <!-- Links to social media -->
       <div class="social-links">
         <a href="https://www.instagram.com/iota_omega_epsilon/" class="instagram" target="_blank">Instagram</a>
@@ -142,9 +141,6 @@
     <script>
       window.onload = function() {
         var video = document.getElementById('intro-animation');
-        if (window.innerWidth > 950) {
-          video.load();
-        }
     
         if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
           document.getElementById('overlay').style.display = 'none';

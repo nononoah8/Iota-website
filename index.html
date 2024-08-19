@@ -23,7 +23,11 @@
   </head>
 
   <body style="background-color:#e2decd">
-    <!-- Can just load them here? -->
+    <!-- Intro animations -->
+    <img src="public/about_intro_animation.gif" style="display: none;"></img>
+    <img src="public/members_intro_animation.gif" style="display: none;"></img>
+    <img src="public/rush_intro_animation.gif" style="display: none;"></img>
+    
     <header>
       <div id="brand">
         <a href="/">
@@ -110,39 +114,6 @@
     </div>
     <script src="script.js"></script>
     <script>
-      // Preload images and GIFs
-      const imagesToPreload = [
-        './public/about_intro_animation.gif',
-        './public/rush_intro_animation.gif',
-        './public/members_intro_animation.gif',
-        './public/IOE_logo.png'
-      ];
-
-      let imagesLoaded = 0;
-
-      function preloadImages(imageUrls, callback) {
-        imageUrls.forEach(url => {
-          const img = new Image();
-          img.src = url;
-          img.onload = () => {
-            imagesLoaded++;
-            if (imagesLoaded === imageUrls.length) {
-              callback();
-            }
-          };
-        });
-      }
-
-      // Show the main content after all images are preloaded
-      function showContent() {
-        document.body.style.visibility = 'visible';
-        document.body.style.overflow = 'auto';
-        document.getElementById('loading-indicator').style.display = 'none';
-      }
-
-      // Preload images and show content
-      preloadImages(imagesToPreload, showContent);
-
       window.addEventListener('scroll', function() {
         var overlay = document.getElementById('overlay');
         overlay.style.opacity = '0';

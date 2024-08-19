@@ -41,10 +41,17 @@
     </header>
 
     <div class="overlay" id="overlay">
-      <video id="intro-animation" autoplay muted>
-        <source src="../public/ioe_members.mp4" type="video/mp4">
-      </video>
+      <img id="intro-animation" src="../public/members_transparent.gif" alt="intro animation"></img>
     </div>
+    <!-- <div class="member-header">
+
+      <h1 class="member">MEMBERS</h1>
+      <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
+    </div> -->
+<!--     
+    <div class="overlay" id="overlay">
+      <img id="intro-animation" src="../public/members_transparent.gif" alt="intro animation"></img>
+    </div> -->
 
     <h1 class="exec-header">
       Executive Board
@@ -222,18 +229,6 @@
     </div>
     <script src="../script.js"></script>  
     <script>
-      window.onload = function() {
-        var video = document.getElementById('intro-animation');
-    
-        if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-          document.getElementById('overlay').style.display = 'none';
-        }
-      };
-    
-      if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-        document.getElementById('overlay').style.display = 'none';
-      }
-    
       window.addEventListener('scroll', function() {
         var overlay = document.getElementById('overlay');
         overlay.style.opacity = '0';
@@ -241,16 +236,40 @@
           overlay.style.display = 'none';
         }, 200); 
       });
-    
-      var video = document.getElementById('intro-animation');
-      var overlay = document.getElementById('overlay');
-    
-      video.onended = function() {
-        overlay.style.opacity = '0';
-        setTimeout(function() {
-          overlay.style.display = 'none';
-          // Scroll a little bit
-        }, 200);
+
+      window.onload = function() {
+        var hasRun = false;
+        var gifDuration = 2650;
+
+        function checkOverlay() {
+          var overlay = document.getElementById('overlay');
+          var gif = document.getElementById('intro-animation');
+          if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
+            overlay.style.display = 'none';
+          } else {
+            overlay.style.display = 'flex';
+            // Restart the GIF by changing the src attribute
+            var src = gif.src;
+            gif.src = '';
+            gif.src = src;
+
+            // Hide the overlay after the GIF duration
+            setTimeout(function() {
+              overlay.style.display = 'none';
+            }, gifDuration);
+          }
+          hasRun = true;
+        }
+
+        // Initial check
+        checkOverlay();
+
+        // Event listener for scroll
+        window.addEventListener('scroll', function() {
+          if (!hasRun) {
+            checkOverlay();
+          }
+        });
       };
     </script>
   </body>

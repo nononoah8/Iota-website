@@ -46,6 +46,10 @@
       </div>
     </header>
 
+    <div class="overlay" id="overlay">
+      <img id="intro-animation" src="public/ioe_front_animation.gif"></img>
+    </div>
+
     <div class="front-wrapper">
       <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">JOIN US</button>
 
@@ -99,7 +103,61 @@
         <a href="https://www.linkedin.com/company/iota-omega-epsilon/" class="linkedin" target="_blank">LinkedIn</a>
       </div>
     </div>
-    <script src="script.js">
+    <script src="script.js"></script>
+    <script>
+      window.addEventListener('scroll', function() {
+        var overlay = document.getElementById('overlay');
+        overlay.style.opacity = '0';
+        setTimeout(function() {
+          overlay.style.display = 'none';
+        }, 200); 
+      });
+    
+      // var video = document.getElementById('intro-animation');
+      // var overlay = document.getElementById('overlay');
+    
+      // video.onended = function() {
+      //   overlay.style.opacity = '0';
+      //   setTimeout(function() {
+      //     overlay.style.display = 'none';
+      //     // Scroll a little bit
+      //   }, 200);
+      // };
+
+      window.onload = function() {
+        var hasRun = false;
+        var gifDuration = 2700;
+
+        function checkOverlay() {
+          var overlay = document.getElementById('overlay');
+          var gif = document.getElementById('intro-animation');
+          if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
+            overlay.style.display = 'none';
+          } else {
+            overlay.style.display = 'flex';
+            // Restart the GIF by changing the src attribute
+            var src = gif.src;
+            gif.src = '';
+            gif.src = src;
+
+            // Hide the overlay after the GIF duration
+            setTimeout(function() {
+              overlay.style.display = 'none';
+            }, gifDuration);
+          }
+          hasRun = true;
+        }
+
+        // Initial check
+        checkOverlay();
+
+        // Event listener for scroll
+        window.addEventListener('scroll', function() {
+          if (!hasRun) {
+            checkOverlay();
+          }
+        });
+      };
     </script>
   </body>
 </html>

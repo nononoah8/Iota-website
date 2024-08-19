@@ -17,7 +17,7 @@
     <header>
       <div id="brand">
         <a href="../index.html">
-          <img src="../public/IOE_logo_home.png" alt="IOE" class="logo" />
+          <img src="../public/IOE_logo2.png" alt="IOE" class="logo" />
         </a>
       </div>
       <nav>
@@ -40,6 +40,10 @@
         </ul>
       </div>
     </header>
+
+    <div class="overlay" id="overlay">
+      <img id="intro-animation" src="../public/rush_transparent.gif" alt="intro animation"></img>
+    </div>
     
     <!-- Image Section -->
     <div class="rush-container">
@@ -50,10 +54,8 @@
     <div class="footer">
       <!-- Link to apply -->
       <div>
-        <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us!</button>
+        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0')" class="join-btn">Join Us!</button>
       </div>
-      <!-- email -->
-      <a class="email" href="mailto:iotaomegaepsilon@umich.edu">iotaomegaepsilon@umich.edu</a>
       <!-- Links to social media -->
       <div class="social-links">
         <a href="https://www.instagram.com/iota_omega_epsilon/" class="instagram" target="_blank">Instagram</a>
@@ -61,6 +63,50 @@
       </div>
     </div>
     <script src="../script.js"></script>
+    <script>
+            window.addEventListener('scroll', function() {
+        var overlay = document.getElementById('overlay');
+        overlay.style.opacity = '0';
+        setTimeout(function() {
+          overlay.style.display = 'none';
+        }, 200); 
+      });
+
+      window.onload = function() {
+        var hasRun = false;
+        var gifDuration = 2600;
+
+        function checkOverlay() {
+          var overlay = document.getElementById('overlay');
+          var gif = document.getElementById('intro-animation');
+          if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
+            overlay.style.display = 'none';
+          } else {
+            overlay.style.display = 'flex';
+            // Restart the GIF by changing the src attribute
+            var src = gif.src;
+            gif.src = '';
+            gif.src = src;
+
+            // Hide the overlay after the GIF duration
+            setTimeout(function() {
+              overlay.style.display = 'none';
+            }, gifDuration);
+          }
+          hasRun = true;
+        }
+
+        // Initial check
+        checkOverlay();
+
+        // Event listener for scroll
+        window.addEventListener('scroll', function() {
+          if (!hasRun) {
+            checkOverlay();
+          }
+        });
+      };
+    </script>
   </body>
 </html>
 

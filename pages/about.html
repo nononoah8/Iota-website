@@ -26,7 +26,7 @@
     <header>
       <div id="brand">
         <a href="../index.html">
-          <img src="../public/IOE_logo_home.png" alt="IOE" class="logo" />
+          <img src="../public/IOE_logo2.png" alt="IOE" class="logo" />
         </a>
       </div>
       <nav>
@@ -50,18 +50,16 @@
       </div>
     </header>
 
-    <!-- Header Image -->
     <div class="about-header">
       <div class="overlay" id="overlay">
-        <video id="intro-animation" autoplay muted>
-          <source src="../public/about-animation.mp4" type="video/mp4" media="(min-width: 951px)">
-        </video>
+        <img id="intro-animation" src="../public/about_animeation_transparent.gif" alt="intro animation"></img>
       </div>
       <h1 class="about">ABOUT US</h1>
       <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
     </div>
 
     <div class="phil-img-container">
+      <!-- ! Fix the image here so that it stays the correct aspect ratio. -->
       <img src="./../public/ioe-collage.png" alt="IOE College">
       <p>
         Iota Omega Epsilon is a co-ed professional fraternity at the University of Michigan,
@@ -127,10 +125,8 @@
     <div class="footer">
       <!-- Link to apply -->
       <div>
-        <button onclick="window.location.href='./pages/prosmembers.html';" class="join-btn">Join Us!</button>
+        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0')" class="join-btn">Join Us!</button>
       </div>
-      <!-- email -->
-      <a class="email" href="mailto:iotaomegaepsilon@umich.edu">iotaomegaepsilon@umich.edu</a>
       <!-- Links to social media -->
       <div class="social-links">
         <a href="https://www.instagram.com/iota_omega_epsilon/" class="instagram" target="_blank">Instagram</a>
@@ -140,20 +136,17 @@
   
     <script src="../script.js"></script>
     <script>
-      window.onload = function() {
-        var video = document.getElementById('intro-animation');
-        if (window.innerWidth > 950) {
-          video.load();
-        }
+      // window.onload = function() {
+      //   var video = document.getElementById('intro-animation');
     
-        if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-          document.getElementById('overlay').style.display = 'none';
-        }
-      };
+      //   if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
+      //     document.getElementById('overlay').style.display = 'none';
+      //   }
+      // };
     
-      if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-        document.getElementById('overlay').style.display = 'none';
-      }
+      // if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
+      //   document.getElementById('overlay').style.display = 'none';
+      // }
     
       window.addEventListener('scroll', function() {
         var overlay = document.getElementById('overlay');
@@ -163,15 +156,50 @@
         }, 200); 
       });
     
-      var video = document.getElementById('intro-animation');
-      var overlay = document.getElementById('overlay');
+      // var video = document.getElementById('intro-animation');
+      // var overlay = document.getElementById('overlay');
     
-      video.onended = function() {
-        overlay.style.opacity = '0';
-        setTimeout(function() {
-          overlay.style.display = 'none';
-          // Scroll a little bit
-        }, 200);
+      // video.onended = function() {
+      //   overlay.style.opacity = '0';
+      //   setTimeout(function() {
+      //     overlay.style.display = 'none';
+      //     // Scroll a little bit
+      //   }, 200);
+      // };
+
+      window.onload = function() {
+        var hasRun = false;
+        var gifDuration = 2650;
+
+        function checkOverlay() {
+          var overlay = document.getElementById('overlay');
+          var gif = document.getElementById('intro-animation');
+          if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
+            overlay.style.display = 'none';
+          } else {
+            overlay.style.display = 'flex';
+            // Restart the GIF by changing the src attribute
+            var src = gif.src;
+            gif.src = '';
+            gif.src = src;
+
+            // Hide the overlay after the GIF duration
+            setTimeout(function() {
+              overlay.style.display = 'none';
+            }, gifDuration);
+          }
+          hasRun = true;
+        }
+
+        // Initial check
+        checkOverlay();
+
+        // Event listener for scroll
+        window.addEventListener('scroll', function() {
+          if (!hasRun) {
+            checkOverlay();
+          }
+        });
       };
     </script>
   </body>

@@ -213,7 +213,7 @@ header ul li {
   }
 }
 .overlay {
-  position: absolute; /* Position relative to the top of the page */
+  position: absolute;
   display: flex;
   justify-content: center;
   top: -6rem;
@@ -222,8 +222,12 @@ header ul li {
   height: 115vh;
   background-color: #231F20 !important;
   z-index: 1;
-  transition: opacity 0.2s, visibility 0.2s;
+  transition: opacity 0.3s;
   opacity: 1;
+}
+.overlay.hidden {
+  opacity: 0;
+  display: none;
 }
 
 @media (max-width: 950px) {
@@ -352,6 +356,36 @@ header ul li {
     gap: 1rem;
   }
 }
+@keyframes sweep-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.home-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -6rem;
+  left: 0;
+  width: 100%;
+  height: 115vh;
+  background-color: #231F20 !important;
+  z-index: 1;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(0);
+  opacity: 1;
+}
+.home-overlay.hidden {
+  opacity: 0;
+  display: none;
+  animation: sweep-right 0.3s forwards;
+}
+
 .exec-header {
   font-size: 3em;
   position: absolute;

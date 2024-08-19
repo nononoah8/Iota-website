@@ -52,7 +52,7 @@
 
     <div class="about-header">
       <div class="overlay" id="overlay">
-        <img id="intro-animation" src="../public/about_animation_transparent.gif" alt="intro animation"></img>
+        <img id="intro-animation" src="../public/about_intro_animation.gif" alt="intro animation"></img>
       </div>
       <h1 class="about">ABOUT US</h1>
       <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
@@ -169,13 +169,15 @@
 
       window.onload = function() {
         var hasRun = false;
-        var gifDuration = 2650;
+        var gifDuration = 2550;
 
         function checkOverlay() {
           var overlay = document.getElementById('overlay');
           var gif = document.getElementById('intro-animation');
           if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-            overlay.style.display = 'none';
+            // overlay.style.display = 'none';
+            overlay.classList.add('hidden');
+
           } else {
             overlay.style.display = 'flex';
             // Restart the GIF by changing the src attribute
@@ -185,7 +187,9 @@
 
             // Hide the overlay after the GIF duration
             setTimeout(function() {
-              overlay.style.display = 'none';
+              // overlay.style.display = 'none';
+              overlay.classList.add('hidden');
+
             }, gifDuration);
           }
           hasRun = true;

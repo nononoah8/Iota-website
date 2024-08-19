@@ -41,7 +41,7 @@
     </header>
 
     <div class="overlay" id="overlay">
-      <img id="intro-animation" src="../public/members_transparent.gif" alt="intro animation"></img>
+      <img id="intro-animation" src="../public/members_intro_animation.gif" alt="intro animation"></img>
     </div>
     <!-- <div class="member-header">
 
@@ -240,7 +240,7 @@
 
       window.onload = function() {
         var hasRun = false;
-        var gifDuration = 2700;
+        var gifDuration = 2750;
 
         function checkOverlay() {
           var overlay = document.getElementById('overlay');
@@ -248,6 +248,7 @@
           if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
             overlay.style.display = 'none';
             overlay.style.visibility = 'hidden';
+            overlay.classList.add('hidden');
           } else {
             overlay.style.display = 'flex';
             // Restart the GIF by changing the src attribute
@@ -257,8 +258,7 @@
 
             // Hide the overlay after the GIF duration
             setTimeout(function() {
-              overlay.style.visibility = 'hidden';
-              overlay.style.display = 'none';
+              overlay.classList.add('hidden');
             }, gifDuration);
           }
           hasRun = true;

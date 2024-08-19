@@ -42,7 +42,7 @@
     </header>
 
     <div class="overlay" id="overlay">
-      <img id="intro-animation" src="../public/rush_transparent.gif" alt="intro animation"></img>
+      <img id="intro-animation" src="../public/rush_intro_animation.gif" alt="intro animation"></img>
     </div>
     
     <!-- Image Section -->
@@ -74,13 +74,13 @@
 
       window.onload = function() {
         var hasRun = false;
-        var gifDuration = 2600;
+        var gifDuration = 2700;
 
         function checkOverlay() {
           var overlay = document.getElementById('overlay');
           var gif = document.getElementById('intro-animation');
           if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-            overlay.style.display = 'none';
+            overlay.classList.add('hidden');
           } else {
             overlay.style.display = 'flex';
             // Restart the GIF by changing the src attribute
@@ -90,7 +90,7 @@
 
             // Hide the overlay after the GIF duration
             setTimeout(function() {
-              overlay.style.display = 'none';
+              overlay.classList.add('hidden');
             }, gifDuration);
           }
           hasRun = true;

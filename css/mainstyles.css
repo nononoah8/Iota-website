@@ -435,7 +435,6 @@ header ul li {
   font-size: 1rem;
   bottom: -3rem;
   left: 5rem;
-  text-align: center;
   font-weight: bold;
 }
 
@@ -484,7 +483,6 @@ header ul li {
   font-size: 3rem;
   position: absolute;
   top: -10px;
-  text-align: center;
   color: black;
 }
 
@@ -525,10 +523,9 @@ header ul li {
   bottom: -3rem;
   left: 4rem;
   color: white;
-  text-align: center;
 }
 
-.common-link-style, .member-card-link, .exec-card-link {
+.common-link-style, .chair-card-link, .member-card-link, .exec-card-link {
   content: "";
   position: absolute;
   width: 2.2rem;
@@ -546,7 +543,12 @@ header ul li {
 }
 
 .member-card-link {
-  bottom: -1.8rem;
+  bottom: -2rem;
+  left: 1rem;
+}
+
+.chair-card-link {
+  bottom: -2.5rem;
   left: 1rem;
 }
 

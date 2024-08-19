@@ -16,7 +16,7 @@
     <header>
       <div id="brand">
         <a href="../index.html">
-          <img src="../public/IOE_logo2.png" alt="IOE" class="logo" />
+          <img src="../public/IOE_logo.png" alt="IOE" class="logo" />
         </a>
       </div>
       <nav>
@@ -233,6 +233,7 @@
         var overlay = document.getElementById('overlay');
         overlay.style.opacity = '0';
         setTimeout(function() {
+          overlay.style.visibility = 'hidden';
           overlay.style.display = 'none';
         }, 200); 
       });
@@ -246,6 +247,7 @@
           var gif = document.getElementById('intro-animation');
           if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
             overlay.style.display = 'none';
+            overlay.style.visibility = 'hidden';
           } else {
             overlay.style.display = 'flex';
             // Restart the GIF by changing the src attribute
@@ -255,6 +257,7 @@
 
             // Hide the overlay after the GIF duration
             setTimeout(function() {
+              overlay.style.visibility = 'hidden';
               overlay.style.display = 'none';
             }, gifDuration);
           }

@@ -263,6 +263,12 @@ header {
   z-index: 1;
   transition: opacity 0.2s, visibility 0.2s;
   opacity: 1;
+  visibility: show;
+}
+
+.overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: 950px) {

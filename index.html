@@ -105,6 +105,30 @@
     </div>
     <script src="script.js"></script>
     <script>
+      window.onload = function() {
+        var hasRun = false;
+        var gifDuration = 2700;
+
+        // Function to preload GIFs
+        function preloadGifs(gifUrls) {
+          gifUrls.forEach(function(url) {
+            var img = new Image();
+            img.src = url;
+          });
+        }
+
+        // List of GIF URLs to preload
+        var gifUrls = [
+          './public/about_animation_transparent.gif',
+          './public/rush_transparent.gif',
+          './public/members_transparent.gif'
+        ];
+
+        // Preload the GIFs
+        preloadGifs(gifUrls);
+      }
+
+
       window.addEventListener('scroll', function() {
         var overlay = document.getElementById('overlay');
         overlay.style.opacity = '0';
@@ -112,17 +136,6 @@
           overlay.style.display = 'none';
         }, 200); 
       });
-    
-      // var video = document.getElementById('intro-animation');
-      // var overlay = document.getElementById('overlay');
-    
-      // video.onended = function() {
-      //   overlay.style.opacity = '0';
-      //   setTimeout(function() {
-      //     overlay.style.display = 'none';
-      //     // Scroll a little bit
-      //   }, 200);
-      // };
 
       window.onload = function() {
         var hasRun = false;

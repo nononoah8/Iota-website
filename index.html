@@ -14,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
 
+    <link rel="preload" href="./public/about_intro_animation.gif" as="image">
+    <link rel="preload" href="./public/rush_intro_animation.gif" as="image">
+    <link rel="preload" href="./public/members_intro_animation.gif" as="image">
+
     <link rel="stylesheet" href="css/mainstyles.css" />
     <title>Home</title>
   </head>
@@ -105,30 +109,6 @@
     </div>
     <script src="script.js"></script>
     <script>
-      window.onload = function() {
-        var hasRun = false;
-        var gifDuration = 2700;
-
-        // Function to preload GIFs
-        function preloadGifs(gifUrls) {
-          gifUrls.forEach(function(url) {
-            var img = new Image();
-            img.src = url;
-          });
-        }
-
-        // List of GIF URLs to preload
-        var gifUrls = [
-          './public/about_animation_transparent.gif',
-          './public/rush_transparent.gif',
-          './public/members_transparent.gif'
-        ];
-
-        // Preload the GIFs
-        preloadGifs(gifUrls);
-      }
-
-
       window.addEventListener('scroll', function() {
         var overlay = document.getElementById('overlay');
         overlay.style.opacity = '0';

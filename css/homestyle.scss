@@ -137,3 +137,9 @@
     gap: 1rem; // Adjust gap for vertical layout  
   }
 }
+
+.home-overlay {
+  @extend .overlay;
+
+  background-color: #232021 !important;
+}

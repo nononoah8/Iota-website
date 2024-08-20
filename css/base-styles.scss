@@ -259,14 +259,13 @@ header {
   left: 0;
   width: 100%;
   height: 115vh;
-  background-color: $tertiary-color !important;
+  background-color: $tertiary-color;
   z-index: 1;
   transition: opacity 0.3s;
   opacity: 1;
 
   &.hidden {
     opacity: 0;
-    // display: none !important;
   }
 }
 

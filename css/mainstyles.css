@@ -212,7 +212,7 @@ header ul li {
     gap: 0.5rem; /* Adjust gap for vertical layout */
   }
 }
-.overlay {
+.overlay, .home-overlay {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -220,17 +220,17 @@ header ul li {
   left: 0;
   width: 100%;
   height: 115vh;
-  background-color: #231F20 !important;
+  background-color: #231F20;
   z-index: 1;
   transition: opacity 0.3s;
   opacity: 1;
 }
-.overlay.hidden {
+.overlay.hidden, .hidden.home-overlay {
   opacity: 0;
 }
 
 @media (max-width: 950px) {
-  .overlay {
+  .overlay, .home-overlay {
     display: none !important;
   }
 }
@@ -355,6 +355,10 @@ header ul li {
     gap: 1rem;
   }
 }
+.home-overlay {
+  background-color: #232021 !important;
+}
+
 .exec-header {
   font-size: 3em;
   position: absolute;
@@ -493,6 +497,7 @@ header ul li {
   font-size: 0.9rem;
   bottom: -2.65rem;
   left: 4rem;
+  font-weight: bold;
   color: white;
 }
 

@@ -266,12 +266,12 @@ header {
 
   &.hidden {
     opacity: 0;
-    display: none;
+    // display: none !important;
   }
 }
 
 @media (max-width: 950px) {
   .overlay {
-    display: none;
+    display: none !important;
   }
 }

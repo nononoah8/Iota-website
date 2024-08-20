@@ -431,8 +431,9 @@ header ul li {
   border-radius: 10px;
 }
 .exec-card > .exec-card-text {
+  font-family: "Inter", sans-serif;
   position: absolute;
-  font-size: 1rem;
+  font-size: 0.9rem;
   bottom: -3rem;
   left: 5rem;
   font-weight: bold;
@@ -512,14 +513,15 @@ header ul li {
 .member-card > .member-card-text {
   font-family: "Inter", sans-serif;
   position: absolute;
-  font-size: 1rem;
+  font-size: 0.9rem;
   bottom: -1.8rem;
   left: 4.5rem;
   font-weight: bold;
 }
 .member-card > .chair-card-text {
+  font-family: "Inter", sans-serif;
   position: absolute;
-  font-size: 1rem;
+  font-size: 0.9rem;
   bottom: -3rem;
   left: 4rem;
   color: white;

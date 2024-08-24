@@ -6,16 +6,6 @@ function toggleMobileMenu(menu) {
   menu.classList.toggle('open');
 };
 
-function loadPage(event, url) {
-  event.preventDefault();
-  fetch(url)
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('content').innerHTML = html;
-    })
-    .catch(error => console.error('Error loading page:', error));
-}
-
 // document.addEventListener('DOMContentLoaded', () => {
 //   const pillarCards = document.querySelectorAll('.pillar-card');
 

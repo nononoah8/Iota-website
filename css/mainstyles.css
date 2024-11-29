@@ -707,14 +707,15 @@ header ul li {
     width: 90%;
   }
 }
-.faq {
-  width: 500px;
-  padding: 20px;
-}
 
+.faq-content {
+  display: flex;
+  align-items: flex-start;
+}
 .faq-title {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  font-size: 50px;
 }
 
 .faq-text {
@@ -724,24 +725,32 @@ header ul li {
   justify-content: center;
   text-align: center;
   margin: 5px auto; /* Center horizontally */
-  width: 300px;
+  font-size: 20px;
 }
 
 .accordion {
-  border-bottom: 2px solid black;
   margin-top: 20px;
+  margin-left: 35%;
+}
+
+.accordion-container {
+  flex: 1;
+  padding-right: 0px;
 }
 
 .accordion-btn {
   background-color: #e2decd;
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
+  padding: 20px;
+  width: 90%;
+  text-align: center;
   border: none;
   outline: none;
   transition: 0.4s;
   border-top: 2px solid black;
+  font-size: 15px;
+  margin-top: 25px;
+  border-bottom: 2px solid black;
 }
 .accordion-btn:after {
   content: "▼"; /* Unicode character for "downard carat" sign */
@@ -750,6 +759,13 @@ header ul li {
   float: right;
   margin-left: 5px;
   transition: transform 0.3s;
+}
+
+.mass-meeting-img {
+  width: 420px;
+  height: 330px;
+  margin-right: 20%;
+  margin-top: 37px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */

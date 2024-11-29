@@ -6,6 +6,9 @@
 - [Members Page](#members-page)
 - [Prospective Members Page](#prospective-members-page)
 
+Compile style:
+'''sass css/mainstyles.scss:css/mainstyles.css --watch'''
+
 ## Home Page
 <!-- Add details about the Home Page here -->
 

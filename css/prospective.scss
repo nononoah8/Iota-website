@@ -45,3 +45,66 @@
     width: 90%;
   }
 }
+
+.faq {
+  width: 500px;
+  padding: 20px;
+}
+
+.faq-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.faq-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px auto; /* Center horizontally */
+  width: 300px;
+}
+
+.accordion {
+  border-bottom: 2px solid black;
+  margin-top: 20px;
+}
+
+.accordion-btn {
+  background-color: #e2decd;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-top: 2px solid black;
+
+  &:after {
+    content: '\25BC'; /* Unicode character for "downard carat" sign */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s
+  }
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion-btn:hover {
+  background-color: #c2bfaf;
+}
+
+.active:after {
+  transform: rotate(180deg); /* Rotate to create the minus sign effect */
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #e2decd;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}

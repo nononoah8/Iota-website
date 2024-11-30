@@ -770,4 +770,82 @@ header ul li {
   transition: max-height 0.2s ease-out;
 }
 
+.faq-content {
+  display: flex;
+  align-items: flex-start;
+}
+.faq-title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 50px;
+}
+
+.faq-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px auto; /* Center horizontally */
+  font-size: 20px;
+}
+
+.accordion {
+  margin-top: 20px;
+  margin-left: 35%;
+}
+
+.accordion-container {
+  flex: 1;
+  padding-right: 0px;
+}
+
+.accordion-btn {
+  background-color: #e2decd;
+  cursor: pointer;
+  padding: 20px;
+  width: 90%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-top: 2px solid black;
+  font-size: 15px;
+  margin-top: 25px;
+  border-bottom: 2px solid black;
+}
+.accordion-btn:after {
+  content: "▼"; /* Unicode character for "downard carat" sign */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.mass-meeting-img {
+  width: 420px;
+  height: 330px;
+  margin-right: 20%;
+  margin-top: 37px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion-btn:hover {
+  background-color: #c2bfaf;
+}
+
+.active:after {
+  transform: rotate(180deg); /* Rotate to create the minus sign effect */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #e2decd;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 /*# sourceMappingURL=mainstyles.css.map */

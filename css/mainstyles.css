@@ -715,7 +715,44 @@ header ul li {
 .faq-title {
   text-align: center;
   margin-top: 40px;
+  font-family: "Sen", sans-serif;
   font-size: 50px;
+}
+
+.button-container {
+  display: flex;   
+}
+
+.interested-form {
+  margin-left: 35%;
+  margin-top: 20px;
+  width: 200px;
+  height: 55px;
+  font-family: "Sen", sans-serif; 
+  font-size: larger;
+  border-radius: 15px;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.8);
+}
+
+.apply-form {
+  margin-left: 2%;
+  margin-top: 20px;
+  width: 200px;
+  height: 55px;
+  font-family: "Sen", sans-serif; 
+  font-size: larger;
+  border-radius: 15px;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Add a box shadow to the button if it is clicked on  */
+.active, .interested-form:hover {
+  background-color: #bdb9a8d2;
+}
+
+/* Add a box shadow to the button if it is clicked on  */
+.active, .apply-form:hover {
+  background-color: #bdb9a8d2;
 }
 
 .faq-text {
@@ -725,6 +762,7 @@ header ul li {
   justify-content: center;
   text-align: center;
   margin: 5px auto; /* Center horizontally */
+  font-family: "Inknut Antiqua", serif; 
   font-size: 20px;
 }
 
@@ -748,8 +786,9 @@ header ul li {
   outline: none;
   transition: 0.4s;
   border-top: 2px solid black;
-  font-size: 15px;
-  margin-top: 25px;
+  font-family: "Inknut Antiqua", serif; 
+  font-size: 17px;
+  margin-top: 22px;
   border-bottom: 2px solid black;
 }
 .accordion-btn:after {

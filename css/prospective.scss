@@ -47,8 +47,10 @@
 }
 
 .faq {
-  width: 500px;
-  padding: 20px;
+  width: 100%;
+  height: auto;
+  top: 100px;
+  // padding: 20px;
 }
 
 .faq-title {
@@ -66,7 +68,19 @@
   width: 300px;
 }
 
+.faq-header {
+  p {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+}
+
 .accordion {
+  width: 500px;
   border-bottom: 2px solid black;
   margin-top: 20px;
 }
@@ -108,3 +122,100 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
+.mass-meeting-img {
+  max-width: 500px;
+}
+
+.apply-btn-wrapper{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+  .apply-btn {
+    position: relative;
+    color: black;
+    background-color: white;
+    font-weight: 700;
+    border: 2px solid black;
+    padding: 10px 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.368); /* Add shadow effect */
+
+
+    &:hover {
+      background-color: rgb(228, 228, 228);
+      transition: 0.3s;
+    }
+  }
+}
+
+.rush-title {
+  width: 100%;
+  height: 95vh;
+  h1 {
+    font-size: 160px;
+    color: black;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+  }
+
+  > .arrow-down {
+    display: flex;
+    width: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .back-video {
+    display: none;
+  }
+
+  .rush-title {
+    display: none;
+  }
+}
+
+.faq-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+// If the width is less than 1060px, make the picture and faq be vertical not next to each other horizontally

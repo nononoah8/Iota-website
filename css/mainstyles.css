@@ -707,15 +707,15 @@ header ul li {
     width: 90%;
   }
 }
-
-.faq-content {
-  display: flex;
-  align-items: flex-start;
+.faq {
+  width: 100%;
+  height: auto;
+  top: 100px;
 }
+
 .faq-title {
   text-align: center;
-  margin-top: 40px;
-  font-size: 50px;
+  margin-top: 20px;
 }
 
 .faq-text {
@@ -725,32 +725,33 @@ header ul li {
   justify-content: center;
   text-align: center;
   margin: 5px auto; /* Center horizontally */
-  font-size: 20px;
+  width: 300px;
+}
+
+.faq-header p {
+  width: 100%;
+  font-size: 30px;
+}
+.faq-header h1 {
+  font-size: 60px;
 }
 
 .accordion {
+  width: 500px;
+  border-bottom: 2px solid black;
   margin-top: 20px;
-  margin-left: 35%;
-}
-
-.accordion-container {
-  flex: 1;
-  padding-right: 0px;
 }
 
 .accordion-btn {
   background-color: #e2decd;
   cursor: pointer;
-  padding: 20px;
-  width: 90%;
-  text-align: center;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
   border-top: 2px solid black;
-  font-size: 15px;
-  margin-top: 25px;
-  border-bottom: 2px solid black;
 }
 .accordion-btn:after {
   content: "▼"; /* Unicode character for "downard carat" sign */
@@ -759,13 +760,6 @@ header ul li {
   float: right;
   margin-left: 5px;
   transition: transform 0.3s;
-}
-
-.mass-meeting-img {
-  width: 420px;
-  height: 330px;
-  margin-right: 20%;
-  margin-top: 37px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -784,6 +778,92 @@ header ul li {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.mass-meeting-img {
+  max-width: 500px;
+}
+
+.apply-btn-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.apply-btn-wrapper .apply-btn {
+  position: relative;
+  color: black;
+  background-color: white;
+  font-weight: 700;
+  border: 2px solid black;
+  padding: 10px 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.368); /* Add shadow effect */
+}
+.apply-btn-wrapper .apply-btn:hover {
+  background-color: rgb(228, 228, 228);
+  transition: 0.3s;
+}
+
+.rush-title {
+  width: 100%;
+  height: 95vh;
+}
+.rush-title h1 {
+  font-size: 160px;
+  color: black;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+}
+.rush-title > .arrow-down {
+  display: flex;
+  width: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .back-video {
+    display: none;
+  }
+  .rush-title {
+    display: none;
+  }
+}
+.faq-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=mainstyles.css.map */

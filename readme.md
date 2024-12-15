@@ -17,3 +17,7 @@
 
 ## Prospective Members Page
 <!-- Add details about the Prospective Members Page here -->
+
+### Run the styles
+
+sass css/mainstyles.scss:css/mainstyles.css --watch

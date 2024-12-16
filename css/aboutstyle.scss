@@ -25,18 +25,6 @@
       font-size: 10.5rem;
     }
   }
-
-  > .arrow-down {
-    display: flex;
-    width: 2rem;
-    justify-content: center;
-    align-items: flex-end;
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 4;
-  }
 }
 
 .phil-img-container {

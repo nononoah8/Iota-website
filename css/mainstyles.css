@@ -711,11 +711,13 @@ header ul li {
   width: 100%;
   height: auto;
   top: 100px;
+  color: white;
 }
 
 .faq-title {
   text-align: center;
   margin-top: 20px;
+  color: white;
 }
 
 .faq-text {
@@ -726,6 +728,7 @@ header ul li {
   text-align: center;
   margin: 5px auto; /* Center horizontally */
   width: 300px;
+  color: white;
 }
 
 .faq-header p {
@@ -738,12 +741,12 @@ header ul li {
 
 .accordion {
   width: 500px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   margin-top: 20px;
 }
 
 .accordion-btn {
-  background-color: #e2decd;
+  background-color: #425e91;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -751,22 +754,19 @@ header ul li {
   border: none;
   outline: none;
   transition: 0.4s;
-  border-top: 2px solid black;
+  border-top: 2px solid white;
+  color: white;
 }
 .accordion-btn:after {
   content: "▼"; /* Unicode character for "downard carat" sign */
   font-size: 13px;
-  color: #777;
+  color: white;
   float: right;
   margin-left: 5px;
   transition: transform 0.3s;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion-btn:hover {
-  background-color: #c2bfaf;
-}
-
 .active:after {
   transform: rotate(180deg); /* Rotate to create the minus sign effect */
 }
@@ -774,38 +774,19 @@ header ul li {
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: #e2decd;
+  background-color: #425e91;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+.panel p {
+  color: white;
+}
 
 .mass-meeting-img {
   max-width: 500px;
-}
-
-.apply-btn-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-.apply-btn-wrapper .apply-btn {
-  position: relative;
-  color: black;
-  background-color: white;
-  font-weight: 700;
-  border: 2px solid black;
-  padding: 10px 20px;
-  width: 200px;
-  height: 40px;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.368); /* Add shadow effect */
-}
-.apply-btn-wrapper .apply-btn:hover {
-  background-color: rgb(228, 228, 228);
-  transition: 0.3s;
+  border: 4px solid white;
+  border-radius: 3px;
 }
 
 .rush-title {
@@ -814,7 +795,7 @@ header ul li {
 }
 .rush-title h1 {
   font-size: 160px;
-  color: black;
+  color: white;
   font-weight: 600;
   position: absolute;
   width: 100%;
@@ -864,6 +845,98 @@ header ul li {
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+
+@media (max-width: 1060px) {
+  .mass-meeting-img {
+    display: none;
+  }
+}
+.rush-poster {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.rush-poster .rush-poster-img {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+}
+
+.why-rush-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 2px solid white;
+}
+.why-rush-wrapper .why-rush-title {
+  display: flex;
+  top: 10px;
+  justify-content: center;
+  color: white;
+  font-size: 60px;
+}
+.why-rush-wrapper .why-rush-cards {
+  display: flex;
+  width: 300px;
+  height: 220px;
+  border: 1px solid white;
+  margin: 10px 40px;
+  color: white;
+  flex-direction: column;
+}
+.why-rush-wrapper .why-rush-cards .rush-card-img {
+  display: flex;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 10px 0px;
+  text-align: center;
+  margin-left: 30%;
+}
+.why-rush-wrapper .why-rush-cards .rush-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between title and text */
+  text-align: center;
+}
+.why-rush-wrapper .why-rush-cards .rush-card-text {
+  font-size: 14px;
+  text-align: center;
+}
+.why-rush-wrapper .rush-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0px;
+}
+.why-rush-wrapper .apply-btn-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.why-rush-wrapper .apply-btn-wrapper .apply-btn {
+  position: relative;
+  color: black;
+  background-color: white;
+  font-weight: 700;
+  border: 2px solid black;
+  padding: 10px 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.813); /* Add shadow effect */
+}
+.why-rush-wrapper .apply-btn-wrapper .apply-btn:hover {
+  background-color: rgb(228, 228, 228);
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=mainstyles.css.map */

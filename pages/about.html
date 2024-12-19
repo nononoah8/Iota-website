@@ -34,7 +34,7 @@
           <li><a href="about.html">About Us</a></li>
           <li><a href="rush.html">Rush</a></li>
           <li><a href="members.html">Members</a></li>
-          <li><a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Apply Now</a></li>
+          <li><a class="apply" href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">Apply Now</a></li>
         </ul>
       </nav>
       <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
@@ -43,19 +43,23 @@
         <div class="bar3"></div>
         <ul class="mobile-menu">
           <li><a href="about.html">About Us</a></li>
-          <li><a href="prosmembers.html">Prospective Members</a></li>
+          <li><a href="rush.html">Prospective Members</a></li>
           <li><a href="members.html">Members</a></li>
-          <li><a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Apply Now</a></li>
+          <li><a class="apply" href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">Apply Now</a></li>
         </ul>
       </div>
     </header>
 
     <div class="about-header">
-      <div class="home-overlay" id="overlay">
+      <!-- <div class="home-overlay" id="overlay">
         <img id="intro-animation" src="../public/about_intro_animation.gif" alt="intro animation"></img>
-      </div>
+      </div> -->
       <h1 class="about">ABOUT US</h1>
-      <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
+      <button class="arrow-down-btn" style="border: none; background: none; padding: 0; cursor: pointer;">
+        <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
+      </button>
+    </div>
+
     </div>
 
     <div class="phil-img-container">
@@ -125,7 +129,7 @@
     <div class="footer">
       <!-- Link to apply -->
       <div>
-        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0')" class="join-btn">Join Us!</button>
+        <button onclick="window.open('https://forms.gle/wtxFNX6y6ta2noHt8')" class="join-btn">Join Us!</button>
       </div>
       <!-- Links to social media -->
       <div class="social-links">
@@ -135,18 +139,7 @@
     </div>
   
     <script src="../script.js"></script>
-    <script>
-      // window.onload = function() {
-      //   var video = document.getElementById('intro-animation');
-    
-      //   if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-      //     document.getElementById('overlay').style.display = 'none';
-      //   }
-      // };
-    
-      // if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-      //   document.getElementById('overlay').style.display = 'none';
-      // }
+    <!-- <script>
     
       window.addEventListener('scroll', function() {
         var overlay = document.getElementById('overlay');
@@ -155,17 +148,6 @@
           overlay.style.display = 'none';
         }, 200); 
       });
-    
-      // var video = document.getElementById('intro-animation');
-      // var overlay = document.getElementById('overlay');
-    
-      // video.onended = function() {
-      //   overlay.style.opacity = '0';
-      //   setTimeout(function() {
-      //     overlay.style.display = 'none';
-      //     // Scroll a little bit
-      //   }, 200);
-      // };
 
       window.onload = function() {
         var hasRun = false;
@@ -203,6 +185,6 @@
           }
         });
       };
-    </script>
+    </script> -->
   </body>
 </html>

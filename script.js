@@ -5,19 +5,3 @@ document.getElementById('join-us-btn').addEventListener('click', function() {
 function toggleMobileMenu(menu) {
   menu.classList.toggle('open');
 };
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const pillarCards = document.querySelectorAll('.pillar-card');
-
-//   pillarCards.forEach(card => {
-//     card.addEventListener('mouseenter', () => {
-//       document.body.classList.add('dimmed-background');
-//       card.classList.add('hovered');
-//     });
-
-//     card.addEventListener('mouseleave', () => {
-//       document.body.classList.remove('dimmed-background');
-//       card.classList.remove('hovered');
-//     });
-//   });
-// });

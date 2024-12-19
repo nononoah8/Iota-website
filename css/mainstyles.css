@@ -235,6 +235,20 @@ header ul li {
     display: none !important;
   }
 }
+.arrow-down-btn > .arrow-down {
+  display: flex;
+  width: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  height: 110px;
+  width: 110px;
+}
+
 .front-wrapper {
   position: relative;
   padding: 5px;
@@ -407,7 +421,7 @@ header ul li {
 .exec-card > .exec-card-text {
   font-family: "Inter", sans-serif;
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   bottom: -3rem;
   left: 5rem;
   font-weight: bold;
@@ -487,7 +501,7 @@ header ul li {
 .member-card > .member-card-text {
   font-family: "Inter", sans-serif;
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   bottom: -1.8rem;
   left: 4.5rem;
   font-weight: bold;
@@ -495,7 +509,7 @@ header ul li {
 .member-card > .chair-card-text {
   font-family: "Inter", sans-serif;
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   bottom: -2.65rem;
   left: 4rem;
   font-weight: bold;
@@ -555,17 +569,6 @@ header ul li {
   .about-header > .about {
     font-size: 10.5rem;
   }
-}
-.about-header > .arrow-down {
-  display: flex;
-  width: 2rem;
-  justify-content: center;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
 }
 
 .phil-img-container {
@@ -707,15 +710,17 @@ header ul li {
     width: 90%;
   }
 }
-
-.faq-content {
-  display: flex;
-  align-items: flex-start;
+.faq {
+  width: 100%;
+  height: auto;
+  top: 100px;
+  color: white;
 }
+
 .faq-title {
   text-align: center;
   margin-top: 40px;
-  font-size: 50px;
+  color: white;
 }
 
 .faq-text {
@@ -725,54 +730,48 @@ header ul li {
   justify-content: center;
   text-align: center;
   margin: 5px auto; /* Center horizontally */
-  font-size: 20px;
+  width: 300px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.faq-header p {
+  width: 100%;
+  font-size: 30px;
+}
+.faq-header h1 {
+  font-size: 60px;
 }
 
 .accordion {
+  width: 500px;
+  border-bottom: 2px solid white;
   margin-top: 20px;
-  margin-left: 35%;
-}
-
-.accordion-container {
-  flex: 1;
-  padding-right: 0px;
 }
 
 .accordion-btn {
-  background-color: #e2decd;
+  background-color: #425e91;
+  font-size: 16px;
   cursor: pointer;
-  padding: 20px;
-  width: 90%;
-  text-align: center;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
-  border-top: 2px solid black;
-  font-size: 15px;
-  margin-top: 25px;
-  border-bottom: 2px solid black;
+  border-top: 2px solid white;
+  color: white;
 }
 .accordion-btn:after {
   content: "▼"; /* Unicode character for "downard carat" sign */
   font-size: 13px;
-  color: #777;
+  color: white;
   float: right;
   margin-left: 5px;
   transition: transform 0.3s;
 }
 
-.mass-meeting-img {
-  width: 420px;
-  height: 330px;
-  margin-right: 20%;
-  margin-top: 37px;
-}
-
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion-btn:hover {
-  background-color: #c2bfaf;
-}
-
 .active:after {
   transform: rotate(180deg); /* Rotate to create the minus sign effect */
 }
@@ -780,10 +779,171 @@ header ul li {
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: #e2decd;
+  background-color: #425e91;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+.panel p {
+  color: white;
+}
+
+.mass-meeting-img {
+  max-width: 500px;
+  border: 4px solid white;
+  border-radius: 3px;
+}
+
+.rush-title {
+  width: 100%;
+  height: 95vh;
+}
+.rush-title h1 {
+  font-size: 160px;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+}
+.rush-title > .arrow-down {
+  display: flex;
+  width: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .back-video {
+    display: none;
+  }
+  .rush-title {
+    display: none;
+  }
+}
+.faq-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+@media (max-width: 1060px) {
+  .mass-meeting-img {
+    display: none;
+  }
+}
+.rush-poster {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.rush-poster .rush-poster-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.why-rush-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+.why-rush-wrapper .why-rush-title {
+  display: flex;
+  top: 10px;
+  justify-content: center;
+  color: white;
+  font-size: 60px;
+}
+.why-rush-wrapper .why-rush-cards {
+  display: flex;
+  width: 300px;
+  height: 220px;
+  margin: 10px 40px;
+  color: white;
+  flex-direction: column;
+}
+.why-rush-wrapper .why-rush-cards .rush-card-img {
+  display: flex;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 10px 0px;
+  text-align: center;
+  margin-left: 30%;
+}
+.why-rush-wrapper .why-rush-cards .rush-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between title and text */
+  text-align: center;
+}
+.why-rush-wrapper .why-rush-cards .rush-card-text {
+  font-size: 14px;
+  text-align: center;
+}
+.why-rush-wrapper .rush-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0px;
+}
+.why-rush-wrapper .apply-btn-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.why-rush-wrapper .apply-btn-wrapper .apply-btn {
+  position: relative;
+  color: black;
+  background-color: white;
+  font-weight: 700;
+  border: 2px solid black;
+  padding: 10px 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.813); /* Add shadow effect */
+}
+.why-rush-wrapper .apply-btn-wrapper .apply-btn:hover {
+  background-color: rgb(228, 228, 228);
+  transition: 0.3s;
+}
+
+.rush-image-container {
+  flex: 0 0 auto; /* Prevents the image container from resizing */
 }
 
 /*# sourceMappingURL=mainstyles.css.map */

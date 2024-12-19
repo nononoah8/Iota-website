@@ -47,13 +47,17 @@
 }
 
 .faq {
-  width: 500px;
-  padding: 20px;
+  width: 100%;
+  height: auto;
+  top: 100px;
+  color: white;
+  // padding: 20px;
 }
 
 .faq-title {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  color: white;
 }
 
 .faq-text {
@@ -64,15 +68,30 @@
   text-align: center;
   margin: 5px auto; /* Center horizontally */
   width: 300px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.faq-header {
+  p {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
 }
 
 .accordion {
-  border-bottom: 2px solid black;
+  width: 500px;
+  border-bottom: 2px solid white;
   margin-top: 20px;
 }
 
 .accordion-btn {
-  background-color: #e2decd;
+  background-color: #425e91;
+  font-size: 16px;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -80,12 +99,13 @@
   border: none;
   outline: none;
   transition: 0.4s;
-  border-top: 2px solid black;
+  border-top: 2px solid white;
+  color: white;
 
   &:after {
     content: '\25BC'; /* Unicode character for "downard carat" sign */
     font-size: 13px;
-    color: #777;
+    color: white;
     float: right;
     margin-left: 5px;
     transition: transform 0.3s
@@ -93,9 +113,9 @@
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion-btn:hover {
-  background-color: #c2bfaf;
-}
+// .active, .accordion-btn:hover {
+//   background-color: #c2bfaf;
+// }
 
 .active:after {
   transform: rotate(180deg); /* Rotate to create the minus sign effect */
@@ -103,8 +123,193 @@
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: #e2decd;
+  background-color: #425e91;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+
+  p {
+    color: white;
+  }
+}
+
+.mass-meeting-img {
+  max-width: 500px;
+  border: 4px solid white;
+  border-radius: 3px;
+}
+
+.rush-title {
+  width: 100%;
+  height: 95vh;
+  h1 {
+    font-size: 160px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+  }
+
+  > .arrow-down {
+    display: flex;
+    width: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .back-video {
+    display: none;
+  }
+
+  .rush-title {
+    display: none;
+  }
+}
+
+.faq-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+// If the width is less than 1060px, make the picture and faq be vertical not next to each other horizontally
+@media (max-width: 1060px) {
+  .mass-meeting-img {
+    display: none;
+  }
+}
+
+.rush-poster {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .rush-poster-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.why-rush-wrapper {
+	display: flex;
+	// position: relative;
+  flex-direction: column;
+
+	padding: 40px;
+  margin-bottom: 40px;
+  // border: 2px solid white;
+
+  .why-rush-title {
+    display: flex;
+    top: 10px;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+  }
+
+  .why-rush-cards {
+    display: flex;
+    width: 300px;
+    height: 220px;
+    // border: 1px solid white;
+    margin: 10px 40px;
+    color: white;
+    flex-direction: column;
+
+    .rush-card-img {
+      display: flex;
+      background-color: white;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin: 10px 0px;
+      text-align: center;
+      margin-left: 30%;
+    }
+
+    .rush-card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px; /* Space between title and text */
+      text-align: center;
+    }
+
+    .rush-card-text {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  .rush-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+  }
+
+  .apply-btn-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+  
+    .apply-btn {
+      position: relative;
+      color: black;
+      background-color: white;
+      font-weight: 700;
+      border: 2px solid black;
+      padding: 10px 20px;
+      width: 200px;
+      height: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.813); /* Add shadow effect */
+  
+  
+      &:hover {
+        background-color: rgb(228, 228, 228);
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.rush-image-container {
+  flex: 0 0 auto; /* Prevents the image container from resizing */
 }

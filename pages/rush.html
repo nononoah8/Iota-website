@@ -13,69 +13,151 @@
     <title>Rush</title>
   </head>
 
-  <header>
-    <div id="brand">
-      <a href="../index.html">
-        <img src="../public/IOE_logo.png" alt="IOE" class="logo" />
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="rush.html">Rush</a></li>
-        <li><a href="members.html">Members</a></li>
-        <li><a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Apply Now</a></li>
-      </ul>
-    </nav>
-    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="rush.html">Rush</a></li>
-        <li><a href="members.html">Members</a></li>
-        <li><a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSd3JrgKDDBYFKH_4OI6k9Pjdx3byXOCZi-0TQ_d7NlzjTkCdA/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Apply Now</a></li>
-      </ul>
-    </div>
-  </header>
 
-  <body style="background-color: #e2decd">
-    <div class="interested">
-      <h1 class="faq-title">INTERESTED?</h1>
-      <button class="interested-form">Interest Form</button>
-      <button class="apply-form">Apply Now!</button>
+
+  <body style="background-color: #425e91">
+    <header>
+      <div id="brand">
+        <a href="../index.html">
+          <img src="../public/IOE_logo.png" alt="IOE" class="logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="rush.html">Rush</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a class="apply" href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">Apply Now</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="rush.html">Rush</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a class="apply" href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">Apply Now</a></li>
+        </ul>
+      </div>
+    </header>
+
+
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="../public/IotaRushWebsiteVid.mp4" type="video/mp4">
+    </video>
+
+      
+    <div class="rush-title">
+      <!-- <h1><b>RUSH</b></h1> -->
+      <button class="arrow-down-btn" style="border: none; background: none; padding: 0; cursor: pointer;">
+      <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
+      </button>
     </div>
-    <div class="faq">
+
+    <div class="why-rush-wrapper">
+      <div class="why-rush-header">
+        <h1 class="why-rush-title">
+          Why Rush Iota?
+        </h1>
+      </div>
+
+      <div class="rush-card-wrapper">
+        <div class="why-rush-cards">
+          <!-- <img src="" alt=""></img> -->
+          <div class="rush-card-img">
+            <img src="../public/prof-growth-icon.png" alt="Professional Growth Icon" class="rush-icons">
+          </div>
+          <p class="rush-card-title">Professional Growth</p>
+          <p class="rush-card-text">From professional development workshops to industry guest speaker sessions, Iota Omega Epsilon prioritizes providing resources for members to succeed in their career endeavors.
+
+          </p>
+        </div>
+        
+        <div class="why-rush-cards">
+          <!-- <img src="" alt=""></img> -->
+          <div class="rush-card-img">
+            <img src="../public/brotherhood-icon.png" alt="Brotherhood Icon" class="rush-icons">
+          </div>
+          <p class="rush-card-title">Brotherhood</p>
+          <p class="rush-card-text">Iota holds many social events each semester, and the community is close-knit. You will meet brothers who not only may share your professional goals but become your closest friends! </p>
+        </div>
+
+        <div class="why-rush-cards">
+          <!-- <img src="" alt=""></img> -->
+          <div class="rush-card-img">
+            <img src="../public/networking-icon.png" alt="Networking Icon" class="rush-icons">
+          </div>
+          <p class="rush-card-title">Networking</p>
+          <p class="rush-card-text">In addition to networking workshops and events, our network of brothers pursue all kinds of majors and careers, from healthcare consulting to engineering. We help each other and grow together. </p>
+        </div>
+
+        <div class="why-rush-cards">
+          <!-- <img src="" alt=""></img> -->
+          <div class="rush-card-img">
+            <img src="../public/career-opps-icon.png" alt="Career Opportunities Icon" class="rush-icons">
+          </div>
+          <p class="rush-card-title">Career Opportunities</p>
+          <p class="rush-card-text">At Iota Omega Epsilon, we strive to open career opportunities for members. Through our project teams, career treks, and much more, brothers can both explore their passions and succeed.</p>
+        </div>
+      </div>
+
+      <div class="apply-btn-wrapper">
+        <a href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">
+          <button class="interested-form apply-btn">INTEREST FORM</button>
+        </a>
+        <!-- <button class="apply-form apply-btn">APPLY NOW!</button> -->
+      </div>
+    </div>
+
+    <div class="rush-poster" style="width: 100%; display: flex;">
+      <img src="../public/rush_poster.jpg" alt="Rush Poster" class="rush-poster-img">
+    </div>
+
+    <div class="faq-header">
       <h1 class="faq-title">FAQs</h1>
       <p class="faq-text">Below are some of the most frequently asked questions about Iota and our recruitment process.</p>
-      
+    </div>
+    <div class="faq">
       <div class="faq-content">
         <div class="accordion-container">
           <div class="accordion">
-            <button class="accordion-btn">WHY IOTA?</button>
+            <button class="accordion-btn"><b>WHAT IS RUSH?</b></button>
             <div class="panel">
-              <p>Lorem ipsum...</p>
+              <p>Rush will be a 2-week process of applying, attending fun events, and interviewing to help us, and especially YOU, gauge a professional and social fit in Iota.</p>
             </div>
             
-            <button class="accordion-btn">WHAT IS RUSH?</button>
+            <button class="accordion-btn"><b>DO YOU HAVE TO BE AN IOE MAJOR TO JOIN?</b></button>
             <div class="panel">
-              <p>Lorem ipsum...</p>
+              <p>NO! We accept and welcome ALL majors!</p>
             </div>
-            
-            <button class="accordion-btn">DO YOU HAVE TO BE AN IOE MAJOR TO JOIN?</button>
+
+            <button class="accordion-btn"><b>I HAVE NO BUSINESS EXPERIENCE. CAN I STILL JOIN?</b></button>
             <div class="panel">
-              <p>Lorem ipsum...</p>
+              <p>Yes! Anyone interested in business can join. Iota Omega Epsilon aims to provide brothers with more experience in business and build their skills, regardless of their prior level. </p>
             </div>
     
-            <button class="accordion-btn">WHAT DO I GAIN FROM BEING IN IOTA?</button>
+            <button class="accordion-btn"><b>WHAT IS THE TIME COMMITMENT?</b></button>
             <div class="panel">
-              <p>Lorem ipsum...</p>
+              <p>While there are minimum requirements for pledging, the time commitment of pledging and being a brother varies by what you want out of Iota.</p>
             </div>
           </div>
         </div>
-        
-        <img src="../public/rush_questions.png" alt="Rush Questions" class="mass-meeting-img">
+        <div class="rush-img-container">
+          <img src="../public/rush_questions.png" alt="Rush Questions" class="mass-meeting-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <button onclick="window.open('https://forms.gle/wtxFNX6y6ta2noHt8')" class="join-btn">Join Us!</button>
+      </div>
+      <!-- Links to social media -->
+      <div class="social-links">
+        <a href="https://www.instagram.com/iota_omega_epsilon/" class="instagram" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/iota-omega-epsilon/" class="linkedin" target="_blank">LinkedIn</a>
       </div>
     </div>
   </body>

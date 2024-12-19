@@ -235,6 +235,20 @@ header ul li {
     display: none !important;
   }
 }
+.arrow-down-btn > .arrow-down {
+  display: flex;
+  width: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  height: 110px;
+  width: 110px;
+}
+
 .front-wrapper {
   position: relative;
   padding: 5px;
@@ -407,9 +421,9 @@ header ul li {
 .exec-card > .exec-card-text {
   font-family: "Inter", sans-serif;
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   bottom: -3rem;
-  left: 4.3rem;
+  left: 5rem;
   font-weight: bold;
 }
 
@@ -487,17 +501,17 @@ header ul li {
 .member-card > .member-card-text {
   font-family: "Inter", sans-serif;
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   bottom: -1.8rem;
   left: 4.5rem;
   font-weight: bold;
 }
 .member-card > .chair-card-text {
   font-family: "Inter", sans-serif;
-  position:absolute;
-  font-size: 0.9rem;
+  position: absolute;
+  font-size: 0.86rem;
   bottom: -2.65rem;
-  left: 3.9rem;
+  left: 4rem;
   font-weight: bold;
   color: white;
 }
@@ -555,20 +569,6 @@ header ul li {
   .about-header > .about {
     font-size: 10.5rem;
   }
-}
-
-.arrow-down-btn > .arrow-down {
-  display: flex;
-  width: 2rem;
-  justify-content: center;
-  align-items: flex-end;
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-  height: 110px;
-  width: 110px;
 }
 
 .phil-img-container {
@@ -737,7 +737,7 @@ header ul li {
 
 .faq-header p {
   width: 100%;
-  font-size: 25px;
+  font-size: 30px;
 }
 .faq-header h1 {
   font-size: 60px;
@@ -751,6 +751,7 @@ header ul li {
 
 .accordion-btn {
   background-color: #425e91;
+  font-size: 16px;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -760,9 +761,7 @@ header ul li {
   transition: 0.4s;
   border-top: 2px solid white;
   color: white;
-  font-size: 16px;
 }
-
 .accordion-btn:after {
   content: "▼"; /* Unicode character for "downard carat" sign */
   font-size: 13px;
@@ -770,10 +769,6 @@ header ul li {
   float: right;
   margin-left: 5px;
   transition: transform 0.3s;
-}
-
-.image-container {
-  flex: 0 0 auto; /* Prevents the image container from resizing */
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -791,7 +786,6 @@ header ul li {
 }
 .panel p {
   color: white;
-  margin-bottom: 15px;
 }
 
 .mass-meeting-img {
@@ -803,7 +797,6 @@ header ul li {
 .rush-title {
   width: 100%;
   height: 95vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .rush-title h1 {
   font-size: 160px;
@@ -855,10 +848,8 @@ header ul li {
 }
 .faq-content {
   display: flex;
-  align-items: flex-start;
   width: 100%;
-  gap: 100px;
-  margin-left: 13%;
+  justify-content: space-around;
 }
 
 @media (max-width: 1060px) {
@@ -875,7 +866,7 @@ header ul li {
 .rush-poster .rush-poster-img {
   display: flex;
   justify-content: center;
-  width: 55%;
+  width: 100%;
 }
 
 .why-rush-wrapper {
@@ -883,7 +874,6 @@ header ul li {
   flex-direction: column;
   padding: 40px;
   margin-bottom: 40px;
-  border: 2px solid white;
 }
 .why-rush-wrapper .why-rush-title {
   display: flex;
@@ -895,8 +885,7 @@ header ul li {
 .why-rush-wrapper .why-rush-cards {
   display: flex;
   width: 300px;
-  height: 250px;
-  border: 1px solid #425e91;
+  height: 220px;
   margin: 10px 40px;
   color: white;
   flex-direction: column;
@@ -911,23 +900,13 @@ header ul li {
   text-align: center;
   margin-left: 30%;
 }
-.why-rush-wrapper .why-rush-cards .rush-icons {
-  display: flex;
-  width: 80px;
-  height: 80px;
-  text-align: center;
-  margin-top: 8px;
-  margin-left: 10%;
-}
 .why-rush-wrapper .why-rush-cards .rush-card-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px; /* Space between title and text */
   text-align: center;
-  font-family: "Inter", sans-serif;
 }
 .why-rush-wrapper .why-rush-cards .rush-card-text {
-  margin: 0px 20px;
   font-size: 14px;
   text-align: center;
 }
@@ -941,7 +920,7 @@ header ul li {
 .why-rush-wrapper .apply-btn-wrapper {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 20px;
 }
 .why-rush-wrapper .apply-btn-wrapper .apply-btn {
@@ -949,12 +928,10 @@ header ul li {
   color: black;
   background-color: white;
   font-weight: 700;
-  margin: 0px 75px;
-  font-size:18px;
   border: 2px solid black;
   padding: 10px 20px;
   width: 200px;
-  height: 50px;
+  height: 40px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -965,8 +942,8 @@ header ul li {
   transition: 0.3s;
 }
 
-html {
-  scroll-behavior: smooth;
+.rush-image-container {
+  flex: 0 0 auto; /* Prevents the image container from resizing */
 }
 
 /*# sourceMappingURL=mainstyles.css.map */

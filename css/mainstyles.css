@@ -900,7 +900,7 @@ header ul li {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  margin: 10px 0px;
+  padding: 5px 0px;
   text-align: center;
   margin-left: 30%;
 }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link rel="icon" href="./public/favicon.ico" type="image/ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="Iota Omega Epsilon, University of Michigan Fraternity, Coed Fraternity, STEM Fraternity, Business Professional Fraternity, Michigan Student Organization"></meta>
+    <meta name="description" content="Join Iota Omega Epsilon, the coed STEM business professional fraternity at the University of Michigan. Develop leadership skills, network, and advance your career in STEM and business."></meta>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/mainstyles.css" />
+    <title>Iota Omega Epsilon</title>
+  </head>
+
+  <body style="background-color:#e2decd">
+    <header>
+      <div id="brand">
+        <a href="/">
+          <img src="public/IOE_logo.png" alt="IOE" class="logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/rush.html">Rush</a></li>
+          <li><a href="pages/members.html">Members</a></li>
+          <li><a class="apply" href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">Apply Now</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/rush.html">Prospective Members</a></li>
+          <li><a href="pages/members.html">Members</a></li>
+          <li><a class="apply" href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">Apply Now</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="home-overlay" id="overlay">
+      <img id="intro-animation" src="public/home_animation.gif"></img>
+    </div>
+
+    <div id="content" class="front-wrapper">
+      <button onclick="window.location.href='./pages/rush.html';" class="join-btn">JOIN US</button>
+
+      <p>Michigan's premier co-ed business stem fraternity</p>
+
+      <img src="public/scroll-icon.png" alt="" class="scroll-icon"></img>
+    </div>
+
+    <div class="presidents-wrapper">
+      <img src="./public/members/Ethan_George.jpg" alt="Ethan" style="border-radius: 5px;">
+      <div class="presidents-welcome">
+        Welcome to the Alpha Chapter of Iota Omega Epsilon, Michigan’s premier STEM-Business co-ed professional fraternity.
+        As President, I am honored to extend a warm welcome to you on behalf of our fraternity!
+        <br>
+        <br>
+        During my first year at Michigan, I wanted to join a community that seeked to combine their engineering
+        knowledge and business skills to create positive change both locally and globally. I was able to find this in Iota,
+        and I can confidently say that joining has been the most rewarding and impactful part of my college experience.
+        Not only have I been introduced to lifelong friends and connections who serve as a constant source of inspiration,
+        I’ve also been provided the guidance and resources to become the best version of myself.
+        <br>
+        <br>
+        As Michigan’s first STEM-Business fraternity, Iota Omega Epsilon offers brothers a community of like-minded
+        and driven individuals, along with the tools they need to succeed in the ever-evolving world of STEM and business.
+        From project teams and study groups to professional development workshops, we cultivate a culture of growth where
+        brothers are pushed to become the best version of themselves and supported in their pursuit of their passions within
+        STEM and Business.
+        <br>
+        <br>
+        Thank you for taking the time to visit our website. I encourage you to continue exploring to learn more about who we are
+        and what we stand for. If you have any questions, please don’t hesitate to reach out to me at eten@umich.edu.
+        We look forward to meeting you!
+        <br>
+        <br>
+        Best,
+        <br>
+        Ethan George
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <!-- Link to apply -->
+    <div class="footer">
+      <div>
+        <button onclick="window.open('https://forms.gle/wtxFNX6y6ta2noHt8')" class="join-btn">Join Us!</button>
+      </div>
+      <!-- Links to social media -->
+      <div class="social-links">
+        <a href="https://www.instagram.com/iota_omega_epsilon/" class="instagram" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/iota-omega-epsilon/" class="linkedin" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      window.addEventListener('scroll', function() {
+        var overlay = document.getElementById('overlay');
+        overlay.style.opacity = '0';
+        setTimeout(function() {
+          overlay.style.display = 'none';
+        }, 200); 
+      });
+
+      window.onload = function() {
+        var hasRun = false;
+        var gifDuration = 2150;
+
+        function checkOverlay() {
+          var overlay = document.getElementById('overlay');
+          var gif = document.getElementById('intro-animation');
+          if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
+            overlay.classList.add('hidden');
+          } else {
+            overlay.style.display = 'flex';
+            // Restart the GIF by changing the src attribute
+            var src = gif.src;
+            gif.src = '';
+            gif.src = src;
+
+            // Hide the overlay after the GIF duration
+            setTimeout(function() {
+              overlay.classList.add('hidden');
+            }, gifDuration);
+          }
+          hasRun = true;
+        }
+
+        // Initial check
+        checkOverlay();
+
+        // Event listener for scroll
+        window.addEventListener('scroll', function() {
+          if (!hasRun) {
+            checkOverlay();
+          }
+        });
+      };
+    </script>
+  </body>
+</html>

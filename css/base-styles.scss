@@ -1,0 +1,290 @@
+// Define variables
+$primary-color: #5E9AB7;
+$secondary-color: #E3CAAB;
+$tertiary-color: #231F20;
+$quaternary-color: #d9d9d9;
+$base-font-size: 16px;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+// Apply global styles
+body {
+  font-size: $base-font-size;
+  color: $tertiary-color;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  position: relative;
+  margin-left: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  z-index: 4;
+  height: 40px;
+}
+
+header a {
+  text-decoration: none;
+  z-index: 2;
+}
+
+header {
+  padding: 0 20px;
+  background-color: $tertiary-color;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
+
+  #brand {
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+      color: white;
+      transition: color 0.3s ease;
+      letter-spacing: 2px;
+      z-index: 2;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    li {
+      padding: 5px;
+      margin-left: 10px;
+    }
+  }
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
+
+.open {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .bar2 {
+    opacity: 0;
+  }
+
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+
+  li {
+    z-index: 1;
+    background-color: rgba($tertiary-color, 0.7);
+    width: 100%;
+    text-align: center;
+
+    a {
+      opacity: 1;
+      color: white;
+    }
+  }
+}
+
+
+//! Can change this to a different width if necessary
+@media only screen and (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+
+.footer {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  background-color: $tertiary-color;
+  height: 2rem;
+  width: 100%;
+  margin: 2.5rem 0 0 0 !important;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+  margin-top: auto;
+
+  .join-btn {
+    background-color: white;
+    color: black;
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:active, &:focus {
+      background-color: black;
+      color: white;
+      outline: none;
+      box-shadow: none;
+    }
+
+    > a {
+      text-decoration: none;
+      color: black;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  > .email {
+    color: white;
+  }
+
+  > .social-links {
+    display: flex;
+    gap: 20px;
+  
+    .instagram, .linkedin {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+}
+
+/* Media Query for Vertical Footer Layout */
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .join-btn {
+      margin-bottom: 1rem; /* Add some spacing between items */
+    }
+
+    .email {
+      margin-bottom: 1rem; /* Add some spacing between items */
+    }
+
+    .social-links {
+      flex-direction: column;
+      gap: 0.5rem; /* Adjust gap for vertical layout */
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -6rem;
+  left: 0;
+  width: 100%;
+  height: 115vh;
+  background-color: $tertiary-color;
+  z-index: 1;
+  transition: opacity 0.3s;
+  opacity: 1;
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .overlay {
+    display: none !important;
+  }
+}
+
+.arrow-down-btn > .arrow-down {
+  display: flex;
+  width: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  height: 110px;
+  width: 110px;
+}

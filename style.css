@@ -1,0 +1,810 @@
+
+/* #5E9AB7, #E3CAAB, #231F20 */
+
+/*
+  * Goals on what to do for the reactiveness:
+    * Get rid of all the viewport units because they're ass units.
+    * Fix the padding and make everything use the box model
+    * Clean up the code if possible
+    * Should try to clean up the main front page and then go from there to the about then to the members.
+      * Make the layout look good if possible.
+    * Can just restart the styles and split everything up so it's all just split up for starters.
+*/
+
+:root {
+  --primary-color: #5E9AB7;
+  --secondary-color: #E3CAAB;
+  --tertiary-color: #231F20;
+  --font-family: "Inter", sans-serif;
+  --base-font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  color: var(--tertiary-color);
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography Styles */
+.body-text {
+  color: #231F20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+/* TODO: FIX all the navbar */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 8vh;
+  width: 100%;
+  background-color: var(--tertiary-color);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.heading {
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 10rem;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+/* Main Header Styles */
+.head {
+  color: white;
+  font-size: 7rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  font-weight: 250;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #FFFF;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 14px 16px;
+}
+
+.nav-links a:hover:not(.active) {
+  background-color: lightseagreen;
+  border-radius: 10px;
+}
+
+.nav-links li a.active {
+  background-color: var(--secondary-color);
+}
+
+.apply {
+  background-color: white;
+  color: black !important;
+  font-weight: 1000 !important;
+  border-radius: 10px;
+}
+
+/* TODO: FIX THIS styling shit */
+.logo{
+  display: flex;
+  width: 8vh; 
+  height: 8vh; 
+  justify-content: flex-start;
+  right: 10px;
+  top: 0px;
+}
+
+/* TODO: FIX THIS get rid of vh */
+.oval {
+  height: 100vh;
+  width: 150vw;
+  top: -60vh;
+  left: -25vw;
+  background-color: #376074;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+nav2 {
+  display: flex;
+  height: 45vh;
+  align-items: center;
+  justify-content: center;
+}
+
+nav2 ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-weight: 850;
+}
+
+.nav2-links {
+  color: white;
+  text-decoration: none;
+  font-size: 3.4rem;
+}
+
+.bi {
+  color: white;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%) scale(4,3);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  cursor: pointer;
+}
+
+.welcome {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+
+.second-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  overflow-y: auto;
+  margin-top: 20vh;
+}
+
+.headshot {
+  width: 15rem;
+  height: 15rem;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+/* ! THIS IS NOW THE ABOUT PAGE */
+
+.parent-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*! ERROR HERE WITH THE ABOUTS */
+.abouts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.second_about, .third_about, .main_abt {
+  margin: inherit;
+}
+
+.about1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-weight: 900;
+  color: #000;
+  line-height: 82%;
+}
+.about2 {
+  margin: 10px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 82%;
+}
+.about3 {
+  margin: 10px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 82%;
+}
+.about4 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 100%;
+}
+
+/* TODO: FIX HOW THIS IS DONE */
+
+.nav_page2 {
+  display: flex;
+  height: 150vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.nav_page2 {
+  display: flex;
+  height: 150vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.frame .wave-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: -40vh;
+  z-index: 0;
+  transform: scaleY(0.75);
+}
+
+.pillar_text {
+  position: absolute; 
+  top: 4vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 7.5rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+
+.community_text {
+  cursor: pointer;
+  position: absolute; 
+  top: 28vh; 
+  right: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #000000;
+  font-size: 7.5rem;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  text-align: right;
+}
+
+.ambition_text {
+  cursor: pointer;
+  position: absolute; 
+  top: 48vh; 
+  right: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #000000;
+  font-size: 7.5rem;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  text-align: right;
+}
+
+.philanthropy_text {
+  cursor: pointer;
+  position: absolute; 
+  top: 45vh; 
+  left: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #000000;
+  font-size: 7.5rem;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  text-align: left;
+}
+
+.development_text {
+  cursor: pointer;
+  position: absolute; 
+  top: 65vh; 
+  left: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #000000;
+  font-size: 7.5rem;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  text-align: left;
+}
+
+.chev2 {
+  position: absolute;
+  top: 85vh;
+  left: 50%;
+  transform: translateX(-50%) scale(4,3);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+.nav_page3 {
+  display: flex;
+  top: 200vh;
+  height: 150vh;
+  width: 100vw;
+  position: absolute;
+  background-color: var(--primary-color);
+}
+
+.community_header {
+  position: absolute; 
+  top: 4vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 6vi;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+.socials {
+  position: absolute; 
+  top: 10vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 6vi;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+
+
+.chev3 {
+  position: absolute;
+  top: 93vh;
+  left: 50%;
+  transform: translateX(-50%) scale(4,3);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav_page4 {
+  display: flex;
+  top: 300vh;
+  height: 150vh;
+  width: 100vw;
+  position: absolute;
+  background-color: var(--tertiary-color);
+}
+
+.development_header {
+  position: absolute; 
+  top: 4vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 6rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+.prof-dev {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.nav_page5 {
+  display: flex;
+  top: 400vh;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: #C8C5B5;
+}
+
+.ambition_header {
+  position: absolute; 
+  top: 4vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #000;
+  font-size: 6rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+.ambition_statement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 700;
+  color: #000;
+  font-size: 3rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.nav_page6 {
+  display: flex;
+  top: 500vh;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: #D9D9D9;
+}
+
+.philanthropy_header {
+  position: absolute; 
+  top: 4vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 900;
+  color: #000;
+  font-size: 6rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  z-index: 1;
+  margin: auto;
+}
+
+.philanthropy_statement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter-Black", Helvetica;
+  font-weight: 700;
+  color: #000;
+  font-size: 3rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.wave {
+  position: absolute;
+  bottom: 58vh;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 73px;
+  transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+  fill: var(--primary-color);
+}
+
+.community-images {
+  display: flex;
+  margin-top: 20vh; /* Adjust this value as needed */
+}
+
+.images-container1 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.images-container2 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+/* TODO: Can make this a media query to be one slide instead of multiple */
+.view-port {
+  width: 1300px;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: 25%;
+  left: 27.5vw;
+  transform: translate(-25%, -50%);
+}
+
+.view-port::before,
+.view-port::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  pointer-events: none;
+  z-index: 9999; /* Add this line */
+}
+
+.view-port::before {
+  left: 0;
+  background: linear-gradient(to right, var(--primary-color) 0%, transparent 100%);
+}
+
+.view-port::after {
+  right: 0;
+  background: linear-gradient(to left, var(--primary-color) 0%, transparent 100%);
+}
+
+/* TODO: need to make this not strict pixel values*/
+.card {
+  width: 400px;
+  height: 200px;
+  background-color: green;
+  border: 2px solid black;
+  box-sizing: border-box;
+
+  font-size: 2.5em;
+  text-align: center;
+
+  margin-right: 50px;
+}
+
+.next {
+  position: absolute;
+  height: 200px;
+  top: 16.25%;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.prev {
+  position: absolute;
+  height: 200px;
+  top: 16.25%;
+  z-index: 2;
+  left: 0;
+  cursor: pointer;
+}
+
+.exec-header {
+  font-size: 3em;
+  position: absolute;
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.exec-members {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 90vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.exec-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 220px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 20px;
+  position: relative; /* Added this */
+}
+
+.exec-card::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: skyblue;
+}
+
+.exec-card-text {
+  position: absolute;
+  font-size: 1rem;
+  bottom: -40px;
+  left: 80px;
+}
+
+.chair-members {
+  background-color: #231F20;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+  padding-top: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.chair-members-wrapper {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.chair-header {
+  font-size: 3rem;
+  position: absolute;
+  top: -5px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chair-card-text {
+  position: absolute;
+  font-size: 1em;
+  bottom: -25px;
+  left: 70px;
+  color: white;
+}
+
+.members {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4vh;
+  padding: 20px;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.member-header {
+  font-size: 3rem;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 220px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 20px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.member-card::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: skyblue;
+}
+
+.member-card-text {
+  position: absolute;
+  font-size: 1rem;
+  bottom: -25px;
+  left: 70px;
+}

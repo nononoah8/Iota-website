@@ -1,0 +1,145 @@
+.front-wrapper {
+  position: relative;
+  padding: 5px;
+  background-image: url('../public/IOE_Front_page.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 0;
+  padding-top: 45rem;
+  margin-bottom: 6rem;
+  z-index: 0;
+
+  > .join-btn {
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 5rem;
+    left: 25rem;
+    background-color: #231f20;
+    color: white;
+    //* base is 9x3 rem
+    width: 9rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    
+
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:active, &:focus {
+      background-color: black;
+      color: white;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  > p {
+    // font-family: "Inknut Antiqua", serif;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -1.5rem;
+    letter-spacing: 2px;
+  }
+
+  > .scroll-icon {
+    position: absolute;
+    right: 0.5rem;
+    width: 3rem;
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .front-wrapper {
+    padding-top: 45rem;
+
+    > .join-btn {
+      bottom: 5rem;
+      left: 12rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .front-wrapper {
+    padding-top: 45rem;
+
+    > .join-btn {
+      bottom: 3rem;
+      left: 6rem;
+    }
+  }
+}
+
+.presidents-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.25rem;
+  padding: 3rem 5rem;
+  justify-content: center;
+  align-items: stretch;
+
+  img, .presidents-welcome {
+    flex: 1;
+    max-width: 550px;
+    min-width: 300px;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .presidents-welcome {
+    display: block;
+    background-color: #231f20;
+    color: white;
+    height: auto;
+    overflow: hidden;
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .presidents-wrapper {
+    gap: 3rem; // Adjust gap for vertical layout  
+  }
+}
+
+@media (max-width: 1000px) {
+  .presidents-wrapper {
+    gap: 2rem; // Adjust gap for vertical layout  
+  }
+}
+
+@media (max-width: 900px) {
+  .presidents-wrapper {
+    gap: 1rem; // Adjust gap for vertical layout  
+  }
+}
+
+.home-overlay {
+  @extend .overlay;
+
+  background-color: #232021 !important;
+}

@@ -49,9 +49,9 @@
     </video>
 
       
-    <div class="rush-title">
+    <div class="rush-title" id="why-rush-wrapper">
       <!-- <h1><b>RUSH</b></h1> -->
-      <button class="arrow-down-btn" style="border: none; background: none; padding: 0; cursor: pointer;">
+      <button class="arrow-down-btn" id='arrow-down-btn' style="border: none; background: none; padding: 0; cursor: pointer;">
       <img class="arrow-down" src="./../public/Arrow-Down.png" alt=""></img>
       </button>
     </div>
@@ -178,4 +178,29 @@
       });
     }
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollToNextSection = (currentSectionId) => {
+      const currentSection = document.getElementById(currentSectionId);
+      const nextSection = currentSection.nextElementSibling;
+
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    // for rush page
+    document.getElementById('arrow-down-btn').addEventListener('click', () => {
+      scrollToNextSection('why-rush-wrapper');
+    });
+
+    //for about us page
+    document.getElementById('arrow-down-btn').addEventListener('click', () => {
+      scrollToNextSection('about-us-wrapper');
+    });
+
+  });
+</script>
+
 </html>

@@ -14,8 +14,7 @@
   </head>
 
 
-
-  <body style="background-color: #425e91">
+  <body id="content" class="abt" style="background-color: #425e91">
     <header>
       <div id="brand">
         <a href="../index.html">
@@ -34,7 +33,7 @@
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
-        <ul>
+        <ul class="mobile-menu">
           <li><a href="about.html">About Us</a></li>
           <li><a href="rush.html">Rush</a></li>
           <li><a href="members.html">Members</a></li>
@@ -57,11 +56,9 @@
     </div>
 
     <div class="why-rush-wrapper">
-      <div class="why-rush-header">
-        <h1 class="why-rush-title">
-          Why Rush Iota?
-        </h1>
-      </div>
+      <h1 class="why-rush-title">
+        Why Rush Iota?
+      </h1>
 
       <div class="rush-card-wrapper">
         <div class="why-rush-cards">
@@ -112,7 +109,8 @@
     </div>
 
     <div class="rush-poster" style="width: 100%; display: flex;">
-      <img src="../public/rush_poster.jpg" alt="Rush Poster" class="rush-poster-img">
+      <img src="../public/rush_poster.jpg" alt="Rush Poster" class="rush-poster-img" />
+      <img src="../public/Timeline.png" alt="Rush Poster" class="rush-poster-img-vert" />
     </div>
 
     <div class="faq-header">
@@ -162,6 +160,7 @@
     </div>
   </body>
 
+  <script src="../script.js"></script>
   <script>
     var acc = document.getElementsByClassName("accordion-btn");
     var i;
@@ -177,10 +176,8 @@
         }
       });
     }
-  </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const scrollToNextSection = (currentSectionId) => {
       const currentSection = document.getElementById(currentSectionId);
       const nextSection = currentSection.nextElementSibling;
@@ -201,6 +198,6 @@
     });
 
   });
-</script>
+  </script>
 
 </html>

@@ -719,7 +719,7 @@ header ul li {
 
 .faq-title {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 3rem;
   color: white;
   text-shadow: 4px 4px black;
 }
@@ -734,14 +734,15 @@ header ul li {
   width: 300px;
   color: white;
   margin-bottom: 40px;
+  /* padding: 0px 10px; */
 }
 
 .faq-header p {
   width: 100%;
-  font-size: 30px;
+  font-size: 2rem;
 }
 .faq-header h1 {
-  font-size: 60px;
+  font-size: 4rem;
 }
 
 .accordion {
@@ -776,6 +777,20 @@ header ul li {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active:after {
   transform: rotate(180deg); /* Rotate to create the minus sign effect */
+}
+
+@media (max-width: 550px) {
+  .accordion-container {
+    width: 400px;
+  }
+
+  .accordion {
+    width: 400px;
+  }
+
+  .accordion-btn {
+    padding: 10px;
+  }
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -859,6 +874,10 @@ header ul li {
   .mass-meeting-img {
     display: none;
   }
+
+  .faq-content {
+    justify-content: center;
+  }
 }
 .rush-poster {
   display: flex;
@@ -870,39 +889,51 @@ header ul li {
   display: flex;
   justify-content: center;
   width: 100%;
+  border: 1px solid white;
 }
 
 .why-rush-wrapper {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 40px;
+  flex-direction: row;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 30px 0px;
   margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
 }
 .why-rush-wrapper .why-rush-title {
+  position: relative;
   display: flex;
-  top: 10px;
   justify-content: center;
+  align-items: center;
   color: white;
-  font-size: 60px;
+  font-size: 4rem;
   text-shadow: 4px 4px black;
+  margin-bottom: 30px;
 }
+
+
 .why-rush-wrapper .why-rush-cards {
   display: flex;
-  width: 300px;
+  width: 250px;
   height: 245px;
   margin: 10px 40px;
   color: rgb(234, 234, 234);
   flex-direction: column;
+  align-items: center;
 }
 .why-rush-wrapper .why-rush-cards .rush-card-img {
   display: flex;
   background-color: white;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 100px !important;
+  height: 100px !important;
   padding: 5px 0px;
   text-align: center;
-  margin-left: 30%;
+  /* margin-left: 78px; */
+  align-items: center;
   margin-bottom: 20px;
 }
 .rush-icons {
@@ -924,16 +955,17 @@ header ul li {
 }
 .why-rush-wrapper .rush-card-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 50px 0px;
+  gap: 0px
 }
+
 .why-rush-wrapper .apply-btn-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .why-rush-wrapper .apply-btn-wrapper .apply-btn {
   position: relative;
@@ -956,6 +988,61 @@ header ul li {
 
 .rush-image-container {
   flex: 0 0 auto; /* Prevents the image container from resizing */
+}
+
+.rush-poster-img-vert {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .rush-poster-img {
+    display: none !important;
+  }
+
+  .rush-poster-img-vert {
+    display: block;
+    width: 60%;
+    border: 1px solid white;
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .why-rush-wrapper .why-rush-cards {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+
+  .why-rush-wrapper .rush-card-wrapper {
+    gap: 100px 0px;
+  }
+
+  .why-rush-wrapper .apply-btn-wrapper {
+    margin-top: 70px
+  }
+
+  .rush-poster-img-vert {
+    width: 80%;
+    border: 1px solid white;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-rush-wrapper .why-rush-cards {
+    width: 150px; /* Adjust width for even smaller screens */
+  }
+
+  .why-rush-wrapper .rush-card-wrapper {
+    gap: 100px 0px;
+  }
+
+  .why-rush-wrapper .apply-btn-wrapper {
+    margin-top: 130px;
+  }
+
+  .rush-poster-img-vert {
+    width: 100%;
+    border: 1px solid white;
+  }
 }
 
 .html {

@@ -721,6 +721,7 @@ header ul li {
   text-align: center;
   margin-top: 40px;
   color: white;
+  text-shadow: 4px 4px black;
 }
 
 .faq-text {
@@ -761,6 +762,7 @@ header ul li {
   transition: 0.4s;
   border-top: 2px solid white;
   color: white;
+  text-shadow: 2px 2px black;
 }
 .accordion-btn:after {
   content: "▼"; /* Unicode character for "downard carat" sign */
@@ -783,6 +785,7 @@ header ul li {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  margin-bottom: 10px;
 }
 .panel p {
   color: white;
@@ -881,13 +884,14 @@ header ul li {
   justify-content: center;
   color: white;
   font-size: 60px;
+  text-shadow: 4px 4px black;
 }
 .why-rush-wrapper .why-rush-cards {
   display: flex;
   width: 300px;
-  height: 220px;
+  height: 245px;
   margin: 10px 40px;
-  color: white;
+  color: rgb(234, 234, 234);
   flex-direction: column;
 }
 .why-rush-wrapper .why-rush-cards .rush-card-img {
@@ -896,18 +900,26 @@ header ul li {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  margin: 10px 0px;
+  padding: 5px 0px;
   text-align: center;
   margin-left: 30%;
+  margin-bottom: 20px;
+}
+.rush-icons {
+  width: 70px;
+  height: 70px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 .why-rush-wrapper .why-rush-cards .rush-card-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px; /* Space between title and text */
   text-align: center;
+  text-shadow: 2px 2px black;
 }
 .why-rush-wrapper .why-rush-cards .rush-card-text {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 .why-rush-wrapper .rush-card-wrapper {
@@ -946,4 +958,7 @@ header ul li {
   flex: 0 0 auto; /* Prevents the image container from resizing */
 }
 
+.html {
+  scroll-behavior: smooth;
+}
 /*# sourceMappingURL=mainstyles.css.map */

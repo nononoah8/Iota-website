@@ -43,7 +43,7 @@
         <div class="bar3"></div>
         <ul class="mobile-menu">
           <li><a href="pages/about.html">About Us</a></li>
-          <li><a href="pages/rush.html">Prospective Members</a></li>
+          <li><a href="pages/rush.html">Rush</a></li>
           <li><a href="pages/members.html">Members</a></li>
           <li><a class="apply" href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">Apply Now</a></li>
         </ul>
@@ -61,7 +61,28 @@
 
       <img src="public/scroll-icon.png" alt="" class="scroll-icon"></img>
     </div>
-
+    <div class="who-we-are-wrapper">
+      <div class="who-we-are-images">
+      <div class = "who-we-are-img-row1">
+        <img src="./public/who-we-are-photos/photo1.jpg" class="who-we-are-img" alt = photo1>
+        <img src="./public/who-we-are-photos/photo2.jpg" class="who-we-are-img" alt = photo2>
+      </div> 
+      <div class = "who-we-are-img-row2">
+        <img src="./public/who-we-are-photos/photo3.jpg" class="who-we-are-img" alt = photo2>
+        <img src="./public/who-we-are-photos/photo4.jpg" class="who-we-are-img" alt = photo2>
+      </div>
+      <div class = "who-we-are-img-row3">
+        <img src="./public/who-we-are-photos/photo5.jpg" class="who-we-are-img" alt = photo2>
+        <img src="./public/who-we-are-photos/photo6.jpg" class="who-we-are-img" alt = photo2>
+      </div>
+    </div>
+      <div class = "who-we-are-text">
+        <h1>WHO WE ARE</h1>
+        <br>
+        <p>We are a group of driven, innovative, and creative individuals. As a STEM business fraternity, we foster cross-discipline collaboration and community.</p>
+        <button onclick="window.location.href='./pages/about.html';" class="learn-more-btn">LEARN MORE</button>
+      </div>
+    </div>
     <div class="presidents-wrapper">
       <img src="./public/members/Ethan_George.jpg" alt="Ethan" style="border-radius: 5px;">
       <div class="presidents-welcome">
@@ -151,6 +172,42 @@
           }
         });
       };
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".who-we-are-img");
+
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px", // No margin
+    threshold: 0 // Trigger when the intersection starts
+  };
+
+  const handleImageRotation = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const image = entry.target;
+
+        // Add rotate class to start rotation animation
+        image.classList.add("rotate");
+
+        // Wait for the rotation animation to finish before enabling hover effect
+        setTimeout(() => {
+          image.classList.remove("rotate"); // Remove rotate class
+          image.classList.add("hover-enabled"); // Enable hover effect
+        }, 2600); // Matches the duration of the rotate360 animation
+
+        observer.unobserve(image); // Stop observing this image
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleImageRotation, observerOptions);
+
+  images.forEach(image => observer.observe(image));
+});
+
     </script>
   </body>
 </html>

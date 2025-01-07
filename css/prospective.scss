@@ -223,6 +223,20 @@
   }
 }
 
+
+.chair-members {
+	background-color: $background-color_3;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10vh;
+	padding-top: 40px;
+	flex-wrap: wrap;
+	padding-bottom: 2rem;
+}
+
 .why-rush-wrapper {
 	display: flex;
 	// position: relative;

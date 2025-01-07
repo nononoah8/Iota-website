@@ -325,6 +325,8 @@ header ul li {
 }
 
 .who-we-are-wrapper {
+  /* position: absolute; */
+  top: 0;
   display: flex;
   align-items: flex-start;
   gap: 80px; /* Space between images and text */
@@ -370,6 +372,82 @@ header ul li {
 
 .who-we-are-img:hover {
   transform: translateY(-10px); /* Moves the image 10px upwards */
+}
+
+.custom-shape-divider-top-1736268398 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  fill: #231F20;
+}
+
+.home-pillars {
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.home-pillar-header {
+  font-size: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-pillar-text {
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  /* padding: 20px; */
+  /* margin-left: 40px;
+  margin-right: 40px; */
+}
+
+.home-pillar-title {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.home-pillars-wrapper {
+  gap: 30px;
+}
+
+.pillar-img {
+  width: 250px;
+  height: 200px;
+  margin: 0px 30px;
+}
+
+.dev-pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.community-pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ambition-pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.philanthropy-pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @keyframes rotate360 {
@@ -432,32 +510,75 @@ header ul li {
   display: flex;
   flex-wrap: wrap;
   gap: 6.25rem;
-  padding: 3rem 5rem;
+  /* padding: 3rem 5rem; */
   justify-content: center;
   align-items: stretch;
+  background-color: #231F20;
+  padding-bottom: 2rem;
 }
 .presidents-wrapper img, .presidents-wrapper .presidents-welcome {
   flex: 1;
   max-width: 550px;
   min-width: 300px;
-  padding: 0 1.25rem;
+  /* padding: 0 1.25rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 8%;
+  border: 1px solid white;
+  /* margin-bottom: 2rem; */
 }
 .presidents-wrapper img {
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  margin-left: 1.25rem;
+  /* border-radius: 5px; */
+  border-top-left-radius: 40% !important;
+  border-top-right-radius: 20% !important;
+  border-bottom-left-radius: 10% !important;
+  border-bottom-right-radius: 40% !important;
 }
+
 .presidents-wrapper .presidents-welcome {
+  margin-right: 1.25rem;
   display: block;
   background-color: #231f20;
   color: white;
   height: auto;
   overflow: hidden;
   padding: 2rem 1.25rem;
+}
+
+.custom-shape-divider-top-1736278971 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-shape-divider-top-1736268398 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  fill: #231F20;
+}
+
+
+.custom-shape-divider-top-1736278971 svg {
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 99px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1736278971 .shape-fill {
+  fill: #E2DECD;
 }
 
 @media (max-width: 1200px) {

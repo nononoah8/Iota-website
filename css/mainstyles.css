@@ -459,6 +459,7 @@ header ul li {
   justify-content: center;
   text-align: center;
   margin-top: 30px;
+  font-family: "Inter", sans-serif;
 }
 
 .home-pillar-title {
@@ -475,33 +476,120 @@ header ul li {
 }
 
 .pillar-img {
-  width: 250px;
-  height: 200px;
-  margin: 0px 30px;
+  width: 350px;
+  height: 250px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  transition: transform 1s ease; 
+}
+
+.pillar-img:hover {
+  transform: translateY(-10px);
 }
 
 .dev-pillar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0px 100px;
+  gap: 200px;
+}
+
+.dev-header-left {
+  font-family: "Inter", sans-serif;
+  margin-top: 20px;
+}
+.dev-header-right {
+  font-family: "Inter", sans-serif;
+  margin-top: 20px;
+}
+
+.dev-text-left {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.dev-text-right {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 .community-pillar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0px 100px;
+  gap: 200px;
 }
 
 .ambition-pillar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0px 100px;
+  gap: 200px;
 }
 
 .philanthropy-pillar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0px 100px;
+  gap: 200px;
+}
+
+@media (max-width: 1050px) {
+  .dev-pillar {
+    gap: 100px;
+    padding: 0px 50px;
+  }
+  .community-pillar {
+    gap: 100px;
+    padding: 0px 50px;
+  }
+  .ambition-pillar {
+    gap: 100px;
+    padding: 0px 50px;
+  }
+  .philanthropy-pillar {
+    gap: 100px;
+    padding: 0px 50px;
+  }
+}
+
+@media (max-width: 950px) {
+  .dev-pillar {
+    gap: 50px;
+    padding: 0px 50px;
+  }
+  .community-pillar {
+    gap: 50px;
+    padding: 0px 50px;
+  }
+  .ambition-pillar {
+    gap: 50px;
+    padding: 0px 50px;
+  }
+  .philanthropy-pillar {
+    gap: 50px;
+    padding: 0px 50px;
+  }
+
+  .pillar-img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    transition: transform 1s ease; 
+  }
+}
+
+@media (max-width: 700px) {
+  .pillar-img {
+    display: none;
+  }
 }
 
 @keyframes rotate360 {
@@ -570,6 +658,13 @@ header ul li {
   overflow: hidden;
   padding: 2rem 1.25rem;
   border: 1px solid white;
+}
+
+.presidents-welcome-header {
+  color: white;
+  font-size: 6rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
 }
 
 .custom-shape-divider-top-1736278971 {

@@ -77,9 +77,8 @@
         </div>
       </div>
       <div class = "who-we-are-text">
-        <h1>WHO WE ARE</h1>
-        <br>
-        <p>We are a group of driven, innovative, and creative individuals. As a STEM business fraternity, we foster cross-discipline collaboration and community.</p>
+        <h1>Iota Omega Epsilon</h1>
+        <p>Michigan's premier co-ed STEM business fraternity</p>
         <button onclick="window.location.href='./pages/about.html';" class="learn-more-btn">LEARN MORE</button>
       </div>
     </div>
@@ -133,7 +132,7 @@
         </svg>
       </div>
       <div class="president-img-container">
-        <img src="./public/members/Ethan_George.jpg" alt="Ethan" style="border-radius: 5px;">
+        <img src="./public/new-pres-img.png" alt="Ethan" style="border-radius: 5px;">
       </div>
       <div class="presidents-welcome">
         Welcome to the Alpha Chapter of Iota Omega Epsilon, Michigan’s premier STEM-Business co-ed professional fraternity.
@@ -179,50 +178,6 @@
       </div>
     </div>
     <script src="script.js"></script>
-    <script>
-      window.addEventListener('scroll', function() {
-        var overlay = document.getElementById('overlay');
-        overlay.style.opacity = '0';
-        setTimeout(function() {
-          overlay.style.display = 'none';
-        }, 200); 
-      });
-
-      window.onload = function() {
-        var hasRun = false;
-        var gifDuration = 2150;
-
-        function checkOverlay() {
-          var overlay = document.getElementById('overlay');
-          var gif = document.getElementById('intro-animation');
-          if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-            overlay.classList.add('hidden');
-          } else {
-            overlay.style.display = 'flex';
-            // Restart the GIF by changing the src attribute
-            var src = gif.src;
-            gif.src = '';
-            gif.src = src;
-
-            // Hide the overlay after the GIF duration
-            setTimeout(function() {
-              overlay.classList.add('hidden');
-            }, gifDuration);
-          }
-          hasRun = true;
-        }
-
-        // Initial check
-        checkOverlay();
-
-        // Event listener for scroll
-        window.addEventListener('scroll', function() {
-          if (!hasRun) {
-            checkOverlay();
-          }
-        });
-      };
-    </script>
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {

@@ -37,6 +37,34 @@ body {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Telegraf";
+  src: url("./telegraf/PPTelegraf-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("./telegraf/PPTelegraf-UltraBold.otf") format("opentype");
+  font-weight: 800; /* Use a higher value for ultra-bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("./telegraf/PPTelegraf-UltraLight.otf") format("opentype");
+  font-weight: 100; /* Use a lower value for ultra-thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url("./Anton/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .logo {
   position: relative;
   margin-left: 5px;
@@ -49,6 +77,14 @@ body {
 header a {
   text-decoration: none;
   z-index: 2;
+}
+
+header a.nav-link {
+  font-size: 18px; /* Different font size for the apply link */
+}
+
+header a.apply {
+  font-size: 18px; /* Different font size for the apply link */
 }
 
 header {
@@ -323,36 +359,405 @@ header ul li {
     left: 6rem;
   }
 }
+
+
+
+.who-we-are-wrapper {
+  top: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 80px;
+  background-color: #231F20;
+  height: auto;
+}
+
+.who-we-are-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: "Anton";
+  font-weight: 400;
+  letter-spacing: 1px;
+  background-image: url("./../public/new-home-snake.png");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.who-we-are-text h1 {
+  color: white;
+  font-size: 4rem;
+}
+
+.who-we-are-text p {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  font-family: "Telegraf"
+}
+
+.who-we-are-images {
+  flex: 1;
+  width: 900px;
+}
+
+.who-we-are-img {
+  height: 220px;
+  width: 310px;
+  margin-top: 20px;
+  border-radius: 20px;
+  transition: transform 1s ease; 
+  transform-origin: center;
+}
+
+.who-we-are-img.rotate {
+  animation: rotate360 2.5s ease forwards;
+}
+
+.who-we-are-img:hover {
+  transform: translateY(-10px);
+}
+
+.who-we-are-img-row1 {
+  display: flex;
+  gap: 25px;
+  margin-left: 180px;
+}
+
+.who-we-are-img-row2 {
+  display: flex;
+  gap: 25px; 
+  margin-left: 120px;
+}
+
+.who-we-are-img-row3 {
+  display: flex;
+  gap: 25px;
+  margin-left: 20px; 
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1100px) {
+  .who-we-are-img-row1 {
+    margin-left: 10%;
+  }
+  .who-we-are-img-row2 {
+    margin-left: 10%;
+  }
+  .who-we-are-img-row3 {
+    margin-left: 10%;
+  }
+  .who-we-are-img {
+    height: 175px;
+    width: 280px;
+  }
+  .who-we-are-images {
+    width: 700px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .who-we-are-images {
+    display: none !important;
+  }
+  .who-we-are-wrapper {
+    height: 600px;
+  }
+}
+
+.custom-shape-divider-top-1736268398 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  fill: #231F20;
+}
+
+.home-pillars {
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.home-pillar-header {
+  font-size: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "telegraf", sans-serif;
+  text-align: center;
+}
+
+.home-pillar-text {
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  font-family: "telegraf", sans-serif;
+}
+
+.home-pillar-title {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: "telegraf", sans-serif;
+}
+
+
+.home-pillars-wrapper {
+  gap: 30px;
+}
+
+.pillar-img {
+  width: 350px;
+  height: 250px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  transition: transform 1s ease; 
+}
+
+.pillar-img:hover {
+  transform: translateY(-10px);
+}
+
+.dev-pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 100px;
+  gap: 200px;
+}
+
+.dev-header-left {
+  font-family: "Telegraf", sans-serif;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.dev-header-right {
+  font-family: "Telegraf", sans-serif;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.dev-text-left {
+  font-family: "Telegraf", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.dev-text-right {
+  font-family: "Telegraf", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.community-pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 100px;
+  gap: 200px;
+}
+
+.ambition-pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 100px;
+  gap: 200px;
+}
+
+.philanthropy-pillar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 100px;
+  gap: 200px;
+}
+
+@media (max-width: 1050px) {
+  .dev-pillar {
+    gap: 100px;
+    padding: 0px 50px;
+  }
+  .community-pillar {
+    gap: 100px;
+    padding: 0px 50px;
+  }
+  .ambition-pillar {
+    gap: 100px;
+    padding: 0px 50px;
+  }
+  .philanthropy-pillar {
+    gap: 100px;
+    padding: 0px 50px;
+  }
+}
+
+@media (max-width: 950px) {
+  .dev-pillar {
+    gap: 50px;
+    padding: 0px 50px;
+  }
+  .community-pillar {
+    gap: 50px;
+    padding: 0px 50px;
+  }
+  .ambition-pillar {
+    gap: 50px;
+    padding: 0px 50px;
+  }
+  .philanthropy-pillar {
+    gap: 50px;
+    padding: 0px 50px;
+  }
+
+  .pillar-img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    transition: transform 1s ease; 
+  }
+}
+
+@media (max-width: 700px) {
+  .pillar-img {
+    display: none;
+  }
+
+  .dev-pillar {
+    padding: 0px 20px;
+  }
+  .community-pillar {
+    padding: 0px 20px;
+  }
+  .ambition-pillar {
+    padding: 0px 20px;
+  }
+  .philanthropy-pillar {
+    padding: 0px 20px;
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.learn-more-btn {
+  font-family: "Telegraf", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  background-color: white;
+  color: black;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.learn-more-btn:focus {
+  background-color: black;
+  color: white;
+  outline: none;
+  box-shadow: none;
+}
+
 .presidents-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 6.25rem;
-  padding: 3rem 5rem;
+  /* padding: 3rem 5rem; */
   justify-content: center;
   align-items: stretch;
+  background-color: #231F20;
+  padding-bottom: 2rem;
 }
 .presidents-wrapper img, .presidents-wrapper .presidents-welcome {
   flex: 1;
-  max-width: 550px;
+  max-width: 500px;
   min-width: 300px;
-  padding: 0 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 8%;
+  margin-bottom: 2rem;
 }
-.presidents-wrapper img {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
+
 .presidents-wrapper .presidents-welcome {
+  margin-right: 1.25rem;
   display: block;
   background-color: #231f20;
   color: white;
   height: auto;
   overflow: hidden;
   padding: 2rem 1.25rem;
+  border: 1px solid white;
+}
+
+.presidents-welcome-header {
+  color: white;
+  font-size: 5.3rem;
+  font-weight: 500;
+  font-family: "telegraf", sans-serif;
+  text-align: center;
+}
+
+.custom-shape-divider-top-1736278971 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-shape-divider-top-1736268398 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  fill: #231F20;
+}
+
+
+.custom-shape-divider-top-1736278971 svg {
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 99px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1736278971 .shape-fill {
+  fill: #E2DECD;
 }
 
 @media (max-width: 1200px) {
@@ -369,11 +774,17 @@ header ul li {
   .presidents-wrapper {
     gap: 1rem;
   }
-}
-.home-overlay {
-  background-color: #232021 !important;
+
+  .presidents-wrapper img, .presidents-wrapper .presidents-welcome {
+    width: 400px;
+  }
 }
 
+@media (max-width: 500px) {
+  .presidents-wrapper img, .presidents-wrapper .presidents-welcome {
+    width: 300px;
+  }
+}
 .exec-header {
   font-size: 3em;
   position: absolute;
@@ -734,7 +1145,6 @@ header ul li {
   width: 300px;
   color: white;
   margin-bottom: 40px;
-  /* padding: 0px 10px; */
 }
 
 .faq-header p {
@@ -935,6 +1345,12 @@ header ul li {
   /* margin-left: 78px; */
   align-items: center;
   margin-bottom: 20px;
+}
+.rush-icons {
+  width: 70px;
+  height: 70px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 .rush-icons {
   width: 70px;

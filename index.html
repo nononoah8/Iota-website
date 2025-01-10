@@ -31,9 +31,9 @@
       </div>
       <nav>
         <ul>
-          <li><a href="pages/about.html">About Us</a></li>
-          <li><a href="pages/rush.html">Rush</a></li>
-          <li><a href="pages/members.html">Members</a></li>
+          <li><a class="nav-link" href="pages/about.html">About Us</a></li>
+          <li><a class="nav-link" href="pages/rush.html">Rush</a></li>
+          <li><a class="nav-link" href="pages/members.html">Members</a></li>
           <li><a class="apply" href="https://forms.gle/wtxFNX6y6ta2noHt8" target="_blank">Apply Now</a></li>
         </ul>
       </nav>
@@ -49,21 +49,80 @@
         </ul>
       </div>
     </header>
-
-    <div class="home-overlay" id="overlay">
-      <img id="intro-animation" src="public/home_animation.gif"></img>
+    <div class="who-we-are-wrapper">
+      <div class="who-we-are-images">
+        <div class = "who-we-are-img-row1">
+          <img src="./public/who-we-are-photos/photo1.jpg" class="who-we-are-img" alt = photo1>
+          <img src="./public/who-we-are-photos/photo2.jpg" class="who-we-are-img" alt = photo2>
+        </div> 
+        <div class = "who-we-are-img-row2">
+          <img src="./public/who-we-are-photos/photo3.jpg" class="who-we-are-img" alt = photo2>
+          <img src="./public/who-we-are-photos/photo4.jpg" class="who-we-are-img" alt = photo2>
+        </div>
+        <div class = "who-we-are-img-row3">
+          <img src="./public/who-we-are-photos/photo5.jpg" class="who-we-are-img" alt = photo2>
+          <img src="./public/who-we-are-photos/photo6.jpg" class="who-we-are-img" alt = photo2>
+        </div>
+      </div>
+      <div class = "who-we-are-text">
+        <h1>Iota Omega Epsilon</h1>
+        <p>Michigan's Premier CO-ED STEM business Fraternity</p>
+        <button onclick="window.location.href='./pages/about.html';" class="learn-more-btn">LEARN MORE</button>
+      </div>
+    </div>
+    <div class="custom-shape-divider-top-1736268398">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
     </div>
 
-    <div id="content" class="front-wrapper">
-      <button onclick="window.location.href='./pages/rush.html';" class="join-btn">JOIN US</button>
-
-      <p>Michigan's premier co-ed business stem fraternity</p>
-
-      <img src="public/scroll-icon.png" alt="" class="scroll-icon"></img>
+    <div class="home-pillars">
+      <h1 class="home-pillar-header">WHO WE ARE</h1>
+      <p class="home-pillar-text">We are a group of driven, innovative, and creative individuals. As a STEM business fraternity, we foster cross-discipline collaboration and community.</p>
+      <h3 class="home-pillar-title">OUR PILLARS </h3>
+      <div class="home-pillars-wrapper">
+        <div class="dev-pillar">
+          <div>
+            <h2 class="dev-header-left">DEVELOPMENT</h2>
+            <p class="dev-text-left">From professional development curriculums to industry panels to career treks, our members have a vast array of ways to develop their professional skills and prepare to enter the workforce.</p>
+          </div>
+          <img src="./public/iota-values-development.jpg" alt="" class="pillar-img"/>
+        </div>
+        <div class="community-pillar">
+          <img src="./public/iota-values-community.jpg" alt="" class="pillar-img"/>
+          <div>
+            <h2 class="dev-header-right">COMMUNITY</h2>
+            <p class="dev-text-right">Our organization proudly brings together members from over 25 distinct majors, fostering a vibrant community rich in diverse perspectives, backgrounds, and interests.</p>
+          </div>
+        </div>
+        <div class="ambition-pillar">
+          <div>
+            <h2 class="dev-header-left">AMBITION</h2>
+            <p class="dev-text-left">Our members are driven by a passion for making an impact in their fields and are dedicated to seeking meaningful opportunities to build professional experience.</p>
+          </div>
+          <img src="./public/iota-values-ambition.jpg" alt="" class="pillar-img"/>
+        </div>
+        <div class="philanthropy-pillar">
+          <img src="./public/iota-values-philanthropy.jpg" alt="" class="pillar-img"/>
+          <div>
+            <h2 class="dev-header-right">PHILANTHROPY</h2>
+            <p class="dev-text-right">We strive to enhance our local, state, and national communities, working toward a brighter and more sustainable future.</p>
+          </div>
+        </div>
+      </div>
     </div>
-
+    
+    
     <div class="presidents-wrapper">
-      <img src="./public/members/Ethan_George.jpg" alt="Ethan" style="border-radius: 5px;">
+      <div class="custom-shape-divider-top-1736278971">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <h1 class="presidents-welcome-header">PRESIDENT'S WELCOME</h1>
+      <div class="president-img-container">
+        <img src="./public/new-pres-img.png" alt="Ethan" style="border-radius: 5px;">
+      </div>
       <div class="presidents-welcome">
         Welcome to the Alpha Chapter of Iota Omega Epsilon, Michigan’s premier STEM-Business co-ed professional fraternity.
         As President, I am honored to extend a warm welcome to you on behalf of our fraternity!
@@ -96,61 +155,51 @@
 
 
     <!-- Footer -->
-    <!-- Link to apply -->
-    <div class="footer">
+    <div class="footer" style="margin-top: 0 !important; border-top: 1px solid white;">
       <div>
         <button onclick="window.open('https://forms.gle/wtxFNX6y6ta2noHt8')" class="join-btn">Join Us!</button>
       </div>
-      <!-- Links to social media -->
       <div class="social-links">
         <a href="https://www.instagram.com/iota_omega_epsilon/" class="instagram" target="_blank">Instagram</a>
         <a href="https://www.linkedin.com/company/iota-omega-epsilon/" class="linkedin" target="_blank">LinkedIn</a>
       </div>
     </div>
     <script src="script.js"></script>
+
     <script>
-      window.addEventListener('scroll', function() {
-        var overlay = document.getElementById('overlay');
-        overlay.style.opacity = '0';
-        setTimeout(function() {
-          overlay.style.display = 'none';
-        }, 200); 
-      });
+    document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".who-we-are-img");
 
-      window.onload = function() {
-        var hasRun = false;
-        var gifDuration = 2150;
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px", // No margin
+    threshold: 0 // Trigger when the intersection starts
+  };
 
-        function checkOverlay() {
-          var overlay = document.getElementById('overlay');
-          var gif = document.getElementById('intro-animation');
-          if (window.pageYOffset !== 0 && window.innerWidth <= 950) {
-            overlay.classList.add('hidden');
-          } else {
-            overlay.style.display = 'flex';
-            // Restart the GIF by changing the src attribute
-            var src = gif.src;
-            gif.src = '';
-            gif.src = src;
+  const handleImageRotation = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const image = entry.target;
 
-            // Hide the overlay after the GIF duration
-            setTimeout(function() {
-              overlay.classList.add('hidden');
-            }, gifDuration);
-          }
-          hasRun = true;
-        }
+        // Add rotate class to start rotation animation
+        image.classList.add("rotate");
 
-        // Initial check
-        checkOverlay();
+        // Wait for the rotation animation to finish before enabling hover effect
+        setTimeout(() => {
+          image.classList.remove("rotate"); // Remove rotate class
+          image.classList.add("hover-enabled"); // Enable hover effect
+        }, 2600); // Matches the duration of the rotate360 animation
 
-        // Event listener for scroll
-        window.addEventListener('scroll', function() {
-          if (!hasRun) {
-            checkOverlay();
-          }
-        });
-      };
+        observer.unobserve(image); // Stop observing this image
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleImageRotation, observerOptions);
+
+  images.forEach(image => observer.observe(image));
+});
+
     </script>
   </body>
 </html>

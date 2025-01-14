@@ -361,7 +361,6 @@ header ul li {
 }
 
 
-
 .who-we-are-wrapper {
   top: 0;
   display: flex;
@@ -726,6 +725,7 @@ header ul li {
   font-weight: 500;
   font-family: "telegraf", sans-serif;
   text-align: center;
+  width: 100%;
 }
 
 .custom-shape-divider-top-1736278971 {

@@ -413,9 +413,9 @@ header ul li {
   transform-origin: center;
 }
 
-.who-we-are-img.rotate {
+/*.who-we-are-img.rotate {
   animation: rotate360 2.5s ease forwards;
-}
+}*/
 
 .who-we-are-img:hover {
   transform: translateY(-10px);
@@ -480,6 +480,8 @@ header ul li {
 .home-pillars {
   margin-top: 10px;
   padding: 30px;
+  margin-left: 14%;
+  margin-right: 14%;
 }
 
 .home-pillar-header {
@@ -958,27 +960,75 @@ header ul li {
   * Check figma/praveena text. Can do 100vh for the about part and then do
   * a dynamic scroll to the new content which will lead to pillars
 */
+
 .about-header {
-  top: 0;
   background-color: #231F20;
   height: 95vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-.about-header > .about {
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.about {
   font-family: "Sen", sans-serif;
   font-weight: 800;
-  position: absolute;
-  width: 100%;
-  top: 40%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  font-size: 173px;
+  font-size: 6.5rem;
   color: white;
+  flex: 1;
+  text-align: left;
 }
-@media (max-width: 950px) {
-  .about-header > .about {
-    font-size: 10.5rem;
+
+.about-images {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 2rem;
+  margin-right: -7rem;
+}
+
+.about-img:hover {
+  transform: translateY(-10px);
+}
+
+.about-img {
+  width: 100%;
+  max-width: 500px; /* Control size of images */
+  height: auto;
+  border-radius: 8px;
+  transition: transform 1s ease; 
+  transform-origin: center;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about {
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .about-images {
+    grid-template-columns: repeat(3, 1fr); /* stack more columns on smaller screens if needed */
+  }
+
+  .about-img {
+    max-width: 100px;
   }
 }
 
@@ -999,6 +1049,7 @@ header ul li {
   text-align: justify;
   overflow: hidden;
   margin: 2rem 1rem;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
